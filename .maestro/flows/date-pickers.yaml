@@ -1,0 +1,82 @@
+appId: io.github.robinpcrd.kotose.form.example
+name: Compact and wheels date pickers set a value on every renderer
+# SwiftUI: a wheels field's date pill opens date wheels, its time pill time wheels, applied with
+# Done; tapping an empty compact field fills in today. Compose iOS opens its picker sheet from the
+# row. Android always shows its Material dialog.
+---
+- runFlow:
+    file: ../helpers/open-page.yaml
+    env:
+      PAGE: date
+      RENDERER: ${RENDERER}
+- scrollUntilVisible:
+    element:
+      id: date-wheels
+    direction: DOWN
+- runFlow:
+    when:
+      true: ${RENDERER == 'native'}
+    commands:
+      - tapOn:
+          id: date-wheels-date
+      - tapOn:
+          id: date-wheels-done
+      - assertNotVisible:
+          id: date-wheels-done
+- runFlow:
+    when:
+      true: ${RENDERER == 'compose-ios'}
+    commands:
+      - tapOn:
+          id: date-wheels
+      - tapOn: Done
+- runFlow:
+    when:
+      true: ${RENDERER == 'android'}
+    commands:
+      - tapOn:
+          id: date-wheels
+      - tapOn: OK
+- scrollUntilVisible:
+    element:
+      id: date-error
+    direction: DOWN
+- tapOn:
+    id: date-error
+- runFlow:
+    when:
+      true: ${RENDERER == 'compose-ios'}
+    commands:
+      - tapOn: Done
+- runFlow:
+    when:
+      true: ${RENDERER == 'android'}
+    commands:
+      - tapOn: OK
+- tapOn:
+    id: action-validate
+- assertVisible:
+    id: result
+    text: Valid
+- takeScreenshot: ${RENDERER}-date-pickers
+- runFlow:
+    when:
+      true: ${RENDERER == 'native'}
+    commands:
+      - runFlow:
+          file: ../helpers/open-page.yaml
+          env:
+            PAGE: datetime
+            RENDERER: native
+      - scrollUntilVisible:
+          element:
+            id: datetime-wheels-time
+          direction: DOWN
+      - tapOn:
+          id: datetime-wheels-time
+      - waitForAnimationToEnd
+      - takeScreenshot: native-time-wheels
+      - tapOn:
+          id: date-wheels-done
+      - assertNotVisible:
+          id: date-wheels-done

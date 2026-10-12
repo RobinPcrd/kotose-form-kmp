@@ -1,0 +1,27 @@
+appId: io.github.robinpcrd.kotose.form.example
+# PAGE: catalog row id suffix. RENDERER: android | native | compose-ios.
+---
+- launchApp:
+    clearState: true
+# The list may start scrolled: look up first, then down.
+- scrollUntilVisible:
+    element:
+      id: page-${PAGE}
+    direction: UP
+    timeout: 3000
+    optional: true
+- scrollUntilVisible:
+    element:
+      id: page-${PAGE}
+    direction: DOWN
+- tapOn:
+    id: page-${PAGE}
+- assertVisible:
+    id: action-validate
+- runFlow:
+    when:
+      true: ${RENDERER == 'compose-ios'}
+    commands:
+      - tapOn: Compose
+      - assertVisible:
+          id: action-validate

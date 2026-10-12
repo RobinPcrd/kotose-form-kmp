@@ -1,0 +1,402 @@
+public final class io/github/robinpcrd/kotose/form/IsValidPhoneRule : io/github/robinpcrd/kotose/form/ValidationRule$Field {
+	public static final field INSTANCE Lio/github/robinpcrd/kotose/form/IsValidPhoneRule;
+	public fun isValid (Lio/github/robinpcrd/kotose/form/fields/PhoneData;)Lio/github/robinpcrd/kotose/form/ValidationError;
+	public synthetic fun isValid (Ljava/lang/Object;)Lio/github/robinpcrd/kotose/form/ValidationError;
+}
+
+public final class io/github/robinpcrd/kotose/form/compose/data/Country {
+	public fun <init> (Ljava/lang/String;ILio/github/robinpcrd/kotose/resources/StrRes;Ljava/lang/String;)V
+	public synthetic fun <init> (Ljava/lang/String;ILio/github/robinpcrd/kotose/resources/StrRes;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Ljava/lang/String;
+	public final fun component2 ()I
+	public final fun component3 ()Lio/github/robinpcrd/kotose/resources/StrRes;
+	public final fun component4 ()Ljava/lang/String;
+	public final fun copy (Ljava/lang/String;ILio/github/robinpcrd/kotose/resources/StrRes;Ljava/lang/String;)Lio/github/robinpcrd/kotose/form/compose/data/Country;
+	public static synthetic fun copy$default (Lio/github/robinpcrd/kotose/form/compose/data/Country;Ljava/lang/String;ILio/github/robinpcrd/kotose/resources/StrRes;Ljava/lang/String;ILjava/lang/Object;)Lio/github/robinpcrd/kotose/form/compose/data/Country;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getCode ()I
+	public final fun getEmojiFlag ()Ljava/lang/String;
+	public final fun getName ()Lio/github/robinpcrd/kotose/resources/StrRes;
+	public final fun getRegion ()Ljava/lang/String;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class io/github/robinpcrd/kotose/form/compose/data/CountryAndroidKt {
+	public static final fun getCountryNameForRegion (Ljava/lang/String;)Lio/github/robinpcrd/kotose/resources/StrRes;
+}
+
+public final class io/github/robinpcrd/kotose/form/compose/data/CountryConfiguration {
+	public static final field INSTANCE Lio/github/robinpcrd/kotose/form/compose/data/CountryConfiguration;
+	public final fun getDefaultRegion ()Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+}
+
+public final class io/github/robinpcrd/kotose/form/compose/data/CountryKt {
+	public static final fun countryCodeToEmojiFlag (Ljava/lang/String;)Ljava/lang/String;
+	public static final fun getAvailableCountries ()Lkotlinx/collections/immutable/ImmutableSet;
+	public static final fun getCountryForRegion (Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;)Lio/github/robinpcrd/kotose/form/compose/data/Country;
+	public static final fun getCountryForRegion (Ljava/lang/String;)Lio/github/robinpcrd/kotose/form/compose/data/Country;
+	public static final fun getCountryName (Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;)Lio/github/robinpcrd/kotose/resources/StrRes;
+	public static final fun getUnknownCountry ()Lio/github/robinpcrd/kotose/form/compose/data/Country;
+}
+
+public final class io/github/robinpcrd/kotose/form/compose/data/CountryRegion : java/lang/Enum {
+	public static final field Afghanistan Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field AlandIslands Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field Albania Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field Algeria Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field AmericanSamoa Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field Andorra Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field Angola Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field Anguilla Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field Antarctica Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field AntiguaAndBarbuda Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field Argentina Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field Armenia Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field Aruba Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field Australia Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field Austria Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field Azerbaijan Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field Bahamas Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field Bahrain Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field Bangladesh Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field Barbados Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field Belarus Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field Belgium Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field Belize Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field Benin Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field Bermuda Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field Bhutan Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field Bolivia Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field BonaireSintEustatiusAndSaba Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field BosniaAndHerzegovina Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field Botswana Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field BouvetIsland Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field Brazil Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field BritishIndianOceanTerritory Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field BruneiDarussalam Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field Bulgaria Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field BurkinaFaso Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field Burundi Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field CaboVerde Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field Cambodia Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field Cameroon Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field Canada Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field CaymanIslands Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field CentralAfricanRepublic Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field Chad Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field Chile Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field China Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field ChristmasIsland Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field CocosKeelingIslands Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field Colombia Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field Comoros Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field Companion Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion$Companion;
+	public static final field Congo Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field CongoDemocraticRepublic Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field CookIslands Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field CostaRica Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field CoteDIvoire Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field Croatia Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field Cuba Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field Curacao Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field Cyprus Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field Czechia Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field Denmark Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field Djibouti Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field Dominica Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field DominicanRepublic Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field Ecuador Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field Egypt Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field ElSalvador Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field EquatorialGuinea Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field Eritrea Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field Estonia Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field Eswatini Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field Ethiopia Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field FalklandIslands Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field FaroeIslands Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field Fiji Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field Finland Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field France Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field FrenchGuiana Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field FrenchPolynesia Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field FrenchSouthernTerritories Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field Gabon Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field Gambia Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field Georgia Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field Germany Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field Ghana Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field Gibraltar Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field Greece Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field Greenland Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field Grenada Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field Guadeloupe Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field Guam Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field Guatemala Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field Guernsey Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field Guinea Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field GuineaBissau Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field Guyana Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field Haiti Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field HeardIslandAndMcDonaldIslands Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field HolySee Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field Honduras Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field HongKong Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field Hungary Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field Iceland Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field India Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field Indonesia Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field Iran Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field Iraq Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field Ireland Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field IsleOfMan Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field Israel Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field Italy Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field Jamaica Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field Japan Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field Jersey Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field Jordan Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field Kazakhstan Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field Kenya Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field Kiribati Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field KoreaNorth Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field KoreaSouth Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field Kuwait Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field Kyrgyzstan Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field LaoPeopleDemocraticRepublic Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field Latvia Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field Lebanon Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field Lesotho Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field Liberia Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field Libya Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field Liechtenstein Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field Lithuania Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field Luxembourg Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field Macao Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field Madagascar Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field Malawi Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field Malaysia Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field Maldives Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field Mali Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field Malta Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field MarshallIslands Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field Martinique Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field Mauritania Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field Mauritius Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field Mayotte Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field Mexico Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field Micronesia Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field Moldova Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field Monaco Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field Mongolia Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field Montenegro Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field Montserrat Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field Morocco Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field Mozambique Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field Myanmar Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field Namibia Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field Nauru Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field Nepal Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field Netherlands Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field NewCaledonia Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field NewZealand Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field Nicaragua Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field Niger Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field Nigeria Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field Niue Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field NorfolkIsland Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field NorthernMarianaIslands Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field Norway Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field Oman Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field Pakistan Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field Palau Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field Palestine Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field Panama Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field PapuaNewGuinea Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field Paraguay Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field Peru Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field Philippines Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field Pitcairn Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field Poland Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field Portugal Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field PuertoRico Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field Qatar Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field RepublicOfNorthMacedonia Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field Reunion Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field Romania Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field RussianFederation Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field Rwanda Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field SaintBarthelemy Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field SaintHelenaAscensionAndTristanDaCunha Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field SaintKittsAndNevis Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field SaintLucia Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field SaintMartin Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field SaintPierreAndMiquelon Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field SaintVincentAndTheGrenadines Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field Samoa Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field SanMarino Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field SaoTomeAndPrincipe Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field SaudiArabia Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field Senegal Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field Serbia Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field Seychelles Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field SierraLeone Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field Singapore Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field SintMaarten Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field Slovakia Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field Slovenia Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field SolomonIslands Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field Somalia Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field SouthAfrica Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field SouthGeorgiaAndTheSouthSandwichIslands Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field SouthSudan Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field Spain Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field SriLanka Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field Sudan Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field Suriname Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field SvalbardAndJanMayen Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field Sweden Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field Switzerland Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field SyrianArabRepublic Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field Taiwan Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field Tajikistan Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field Tanzania Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field Thailand Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field TimorLeste Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field Togo Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field Tokelau Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field Tonga Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field TrinidadAndTobago Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field Tunisia Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field Turkey Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field Turkmenistan Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field TurksAndCaicosIslands Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field Tuvalu Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field Uganda Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field Ukraine Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field UnitedArabEmirates Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field UnitedKingdomOfGreatBritainAndNorthernIreland Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field UnitedStatesMinorOutlyingIslands Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field UnitedStatesOfAmerica Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field Unknown Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field Uruguay Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field Uzbekistan Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field Vanuatu Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field Venezuela Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field VietNam Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field VirginIslandsBritish Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field VirginIslandsUS Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field WallisAndFutuna Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field WesternSahara Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field Yemen Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field Zambia Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static final field Zimbabwe Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public final fun getRegion ()Ljava/lang/String;
+	public static fun valueOf (Ljava/lang/String;)Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+	public static fun values ()[Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+}
+
+public final class io/github/robinpcrd/kotose/form/compose/data/CountryRegion$Companion {
+	public final fun getCountryRegion (Ljava/lang/String;)Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;
+}
+
+public final class io/github/robinpcrd/kotose/form/dsl/PhoneFieldsDslKt {
+	public static final fun phoneNumberField (Lio/github/robinpcrd/kotose/form/dsl/GroupBuilder;Ljava/lang/String;Lio/github/robinpcrd/kotose/resources/StrRes;Lkotlin/jvm/functions/Function1;)Lio/github/robinpcrd/kotose/form/fields/PhoneNumberField;
+	public static synthetic fun phoneNumberField$default (Lio/github/robinpcrd/kotose/form/dsl/GroupBuilder;Ljava/lang/String;Lio/github/robinpcrd/kotose/resources/StrRes;Lkotlin/jvm/functions/Function1;ILjava/lang/Object;)Lio/github/robinpcrd/kotose/form/fields/PhoneNumberField;
+}
+
+public final class io/github/robinpcrd/kotose/form/fields/PhoneData : io/github/robinpcrd/kotose/form/RequiredValue {
+	public static final field Companion Lio/github/robinpcrd/kotose/form/fields/PhoneData$Companion;
+	public fun <init> ()V
+	public fun <init> (Lio/github/robinpcrd/kotose/form/compose/data/Country;Ljava/lang/String;)V
+	public synthetic fun <init> (Lio/github/robinpcrd/kotose/form/compose/data/Country;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Lio/github/robinpcrd/kotose/form/compose/data/Country;
+	public final fun component2 ()Ljava/lang/String;
+	public final fun copy (Lio/github/robinpcrd/kotose/form/compose/data/Country;Ljava/lang/String;)Lio/github/robinpcrd/kotose/form/fields/PhoneData;
+	public static synthetic fun copy$default (Lio/github/robinpcrd/kotose/form/fields/PhoneData;Lio/github/robinpcrd/kotose/form/compose/data/Country;Ljava/lang/String;ILjava/lang/Object;)Lio/github/robinpcrd/kotose/form/fields/PhoneData;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getCountry ()Lio/github/robinpcrd/kotose/form/compose/data/Country;
+	public final fun getFormatted ()Ljava/lang/String;
+	public final fun getPhone ()Ljava/lang/String;
+	public fun hashCode ()I
+	public fun isEmptyForRequired ()Z
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class io/github/robinpcrd/kotose/form/fields/PhoneData$Companion {
+	public final fun parse (Ljava/lang/String;Ljava/lang/String;Lkotlinx/collections/immutable/ImmutableSet;)Lio/github/robinpcrd/kotose/form/fields/PhoneData;
+	public static synthetic fun parse$default (Lio/github/robinpcrd/kotose/form/fields/PhoneData$Companion;Ljava/lang/String;Ljava/lang/String;Lkotlinx/collections/immutable/ImmutableSet;ILjava/lang/Object;)Lio/github/robinpcrd/kotose/form/fields/PhoneData;
+}
+
+public class io/github/robinpcrd/kotose/form/fields/PhoneNumberField : io/github/robinpcrd/kotose/form/FocusableField {
+	public fun <init> ()V
+	public fun <init> (Ljava/lang/String;Lio/github/robinpcrd/kotose/resources/StrRes;)V
+	public synthetic fun <init> (Ljava/lang/String;Lio/github/robinpcrd/kotose/resources/StrRes;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun getDialCode ()Ljava/lang/String;
+	public final fun getDisplayCountry ()Lio/github/robinpcrd/kotose/form/compose/data/Country;
+	public final fun getHasCountryPicker ()Z
+	public fun getPlaceholder ()Lio/github/robinpcrd/kotose/resources/StrRes;
+	public fun getSetOfAllowedRegion ()Lkotlinx/collections/immutable/ImmutableSet;
+	public fun getSubmittedValue ()Ljava/lang/Object;
+	public fun isCountrySelectionEnabled ()Z
+	public fun selectCountry (Lio/github/robinpcrd/kotose/form/compose/data/Country;)V
+	public fun selectCountry (Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;)V
+	public fun selectableCountries (Ljava/lang/String;)Lkotlinx/collections/immutable/ImmutableList;
+	public static synthetic fun selectableCountries$default (Lio/github/robinpcrd/kotose/form/fields/PhoneNumberField;Ljava/lang/String;ILjava/lang/Object;)Lkotlinx/collections/immutable/ImmutableList;
+	public fun setBaseValue (Ljava/lang/Object;)V
+	public fun setCountrySelectionEnabled (Z)V
+	public final fun setDialCode (Ljava/lang/String;)V
+	public fun setPhone (Ljava/lang/String;)V
+	public fun setSetOfAllowedRegion (Lkotlinx/collections/immutable/ImmutableSet;)V
+}
+
+public abstract interface class io/github/robinpcrd/kotose/form/utils/PhoneNumberBackend {
+	public static final field Companion Lio/github/robinpcrd/kotose/form/utils/PhoneNumberBackend$Companion;
+	public abstract fun countryCode (Ljava/lang/String;)I
+	public abstract fun formatPartial (Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+	public abstract fun isPossibleNumber (Ljava/lang/String;Ljava/lang/String;)Z
+	public abstract fun parse (Ljava/lang/String;Ljava/lang/String;)Lio/github/robinpcrd/kotose/form/utils/PhoneParseResult;
+	public abstract fun parsePartial (Ljava/lang/String;Ljava/lang/String;)Lio/github/robinpcrd/kotose/form/utils/PhonePartialResult;
+}
+
+public final class io/github/robinpcrd/kotose/form/utils/PhoneNumberBackend$Companion {
+	public final fun getCurrent ()Lio/github/robinpcrd/kotose/form/utils/PhoneNumberBackend;
+	public final fun setCurrent (Lio/github/robinpcrd/kotose/form/utils/PhoneNumberBackend;)V
+}
+
+public final class io/github/robinpcrd/kotose/form/utils/PhoneParseResult {
+	public fun <init> (Ljava/lang/String;Ljava/lang/String;I)V
+	public final fun component1 ()Ljava/lang/String;
+	public final fun component2 ()Ljava/lang/String;
+	public final fun component3 ()I
+	public final fun copy (Ljava/lang/String;Ljava/lang/String;I)Lio/github/robinpcrd/kotose/form/utils/PhoneParseResult;
+	public static synthetic fun copy$default (Lio/github/robinpcrd/kotose/form/utils/PhoneParseResult;Ljava/lang/String;Ljava/lang/String;IILjava/lang/Object;)Lio/github/robinpcrd/kotose/form/utils/PhoneParseResult;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getCountryCode ()I
+	public final fun getNationalNumber ()Ljava/lang/String;
+	public final fun getRegion ()Ljava/lang/String;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class io/github/robinpcrd/kotose/form/utils/PhonePartialResult {
+	public fun <init> (Ljava/lang/String;Ljava/lang/String;I)V
+	public final fun component1 ()Ljava/lang/String;
+	public final fun component2 ()Ljava/lang/String;
+	public final fun component3 ()I
+	public final fun copy (Ljava/lang/String;Ljava/lang/String;I)Lio/github/robinpcrd/kotose/form/utils/PhonePartialResult;
+	public static synthetic fun copy$default (Lio/github/robinpcrd/kotose/form/utils/PhonePartialResult;Ljava/lang/String;Ljava/lang/String;IILjava/lang/Object;)Lio/github/robinpcrd/kotose/form/utils/PhonePartialResult;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getCountryCode ()I
+	public final fun getNationalNumber ()Ljava/lang/String;
+	public final fun getRegion ()Ljava/lang/String;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class io/github/robinpcrd/kotose/form/utils/PlatformUtilsKt {
+	public static final fun getDefaultLocaleCountry ()Ljava/lang/String;
+}
+

@@ -1,0 +1,33 @@
+appId: io.github.robinpcrd.kotose.form.example
+name: A field page opens with its states validated and answers Validate
+# PAGE: one of the field page ids, for example text.
+---
+- runFlow:
+    file: ../helpers/open-page.yaml
+    env:
+      PAGE: ${PAGE}
+      RENDERER: ${RENDERER}
+- assertVisible: Empty
+- scrollUntilVisible:
+    element:
+      id: error-.*
+    direction: DOWN
+- tapOn:
+    id: action-validate
+- runFlow:
+    file: ../helpers/close-keyboard.yaml
+    env:
+      RENDERER: ${RENDERER}
+- assertVisible:
+    id: result
+- takeScreenshot: ${RENDERER}-${PAGE}
+- tapOn:
+    id: action-reset
+- tapOn:
+    id: action-validate
+- runFlow:
+    file: ../helpers/close-keyboard.yaml
+    env:
+      RENDERER: ${RENDERER}
+- assertVisible:
+    id: result

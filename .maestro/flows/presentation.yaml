@@ -1,0 +1,193 @@
+appId: io.github.robinpcrd.kotose.form.example
+name: Collapsed single selections open, pick and close on every renderer
+# The iOS override group is inline on Android and a page on both iOS renderers.
+---
+- runFlow:
+    file: ../helpers/open-page.yaml
+    env:
+      PAGE: presentation
+      RENDERER: ${RENDERER}
+- assertVisible: Please select an option
+- tapOn:
+    id: plan-menu
+- tapOn:
+    id: plan-menu-pro
+- assertNotVisible:
+    id: plan-menu-basic
+- assertVisible: Pro plan
+- tapOn:
+    id: plan-sheet
+- tapOn:
+    id: plan-sheet-plus
+- assertNotVisible:
+    id: plan-sheet-basic
+- assertNotVisible: Please select an option
+- tapOn:
+    id: plan-page
+- tapOn:
+    id: plan-page-basic
+- assertNotVisible:
+    id: plan-page-plus
+- assertVisible: Basic plan
+# Segmented: a tap selects, tapping the selected or a disabled segment keeps the selection.
+# Compose buttons carry the state under the option key (reported as checked on Android);
+# UIKit segments only have their text.
+- scrollUntilVisible:
+    element: Yearly
+    direction: DOWN
+- tapOn: Yearly
+- tapOn: Yearly
+- tapOn: Lifetime
+- runFlow:
+    when:
+      true: ${RENDERER == 'native'}
+    commands:
+      - assertVisible:
+          text: Lifetime
+          enabled: false
+      - assertVisible:
+          text: Yearly
+          selected: true
+- runFlow:
+    when:
+      true: ${RENDERER != 'native'}
+    commands:
+      - assertVisible:
+          id: billing-lifetime
+          enabled: false
+- runFlow:
+    when:
+      true: ${RENDERER == 'android'}
+    commands:
+      - assertVisible:
+          id: billing-yearly
+          checked: true
+- runFlow:
+    when:
+      true: ${RENDERER == 'compose-ios'}
+    commands:
+      - assertVisible:
+          id: billing-yearly
+          selected: true
+# Multiple selection: the sheet and the page stay open while several options are toggled.
+# Scroll to the next caption so the row clears the bottom action bar.
+- scrollUntilVisible:
+    element: Multiple selection on a page
+    direction: DOWN
+- tapOn:
+    id: extras-sheet
+- tapOn:
+    id: extras-sheet-breakfast
+- tapOn:
+    id: extras-sheet-parking
+- runFlow:
+    when:
+      true: ${RENDERER == 'native'}
+    commands:
+      - tapOn:
+          id: extras-sheet-done
+- runFlow:
+    when:
+      true: ${RENDERER != 'native'}
+    commands:
+      - tapOn:
+          id: extras-sheet-close
+- assertVisible: 'Breakfast, Parking'
+# Scroll to the next caption so the row clears the bottom action bar.
+- scrollUntilVisible:
+    element: Inline here, page on iOS
+    direction: DOWN
+- tapOn:
+    id: extras-page
+- tapOn:
+    id: extras-page-breakfast
+- tapOn:
+    id: extras-page-lounge
+- runFlow:
+    when:
+      true: ${RENDERER == 'native'}
+    commands:
+      - tapOn:
+          id: BackButton
+- runFlow:
+    when:
+      true: ${RENDERER != 'native'}
+    commands:
+      - tapOn:
+          id: extras-page-close
+- assertVisible: 'Breakfast, Lounge'
+- scrollUntilVisible:
+    element:
+      id: plan-page-disabled
+    direction: DOWN
+- runFlow:
+    when:
+      true: ${RENDERER == 'android'}
+    commands:
+      - assertVisible:
+          id: plan-ios-page-basic
+- runFlow:
+    when:
+      true: ${RENDERER != 'android'}
+    commands:
+      - assertNotVisible:
+          id: plan-ios-page-basic
+      - tapOn:
+          id: plan-ios-page
+      - tapOn:
+          id: plan-ios-page-pro
+      - assertNotVisible:
+          id: plan-ios-page-basic
+- tapOn:
+    id: plan-page-disabled
+- assertNotVisible:
+    id: plan-page-disabled-plus
+- scrollUntilVisible:
+    element:
+      id: delivery-page
+    direction: DOWN
+- tapOn:
+    id: delivery-inline-option-express
+- tapOn:
+    id: delivery-sheet
+- tapOn:
+    id: delivery-sheet-option-pickup
+- assertNotVisible:
+    id: delivery-sheet-option-standard
+- tapOn:
+    id: delivery-page
+- tapOn:
+    id: delivery-page-option-standard
+- assertNotVisible:
+    id: delivery-page-option-express
+- scrollUntilVisible:
+    element: Large
+    direction: DOWN
+- tapOn: Large
+- runFlow:
+    when:
+      true: ${RENDERER == 'native'}
+    commands:
+      - assertVisible:
+          text: Large
+          selected: true
+- runFlow:
+    when:
+      true: ${RENDERER == 'android'}
+    commands:
+      - assertVisible:
+          id: size-option-large
+          checked: true
+- runFlow:
+    when:
+      true: ${RENDERER == 'compose-ios'}
+    commands:
+      - assertVisible:
+          id: size-option-large
+          selected: true
+- tapOn:
+    id: action-validate
+- assertVisible:
+    id: result
+    text: Valid
+- takeScreenshot: ${RENDERER}-presentation

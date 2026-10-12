@@ -1,0 +1,14 @@
+appId: io.github.robinpcrd.kotose.form.example
+# FROM: the Next button to tap. TO: the Next button of the input that should then have focus.
+# Typing right after Next can reach the previous input, and iOS sometimes drops a tap made just
+# after typing, so tap again until the focus has moved.
+---
+- retry:
+    maxRetries: 2
+    commands:
+      - tapOn:
+          id: ${FROM}
+      - extendedWaitUntil:
+          visible:
+            id: ${TO}
+          timeout: 3000

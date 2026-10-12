@@ -1,0 +1,36 @@
+# Copyright 2025-present Robin PICARD and contributors. Apache 2.0.
+
+name: CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: macos-26
+    env:
+      VERSION: 0.0.0-LOCAL
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-java@v5
+        with:
+          distribution: zulu
+          java-version: 17
+
+      - uses: gradle/actions/setup-gradle@v5
+
+      - run: ./gradlew build
+
+      - name: Build the iOS example
+        run: >-
+          xcodebuild -project example/iosApp/iosApp.xcodeproj -scheme iosApp -configuration Debug
+          -destination 'generic/platform=iOS Simulator' CODE_SIGNING_ALLOWED=NO build -quiet

@@ -1,0 +1,99 @@
+appId: io.github.robinpcrd.kotose.form.example
+name: Phone rows switch between the country picker and the typed dial code
+# Every field on the page preselects France, so without the libraries each row starts on +33.
+# The action bar is only used before the keyboard shows: while it is up it takes those taps.
+---
+- runFlow:
+    file: ../helpers/open-page.yaml
+    env:
+      PAGE: phone
+      RENDERER: ${RENDERER}
+- assertNotVisible:
+    id: phone-empty-dial-code
+- tapOn:
+    id: action-phone-backend
+- assertVisible:
+    id: phone-filled-dial-code
+    text: '33'
+- tapOn:
+    id: action-phone-backend
+- assertNotVisible:
+    id: phone-empty-dial-code
+- tapOn:
+    id: action-phone-backend
+- tapOn:
+    id: action-reset
+- tapOn:
+    id: phone-empty-dial-code
+- runFlow:
+    when:
+      true: ${RENDERER == 'compose-ios'}
+    commands:
+      - tapOn:
+          id: phone-empty-dial-code
+- runFlow:
+    when:
+      true: ${RENDERER != 'android'}
+    commands:
+      - extendedWaitUntil:
+          visible:
+            id: phone-empty-dial-code-next
+          timeout: 5000
+- inputText: '032'
+- assertVisible:
+    id: phone-empty-dial-code
+    text: '32'
+- runFlow:
+    file: ../helpers/next-input.yaml
+    env:
+      RENDERER: ${RENDERER}
+      NEXT: phone-empty-dial-code-next
+      TO: phone-empty-next
+- inputText: '471234567'
+- assertVisible: '471234567'
+# Next lands on the dial code when it is empty.
+- runFlow:
+    file: ../helpers/next-input.yaml
+    env:
+      RENDERER: ${RENDERER}
+      NEXT: phone-empty-next
+      TO: phone-filled-dial-code-next
+- inputText: '44'
+- assertVisible:
+    id: phone-filled-dial-code
+    text: '44'
+# Next lands on the number when the dial code is filled. The iOS keyboard bar visits both inputs
+# instead: Previous enters the row above on its number, Next the row below on its dial code.
+- runFlow:
+    when:
+      true: ${RENDERER == 'android'}
+    commands:
+      - scrollUntilVisible:
+          element:
+            id: phone-empty
+          direction: UP
+      - tapOn:
+          id: phone-empty
+      - pressKey: Enter
+- runFlow:
+    when:
+      true: ${RENDERER != 'android'}
+    commands:
+      - runFlow:
+          file: ../helpers/next.yaml
+          env:
+            FROM: phone-filled-dial-code-previous
+            TO: phone-empty-previous
+      - runFlow:
+          file: ../helpers/next.yaml
+          env:
+            FROM: phone-empty-next
+            TO: phone-filled-dial-code-next
+      - runFlow:
+          file: ../helpers/next.yaml
+          env:
+            FROM: phone-filled-dial-code-next
+            TO: phone-filled-next
+- inputText: '7654'
+- assertVisible: '7654'
+- takeScreenshot: ${RENDERER}-phone-basic

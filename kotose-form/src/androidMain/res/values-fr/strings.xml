@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="country_select_activity_title">Choisissez un pays</string>
+    <string name="country_search_placeholder">Nom du pays</string>
+    <string name="validation_error_field_required">Ce champ est requis</string>
+    <string name="validation_error_required_selectable_section">Une option doit être sélectionnée</string>
+    <string name="validation_error_phone_incorrect_length">La longueur du numéro est invalide pour le pays sélectionné</string>
+    <string name="validation_warning_phone_invalid">Le numéro semble être invalide</string>
+    <string name="search">Recherche</string>
+</resources>

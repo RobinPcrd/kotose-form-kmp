@@ -1,0 +1,9 @@
+public final class io/github/robinpcrd/kotose/form/utils/LibPhoneNumberBackend : io/github/robinpcrd/kotose/form/utils/PhoneNumberBackend {
+	public static final field INSTANCE Lio/github/robinpcrd/kotose/form/utils/LibPhoneNumberBackend;
+	public fun countryCode (Ljava/lang/String;)I
+	public fun formatPartial (Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+	public fun isPossibleNumber (Ljava/lang/String;Ljava/lang/String;)Z
+	public fun parse (Ljava/lang/String;Ljava/lang/String;)Lio/github/robinpcrd/kotose/form/utils/PhoneParseResult;
+	public fun parsePartial (Ljava/lang/String;Ljava/lang/String;)Lio/github/robinpcrd/kotose/form/utils/PhonePartialResult;
+}
+

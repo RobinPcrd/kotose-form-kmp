@@ -1,0 +1,819 @@
+// Klib ABI Dump
+// Targets: [iosArm64, iosSimulatorArm64]
+// Rendering settings:
+// - Signature version: 2
+// - Show manifest properties: true
+// - Show declarations: true
+
+// Library unique name: <io.github.robinpcrd:kotose-form-core>
+open annotation class io.github.robinpcrd.kotose.form.dsl/FieldDslMarker : kotlin/Annotation { // io.github.robinpcrd.kotose.form.dsl/FieldDslMarker|null[0]
+    constructor <init>() // io.github.robinpcrd.kotose.form.dsl/FieldDslMarker.<init>|<init>(){}[0]
+}
+
+open annotation class io.github.robinpcrd.kotose.form.dsl/FormDslMarker : kotlin/Annotation { // io.github.robinpcrd.kotose.form.dsl/FormDslMarker|null[0]
+    constructor <init>() // io.github.robinpcrd.kotose.form.dsl/FormDslMarker.<init>|<init>(){}[0]
+}
+
+open annotation class io.github.robinpcrd.kotose.form.dsl/GroupDslMarker : kotlin/Annotation { // io.github.robinpcrd.kotose.form.dsl/GroupDslMarker|null[0]
+    constructor <init>() // io.github.robinpcrd.kotose.form.dsl/GroupDslMarker.<init>|<init>(){}[0]
+}
+
+open annotation class io.github.robinpcrd.kotose.form.dsl/SelectionGroupDslMarker : kotlin/Annotation { // io.github.robinpcrd.kotose.form.dsl/SelectionGroupDslMarker|null[0]
+    constructor <init>() // io.github.robinpcrd.kotose.form.dsl/SelectionGroupDslMarker.<init>|<init>(){}[0]
+}
+
+open annotation class io.github.robinpcrd.kotose.form/ExperimentalKotoseFormApi : kotlin/Annotation { // io.github.robinpcrd.kotose.form/ExperimentalKotoseFormApi|null[0]
+    constructor <init>() // io.github.robinpcrd.kotose.form/ExperimentalKotoseFormApi.<init>|<init>(){}[0]
+}
+
+final enum class io.github.robinpcrd.kotose.form.fields/IosDatePickerMode : kotlin/Enum<io.github.robinpcrd.kotose.form.fields/IosDatePickerMode> { // io.github.robinpcrd.kotose.form.fields/IosDatePickerMode|null[0]
+    enum entry Compact // io.github.robinpcrd.kotose.form.fields/IosDatePickerMode.Compact|null[0]
+    enum entry Wheels // io.github.robinpcrd.kotose.form.fields/IosDatePickerMode.Wheels|null[0]
+
+    final val entries // io.github.robinpcrd.kotose.form.fields/IosDatePickerMode.entries|#static{}entries[0]
+        final fun <get-entries>(): kotlin.enums/EnumEntries<io.github.robinpcrd.kotose.form.fields/IosDatePickerMode> // io.github.robinpcrd.kotose.form.fields/IosDatePickerMode.entries.<get-entries>|<get-entries>#static(){}[0]
+
+    final fun valueOf(kotlin/String): io.github.robinpcrd.kotose.form.fields/IosDatePickerMode // io.github.robinpcrd.kotose.form.fields/IosDatePickerMode.valueOf|valueOf#static(kotlin.String){}[0]
+    final fun values(): kotlin/Array<io.github.robinpcrd.kotose.form.fields/IosDatePickerMode> // io.github.robinpcrd.kotose.form.fields/IosDatePickerMode.values|values#static(){}[0]
+}
+
+final enum class io.github.robinpcrd.kotose.form.fields/SelectionPresentation : kotlin/Enum<io.github.robinpcrd.kotose.form.fields/SelectionPresentation> { // io.github.robinpcrd.kotose.form.fields/SelectionPresentation|null[0]
+    enum entry Inline // io.github.robinpcrd.kotose.form.fields/SelectionPresentation.Inline|null[0]
+    enum entry Menu // io.github.robinpcrd.kotose.form.fields/SelectionPresentation.Menu|null[0]
+    enum entry Page // io.github.robinpcrd.kotose.form.fields/SelectionPresentation.Page|null[0]
+    enum entry Segmented // io.github.robinpcrd.kotose.form.fields/SelectionPresentation.Segmented|null[0]
+    enum entry Sheet // io.github.robinpcrd.kotose.form.fields/SelectionPresentation.Sheet|null[0]
+
+    final val entries // io.github.robinpcrd.kotose.form.fields/SelectionPresentation.entries|#static{}entries[0]
+        final fun <get-entries>(): kotlin.enums/EnumEntries<io.github.robinpcrd.kotose.form.fields/SelectionPresentation> // io.github.robinpcrd.kotose.form.fields/SelectionPresentation.entries.<get-entries>|<get-entries>#static(){}[0]
+
+    final fun valueOf(kotlin/String): io.github.robinpcrd.kotose.form.fields/SelectionPresentation // io.github.robinpcrd.kotose.form.fields/SelectionPresentation.valueOf|valueOf#static(kotlin.String){}[0]
+    final fun values(): kotlin/Array<io.github.robinpcrd.kotose.form.fields/SelectionPresentation> // io.github.robinpcrd.kotose.form.fields/SelectionPresentation.values|values#static(){}[0]
+}
+
+final enum class io.github.robinpcrd.kotose.form/ValidationOption : kotlin/Enum<io.github.robinpcrd.kotose.form/ValidationOption> { // io.github.robinpcrd.kotose.form/ValidationOption|null[0]
+    enum entry ALWAYS // io.github.robinpcrd.kotose.form/ValidationOption.ALWAYS|null[0]
+    enum entry ON_DEMAND // io.github.robinpcrd.kotose.form/ValidationOption.ON_DEMAND|null[0]
+    enum entry ON_VALUE_CHANGE // io.github.robinpcrd.kotose.form/ValidationOption.ON_VALUE_CHANGE|null[0]
+
+    final val entries // io.github.robinpcrd.kotose.form/ValidationOption.entries|#static{}entries[0]
+        final fun <get-entries>(): kotlin.enums/EnumEntries<io.github.robinpcrd.kotose.form/ValidationOption> // io.github.robinpcrd.kotose.form/ValidationOption.entries.<get-entries>|<get-entries>#static(){}[0]
+    final val priority // io.github.robinpcrd.kotose.form/ValidationOption.priority|{}priority[0]
+        final fun <get-priority>(): kotlin/Int // io.github.robinpcrd.kotose.form/ValidationOption.priority.<get-priority>|<get-priority>(){}[0]
+
+    final fun isAtLeast(io.github.robinpcrd.kotose.form/ValidationOption): kotlin/Boolean // io.github.robinpcrd.kotose.form/ValidationOption.isAtLeast|isAtLeast(io.github.robinpcrd.kotose.form.ValidationOption){}[0]
+    final fun valueOf(kotlin/String): io.github.robinpcrd.kotose.form/ValidationOption // io.github.robinpcrd.kotose.form/ValidationOption.valueOf|valueOf#static(kotlin.String){}[0]
+    final fun values(): kotlin/Array<io.github.robinpcrd.kotose.form/ValidationOption> // io.github.robinpcrd.kotose.form/ValidationOption.values|values#static(){}[0]
+
+    final object Companion { // io.github.robinpcrd.kotose.form/ValidationOption.Companion|null[0]
+        final fun isAtLeast(io.github.robinpcrd.kotose.form/ValidationOption, io.github.robinpcrd.kotose.form/ValidationOption): kotlin/Boolean // io.github.robinpcrd.kotose.form/ValidationOption.Companion.isAtLeast|isAtLeast(io.github.robinpcrd.kotose.form.ValidationOption;io.github.robinpcrd.kotose.form.ValidationOption){}[0]
+    }
+}
+
+final enum class io.github.robinpcrd.kotose.form/ValidationTriggerSource : kotlin/Enum<io.github.robinpcrd.kotose.form/ValidationTriggerSource> { // io.github.robinpcrd.kotose.form/ValidationTriggerSource|null[0]
+    enum entry FORM // io.github.robinpcrd.kotose.form/ValidationTriggerSource.FORM|null[0]
+    enum entry VALUE_CHANGE // io.github.robinpcrd.kotose.form/ValidationTriggerSource.VALUE_CHANGE|null[0]
+
+    final val entries // io.github.robinpcrd.kotose.form/ValidationTriggerSource.entries|#static{}entries[0]
+        final fun <get-entries>(): kotlin.enums/EnumEntries<io.github.robinpcrd.kotose.form/ValidationTriggerSource> // io.github.robinpcrd.kotose.form/ValidationTriggerSource.entries.<get-entries>|<get-entries>#static(){}[0]
+
+    final fun valueOf(kotlin/String): io.github.robinpcrd.kotose.form/ValidationTriggerSource // io.github.robinpcrd.kotose.form/ValidationTriggerSource.valueOf|valueOf#static(kotlin.String){}[0]
+    final fun values(): kotlin/Array<io.github.robinpcrd.kotose.form/ValidationTriggerSource> // io.github.robinpcrd.kotose.form/ValidationTriggerSource.values|values#static(){}[0]
+}
+
+abstract interface <#A: kotlin/Any?> io.github.robinpcrd.kotose.form.fields/ISelectableField { // io.github.robinpcrd.kotose.form.fields/ISelectableField|null[0]
+    abstract val selectableValue // io.github.robinpcrd.kotose.form.fields/ISelectableField.selectableValue|{}selectableValue[0]
+        abstract fun <get-selectableValue>(): #A? // io.github.robinpcrd.kotose.form.fields/ISelectableField.selectableValue.<get-selectableValue>|<get-selectableValue>(){}[0]
+}
+
+abstract interface io.github.robinpcrd.kotose.form.dsl/IGroupBuilder { // io.github.robinpcrd.kotose.form.dsl/IGroupBuilder|null[0]
+    abstract val fields // io.github.robinpcrd.kotose.form.dsl/IGroupBuilder.fields|{}fields[0]
+        abstract fun <get-fields>(): kotlin.collections/MutableList<io.github.robinpcrd.kotose.form/Field<*>> // io.github.robinpcrd.kotose.form.dsl/IGroupBuilder.fields.<get-fields>|<get-fields>(){}[0]
+    abstract val form // io.github.robinpcrd.kotose.form.dsl/IGroupBuilder.form|{}form[0]
+        abstract fun <get-form>(): io.github.robinpcrd.kotose.form/Form // io.github.robinpcrd.kotose.form.dsl/IGroupBuilder.form.<get-form>|<get-form>(){}[0]
+
+    abstract var tag // io.github.robinpcrd.kotose.form.dsl/IGroupBuilder.tag|{}tag[0]
+        abstract fun <get-tag>(): kotlin/String? // io.github.robinpcrd.kotose.form.dsl/IGroupBuilder.tag.<get-tag>|<get-tag>(){}[0]
+        abstract fun <set-tag>(kotlin/String?) // io.github.robinpcrd.kotose.form.dsl/IGroupBuilder.tag.<set-tag>|<set-tag>(kotlin.String?){}[0]
+}
+
+abstract interface io.github.robinpcrd.kotose.form.fields/CustomField { // io.github.robinpcrd.kotose.form.fields/CustomField|null[0]
+    abstract val kind // io.github.robinpcrd.kotose.form.fields/CustomField.kind|{}kind[0]
+        abstract fun <get-kind>(): kotlin/String // io.github.robinpcrd.kotose.form.fields/CustomField.kind.<get-kind>|<get-kind>(){}[0]
+    open val label // io.github.robinpcrd.kotose.form.fields/CustomField.label|{}label[0]
+        open fun <get-label>(): io.github.robinpcrd.kotose.resources/StrRes? // io.github.robinpcrd.kotose.form.fields/CustomField.label.<get-label>|<get-label>(){}[0]
+}
+
+abstract interface io.github.robinpcrd.kotose.form/FormEvent { // io.github.robinpcrd.kotose.form/FormEvent|null[0]
+    abstract fun onValueChange(io.github.robinpcrd.kotose.form/Form, kotlin.collections/Map<kotlin/String, kotlin/Any?>) // io.github.robinpcrd.kotose.form/FormEvent.onValueChange|onValueChange(io.github.robinpcrd.kotose.form.Form;kotlin.collections.Map<kotlin.String,kotlin.Any?>){}[0]
+}
+
+abstract interface io.github.robinpcrd.kotose.form/RequiredValue { // io.github.robinpcrd.kotose.form/RequiredValue|null[0]
+    abstract val isEmptyForRequired // io.github.robinpcrd.kotose.form/RequiredValue.isEmptyForRequired|{}isEmptyForRequired[0]
+        abstract fun <get-isEmptyForRequired>(): kotlin/Boolean // io.github.robinpcrd.kotose.form/RequiredValue.isEmptyForRequired.<get-isEmptyForRequired>|<get-isEmptyForRequired>(){}[0]
+}
+
+sealed interface io.github.robinpcrd.kotose.form.fields/TextLineLimits { // io.github.robinpcrd.kotose.form.fields/TextLineLimits|null[0]
+    final class MultiLine : io.github.robinpcrd.kotose.form.fields/TextLineLimits { // io.github.robinpcrd.kotose.form.fields/TextLineLimits.MultiLine|null[0]
+        constructor <init>(kotlin/Int = ..., kotlin/Int = ...) // io.github.robinpcrd.kotose.form.fields/TextLineLimits.MultiLine.<init>|<init>(kotlin.Int;kotlin.Int){}[0]
+
+        final val maxLines // io.github.robinpcrd.kotose.form.fields/TextLineLimits.MultiLine.maxLines|{}maxLines[0]
+            final fun <get-maxLines>(): kotlin/Int // io.github.robinpcrd.kotose.form.fields/TextLineLimits.MultiLine.maxLines.<get-maxLines>|<get-maxLines>(){}[0]
+        final val minLines // io.github.robinpcrd.kotose.form.fields/TextLineLimits.MultiLine.minLines|{}minLines[0]
+            final fun <get-minLines>(): kotlin/Int // io.github.robinpcrd.kotose.form.fields/TextLineLimits.MultiLine.minLines.<get-minLines>|<get-minLines>(){}[0]
+
+        final fun component1(): kotlin/Int // io.github.robinpcrd.kotose.form.fields/TextLineLimits.MultiLine.component1|component1(){}[0]
+        final fun component2(): kotlin/Int // io.github.robinpcrd.kotose.form.fields/TextLineLimits.MultiLine.component2|component2(){}[0]
+        final fun copy(kotlin/Int = ..., kotlin/Int = ...): io.github.robinpcrd.kotose.form.fields/TextLineLimits.MultiLine // io.github.robinpcrd.kotose.form.fields/TextLineLimits.MultiLine.copy|copy(kotlin.Int;kotlin.Int){}[0]
+        final fun equals(kotlin/Any?): kotlin/Boolean // io.github.robinpcrd.kotose.form.fields/TextLineLimits.MultiLine.equals|equals(kotlin.Any?){}[0]
+        final fun hashCode(): kotlin/Int // io.github.robinpcrd.kotose.form.fields/TextLineLimits.MultiLine.hashCode|hashCode(){}[0]
+        final fun toString(): kotlin/String // io.github.robinpcrd.kotose.form.fields/TextLineLimits.MultiLine.toString|toString(){}[0]
+    }
+
+    final object SingleLine : io.github.robinpcrd.kotose.form.fields/TextLineLimits { // io.github.robinpcrd.kotose.form.fields/TextLineLimits.SingleLine|null[0]
+        final fun equals(kotlin/Any?): kotlin/Boolean // io.github.robinpcrd.kotose.form.fields/TextLineLimits.SingleLine.equals|equals(kotlin.Any?){}[0]
+        final fun hashCode(): kotlin/Int // io.github.robinpcrd.kotose.form.fields/TextLineLimits.SingleLine.hashCode|hashCode(){}[0]
+        final fun toString(): kotlin/String // io.github.robinpcrd.kotose.form.fields/TextLineLimits.SingleLine.toString|toString(){}[0]
+    }
+}
+
+abstract class <#A: kotlin/Any?> io.github.robinpcrd.kotose.form.dsl/SelectableGroupBuilder : io.github.robinpcrd.kotose.form.dsl/GroupBuilder { // io.github.robinpcrd.kotose.form.dsl/SelectableGroupBuilder|null[0]
+    constructor <init>() // io.github.robinpcrd.kotose.form.dsl/SelectableGroupBuilder.<init>|<init>(){}[0]
+
+    final var iosPresentation // io.github.robinpcrd.kotose.form.dsl/SelectableGroupBuilder.iosPresentation|{}iosPresentation[0]
+        final fun <get-iosPresentation>(): io.github.robinpcrd.kotose.form.fields/SelectionPresentation? // io.github.robinpcrd.kotose.form.dsl/SelectableGroupBuilder.iosPresentation.<get-iosPresentation>|<get-iosPresentation>(){}[0]
+        final fun <set-iosPresentation>(io.github.robinpcrd.kotose.form.fields/SelectionPresentation?) // io.github.robinpcrd.kotose.form.dsl/SelectableGroupBuilder.iosPresentation.<set-iosPresentation>|<set-iosPresentation>(io.github.robinpcrd.kotose.form.fields.SelectionPresentation?){}[0]
+    final var presentation // io.github.robinpcrd.kotose.form.dsl/SelectableGroupBuilder.presentation|{}presentation[0]
+        final fun <get-presentation>(): io.github.robinpcrd.kotose.form.fields/SelectionPresentation // io.github.robinpcrd.kotose.form.dsl/SelectableGroupBuilder.presentation.<get-presentation>|<get-presentation>(){}[0]
+        final fun <set-presentation>(io.github.robinpcrd.kotose.form.fields/SelectionPresentation) // io.github.robinpcrd.kotose.form.dsl/SelectableGroupBuilder.presentation.<set-presentation>|<set-presentation>(io.github.robinpcrd.kotose.form.fields.SelectionPresentation){}[0]
+    final var title // io.github.robinpcrd.kotose.form.dsl/SelectableGroupBuilder.title|{}title[0]
+        final fun <get-title>(): io.github.robinpcrd.kotose.resources/StrRes? // io.github.robinpcrd.kotose.form.dsl/SelectableGroupBuilder.title.<get-title>|<get-title>(){}[0]
+        final fun <set-title>(io.github.robinpcrd.kotose.resources/StrRes?) // io.github.robinpcrd.kotose.form.dsl/SelectableGroupBuilder.title.<set-title>|<set-title>(io.github.robinpcrd.kotose.resources.StrRes?){}[0]
+}
+
+abstract class <#A: kotlin/Any?> io.github.robinpcrd.kotose.form.fields.validation/BaseValidationErrorField : io.github.robinpcrd.kotose.form/Field<#A> { // io.github.robinpcrd.kotose.form.fields.validation/BaseValidationErrorField|null[0]
+    constructor <init>(kotlin/String?, kotlin/String? = ...) // io.github.robinpcrd.kotose.form.fields.validation/BaseValidationErrorField.<init>|<init>(kotlin.String?;kotlin.String?){}[0]
+
+    final val elementKey // io.github.robinpcrd.kotose.form.fields.validation/BaseValidationErrorField.elementKey|{}elementKey[0]
+        final fun <get-elementKey>(): kotlin/String? // io.github.robinpcrd.kotose.form.fields.validation/BaseValidationErrorField.elementKey.<get-elementKey>|<get-elementKey>(){}[0]
+}
+
+abstract class <#A: kotlin/Any?> io.github.robinpcrd.kotose.form/Field : io.github.robinpcrd.kotose.form/Element<io.github.robinpcrd.kotose.form/ValidationRule.Field<#A>>, io.github.robinpcrd.kotose.form/FieldEvent { // io.github.robinpcrd.kotose.form/Field|null[0]
+    constructor <init>(kotlin/String?) // io.github.robinpcrd.kotose.form/Field.<init>|<init>(kotlin.String?){}[0]
+
+    final val indexInGroup // io.github.robinpcrd.kotose.form/Field.indexInGroup|{}indexInGroup[0]
+        final fun <get-indexInGroup>(): kotlin/Int // io.github.robinpcrd.kotose.form/Field.indexInGroup.<get-indexInGroup>|<get-indexInGroup>(){}[0]
+    final val isErrorField // io.github.robinpcrd.kotose.form/Field.isErrorField|{}isErrorField[0]
+        final fun <get-isErrorField>(): kotlin/Boolean // io.github.robinpcrd.kotose.form/Field.isErrorField.<get-isErrorField>|<get-isErrorField>(){}[0]
+    final val parentErrorState // io.github.robinpcrd.kotose.form/Field.parentErrorState|{}parentErrorState[0]
+        final fun <get-parentErrorState>(): androidx.compose.runtime/State<kotlin.collections/List<io.github.robinpcrd.kotose.form/ValidationError>> // io.github.robinpcrd.kotose.form/Field.parentErrorState.<get-parentErrorState>|<get-parentErrorState>(){}[0]
+    final val parentErrors // io.github.robinpcrd.kotose.form/Field.parentErrors|{}parentErrors[0]
+        final fun <get-parentErrors>(): kotlin.collections/List<io.github.robinpcrd.kotose.form/ValidationError> // io.github.robinpcrd.kotose.form/Field.parentErrors.<get-parentErrors>|<get-parentErrors>(){}[0]
+    final val valueState // io.github.robinpcrd.kotose.form/Field.valueState|{}valueState[0]
+        final fun <get-valueState>(): androidx.compose.runtime/State<#A?> // io.github.robinpcrd.kotose.form/Field.valueState.<get-valueState>|<get-valueState>(){}[0]
+    open val submittedValue // io.github.robinpcrd.kotose.form/Field.submittedValue|{}submittedValue[0]
+        open fun <get-submittedValue>(): kotlin/Any? // io.github.robinpcrd.kotose.form/Field.submittedValue.<get-submittedValue>|<get-submittedValue>(){}[0]
+
+    final var onValueChange // io.github.robinpcrd.kotose.form/Field.onValueChange|{}onValueChange[0]
+        final fun <get-onValueChange>(): kotlin/Function1<#A?, kotlin/Unit> // io.github.robinpcrd.kotose.form/Field.onValueChange.<get-onValueChange>|<get-onValueChange>(){}[0]
+        final fun <set-onValueChange>(kotlin/Function1<#A?, kotlin/Unit>) // io.github.robinpcrd.kotose.form/Field.onValueChange.<set-onValueChange>|<set-onValueChange>(kotlin.Function1<1:0?,kotlin.Unit>){}[0]
+    final var parent // io.github.robinpcrd.kotose.form/Field.parent|{}parent[0]
+        final fun <get-parent>(): io.github.robinpcrd.kotose.form/Group? // io.github.robinpcrd.kotose.form/Field.parent.<get-parent>|<get-parent>(){}[0]
+    final var value // io.github.robinpcrd.kotose.form/Field.value|{}value[0]
+        final fun <get-value>(): #A? // io.github.robinpcrd.kotose.form/Field.value.<get-value>|<get-value>(){}[0]
+        final fun <set-value>(#A?) // io.github.robinpcrd.kotose.form/Field.value.<set-value>|<set-value>(1:0?){}[0]
+
+    abstract fun setBaseValue(kotlin/Any?) // io.github.robinpcrd.kotose.form/Field.setBaseValue|setBaseValue(kotlin.Any?){}[0]
+    final fun remove(kotlin/Boolean = ...) // io.github.robinpcrd.kotose.form/Field.remove|remove(kotlin.Boolean){}[0]
+    open fun evaluateEnabled() // io.github.robinpcrd.kotose.form/Field.evaluateEnabled|evaluateEnabled(){}[0]
+    open fun evaluateVisibility() // io.github.robinpcrd.kotose.form/Field.evaluateVisibility|evaluateVisibility(){}[0]
+    open fun onParentValidationChanged(kotlin.collections/List<io.github.robinpcrd.kotose.form/ValidationError>) // io.github.robinpcrd.kotose.form/Field.onParentValidationChanged|onParentValidationChanged(kotlin.collections.List<io.github.robinpcrd.kotose.form.ValidationError>){}[0]
+    open fun onValueChanged() // io.github.robinpcrd.kotose.form/Field.onValueChanged|onValueChanged(){}[0]
+    open fun validate(io.github.robinpcrd.kotose.form/ValidationTriggerSource, kotlin/Boolean): kotlinx.collections.immutable/ImmutableList<io.github.robinpcrd.kotose.form/ValidationError> // io.github.robinpcrd.kotose.form/Field.validate|validate(io.github.robinpcrd.kotose.form.ValidationTriggerSource;kotlin.Boolean){}[0]
+}
+
+abstract class <#A: kotlin/Any?> io.github.robinpcrd.kotose.form/FocusableField : io.github.robinpcrd.kotose.form/Field<#A> { // io.github.robinpcrd.kotose.form/FocusableField|null[0]
+    constructor <init>(kotlin/String?) // io.github.robinpcrd.kotose.form/FocusableField.<init>|<init>(kotlin.String?){}[0]
+}
+
+abstract class io.github.robinpcrd.kotose.form/ValidationError { // io.github.robinpcrd.kotose.form/ValidationError|null[0]
+    constructor <init>() // io.github.robinpcrd.kotose.form/ValidationError.<init>|<init>(){}[0]
+
+    abstract val error // io.github.robinpcrd.kotose.form/ValidationError.error|{}error[0]
+        abstract fun <get-error>(): io.github.robinpcrd.kotose.resources/StrRes // io.github.robinpcrd.kotose.form/ValidationError.error.<get-error>|<get-error>(){}[0]
+    open val asWarning // io.github.robinpcrd.kotose.form/ValidationError.asWarning|{}asWarning[0]
+        open fun <get-asWarning>(): kotlin/Boolean // io.github.robinpcrd.kotose.form/ValidationError.asWarning.<get-asWarning>|<get-asWarning>(){}[0]
+    open val isSilent // io.github.robinpcrd.kotose.form/ValidationError.isSilent|{}isSilent[0]
+        open fun <get-isSilent>(): kotlin/Boolean // io.github.robinpcrd.kotose.form/ValidationError.isSilent.<get-isSilent>|<get-isSilent>(){}[0]
+
+    final object PhoneIncorrectLength : io.github.robinpcrd.kotose.form/ValidationError { // io.github.robinpcrd.kotose.form/ValidationError.PhoneIncorrectLength|null[0]
+        final val error // io.github.robinpcrd.kotose.form/ValidationError.PhoneIncorrectLength.error|{}error[0]
+            final fun <get-error>(): io.github.robinpcrd.kotose.resources/StrRes // io.github.robinpcrd.kotose.form/ValidationError.PhoneIncorrectLength.error.<get-error>|<get-error>(){}[0]
+    }
+
+    final object PhoneIsValid : io.github.robinpcrd.kotose.form/ValidationError { // io.github.robinpcrd.kotose.form/ValidationError.PhoneIsValid|null[0]
+        final val asWarning // io.github.robinpcrd.kotose.form/ValidationError.PhoneIsValid.asWarning|{}asWarning[0]
+            final fun <get-asWarning>(): kotlin/Boolean // io.github.robinpcrd.kotose.form/ValidationError.PhoneIsValid.asWarning.<get-asWarning>|<get-asWarning>(){}[0]
+
+        final var error // io.github.robinpcrd.kotose.form/ValidationError.PhoneIsValid.error|{}error[0]
+            final fun <get-error>(): io.github.robinpcrd.kotose.resources/StrRes // io.github.robinpcrd.kotose.form/ValidationError.PhoneIsValid.error.<get-error>|<get-error>(){}[0]
+            final fun <set-error>(io.github.robinpcrd.kotose.resources/StrRes) // io.github.robinpcrd.kotose.form/ValidationError.PhoneIsValid.error.<set-error>|<set-error>(io.github.robinpcrd.kotose.resources.StrRes){}[0]
+    }
+
+    final object Required : io.github.robinpcrd.kotose.form/ValidationError { // io.github.robinpcrd.kotose.form/ValidationError.Required|null[0]
+        final var error // io.github.robinpcrd.kotose.form/ValidationError.Required.error|{}error[0]
+            final fun <get-error>(): io.github.robinpcrd.kotose.resources/StrRes // io.github.robinpcrd.kotose.form/ValidationError.Required.error.<get-error>|<get-error>(){}[0]
+            final fun <set-error>(io.github.robinpcrd.kotose.resources/StrRes) // io.github.robinpcrd.kotose.form/ValidationError.Required.error.<set-error>|<set-error>(io.github.robinpcrd.kotose.resources.StrRes){}[0]
+    }
+
+    final object RequiredSelectableSection : io.github.robinpcrd.kotose.form/ValidationError { // io.github.robinpcrd.kotose.form/ValidationError.RequiredSelectableSection|null[0]
+        final var error // io.github.robinpcrd.kotose.form/ValidationError.RequiredSelectableSection.error|{}error[0]
+            final fun <get-error>(): io.github.robinpcrd.kotose.resources/StrRes // io.github.robinpcrd.kotose.form/ValidationError.RequiredSelectableSection.error.<get-error>|<get-error>(){}[0]
+            final fun <set-error>(io.github.robinpcrd.kotose.resources/StrRes) // io.github.robinpcrd.kotose.form/ValidationError.RequiredSelectableSection.error.<set-error>|<set-error>(io.github.robinpcrd.kotose.resources.StrRes){}[0]
+    }
+}
+
+final class <#A: kotlin/Any?> io.github.robinpcrd.kotose.form.dsl/MultipleSelectionGroupBuilder : io.github.robinpcrd.kotose.form.dsl/SelectableGroupBuilder<#A> { // io.github.robinpcrd.kotose.form.dsl/MultipleSelectionGroupBuilder|null[0]
+    constructor <init>() // io.github.robinpcrd.kotose.form.dsl/MultipleSelectionGroupBuilder.<init>|<init>(){}[0]
+
+    final fun build(): io.github.robinpcrd.kotose.form.groups/SelectionGroup.Multiple<#A> // io.github.robinpcrd.kotose.form.dsl/MultipleSelectionGroupBuilder.build|build(){}[0]
+}
+
+final class <#A: kotlin/Any?> io.github.robinpcrd.kotose.form.dsl/SingleSelectionGroupBuilder : io.github.robinpcrd.kotose.form.dsl/SelectableGroupBuilder<#A> { // io.github.robinpcrd.kotose.form.dsl/SingleSelectionGroupBuilder|null[0]
+    constructor <init>() // io.github.robinpcrd.kotose.form.dsl/SingleSelectionGroupBuilder.<init>|<init>(){}[0]
+
+    final var enableDeselection // io.github.robinpcrd.kotose.form.dsl/SingleSelectionGroupBuilder.enableDeselection|{}enableDeselection[0]
+        final fun <get-enableDeselection>(): kotlin/Boolean // io.github.robinpcrd.kotose.form.dsl/SingleSelectionGroupBuilder.enableDeselection.<get-enableDeselection>|<get-enableDeselection>(){}[0]
+        final fun <set-enableDeselection>(kotlin/Boolean) // io.github.robinpcrd.kotose.form.dsl/SingleSelectionGroupBuilder.enableDeselection.<set-enableDeselection>|<set-enableDeselection>(kotlin.Boolean){}[0]
+    final var isRequired // io.github.robinpcrd.kotose.form.dsl/SingleSelectionGroupBuilder.isRequired|{}isRequired[0]
+        final fun <get-isRequired>(): kotlin/Boolean // io.github.robinpcrd.kotose.form.dsl/SingleSelectionGroupBuilder.isRequired.<get-isRequired>|<get-isRequired>(){}[0]
+        final fun <set-isRequired>(kotlin/Boolean) // io.github.robinpcrd.kotose.form.dsl/SingleSelectionGroupBuilder.isRequired.<set-isRequired>|<set-isRequired>(kotlin.Boolean){}[0]
+
+    final fun build(): io.github.robinpcrd.kotose.form.groups/SelectionGroup.Single<#A> // io.github.robinpcrd.kotose.form.dsl/SingleSelectionGroupBuilder.build|build(){}[0]
+}
+
+final class <#A: kotlin/Any?> io.github.robinpcrd.kotose.form.fields/DropdownOption { // io.github.robinpcrd.kotose.form.fields/DropdownOption|null[0]
+    constructor <init>(#A, io.github.robinpcrd.kotose.resources/StrRes, kotlin/String = ...) // io.github.robinpcrd.kotose.form.fields/DropdownOption.<init>|<init>(1:0;io.github.robinpcrd.kotose.resources.StrRes;kotlin.String){}[0]
+
+    final val id // io.github.robinpcrd.kotose.form.fields/DropdownOption.id|{}id[0]
+        final fun <get-id>(): kotlin/String // io.github.robinpcrd.kotose.form.fields/DropdownOption.id.<get-id>|<get-id>(){}[0]
+    final val label // io.github.robinpcrd.kotose.form.fields/DropdownOption.label|{}label[0]
+        final fun <get-label>(): io.github.robinpcrd.kotose.resources/StrRes // io.github.robinpcrd.kotose.form.fields/DropdownOption.label.<get-label>|<get-label>(){}[0]
+    final val value // io.github.robinpcrd.kotose.form.fields/DropdownOption.value|{}value[0]
+        final fun <get-value>(): #A // io.github.robinpcrd.kotose.form.fields/DropdownOption.value.<get-value>|<get-value>(){}[0]
+
+    final fun component1(): #A // io.github.robinpcrd.kotose.form.fields/DropdownOption.component1|component1(){}[0]
+    final fun component2(): io.github.robinpcrd.kotose.resources/StrRes // io.github.robinpcrd.kotose.form.fields/DropdownOption.component2|component2(){}[0]
+    final fun component3(): kotlin/String // io.github.robinpcrd.kotose.form.fields/DropdownOption.component3|component3(){}[0]
+    final fun copy(#A = ..., io.github.robinpcrd.kotose.resources/StrRes = ..., kotlin/String = ...): io.github.robinpcrd.kotose.form.fields/DropdownOption<#A> // io.github.robinpcrd.kotose.form.fields/DropdownOption.copy|copy(1:0;io.github.robinpcrd.kotose.resources.StrRes;kotlin.String){}[0]
+    final fun equals(kotlin/Any?): kotlin/Boolean // io.github.robinpcrd.kotose.form.fields/DropdownOption.equals|equals(kotlin.Any?){}[0]
+    final fun hashCode(): kotlin/Int // io.github.robinpcrd.kotose.form.fields/DropdownOption.hashCode|hashCode(){}[0]
+    final fun toString(): kotlin/String // io.github.robinpcrd.kotose.form.fields/DropdownOption.toString|toString(){}[0]
+}
+
+final class <#A: kotlin/Any?> io.github.robinpcrd.kotose.form/RequiredFieldRule : io.github.robinpcrd.kotose.form/ValidationRule.Field<#A> { // io.github.robinpcrd.kotose.form/RequiredFieldRule|null[0]
+    constructor <init>() // io.github.robinpcrd.kotose.form/RequiredFieldRule.<init>|<init>(){}[0]
+
+    final fun isValid(#A?): io.github.robinpcrd.kotose.form/ValidationError? // io.github.robinpcrd.kotose.form/RequiredFieldRule.isValid|isValid(1:0?){}[0]
+}
+
+final class io.github.robinpcrd.kotose.form.dsl/FormBuilder { // io.github.robinpcrd.kotose.form.dsl/FormBuilder|null[0]
+    constructor <init>() // io.github.robinpcrd.kotose.form.dsl/FormBuilder.<init>|<init>(){}[0]
+
+    final fun (io.github.robinpcrd.kotose.form/Group).unaryPlus() // io.github.robinpcrd.kotose.form.dsl/FormBuilder.unaryPlus|unaryPlus@io.github.robinpcrd.kotose.form.Group(){}[0]
+    final fun (kotlin.collections/Collection<io.github.robinpcrd.kotose.form/Group>).unaryPlus() // io.github.robinpcrd.kotose.form.dsl/FormBuilder.unaryPlus|unaryPlus@kotlin.collections.Collection<io.github.robinpcrd.kotose.form.Group>(){}[0]
+    final fun (kotlin.collections/Iterable<io.github.robinpcrd.kotose.form/Group>).unaryPlus() // io.github.robinpcrd.kotose.form.dsl/FormBuilder.unaryPlus|unaryPlus@kotlin.collections.Iterable<io.github.robinpcrd.kotose.form.Group>(){}[0]
+    final fun (kotlin.sequences/Sequence<io.github.robinpcrd.kotose.form/Group>).unaryPlus() // io.github.robinpcrd.kotose.form.dsl/FormBuilder.unaryPlus|unaryPlus@kotlin.sequences.Sequence<io.github.robinpcrd.kotose.form.Group>(){}[0]
+    final fun build(): io.github.robinpcrd.kotose.form/Form // io.github.robinpcrd.kotose.form.dsl/FormBuilder.build|build(){}[0]
+}
+
+final class io.github.robinpcrd.kotose.form/Condition { // io.github.robinpcrd.kotose.form/Condition|null[0]
+    constructor <init>(kotlin/Array<out kotlin/String>..., kotlin/Function1<io.github.robinpcrd.kotose.form/Form, kotlin/Boolean>) // io.github.robinpcrd.kotose.form/Condition.<init>|<init>(kotlin.Array<out|kotlin.String>...;kotlin.Function1<io.github.robinpcrd.kotose.form.Form,kotlin.Boolean>){}[0]
+    constructor <init>(kotlin/Boolean) // io.github.robinpcrd.kotose.form/Condition.<init>|<init>(kotlin.Boolean){}[0]
+    constructor <init>(kotlinx.collections.immutable/ImmutableSet<kotlin/String> = ..., kotlin/Function1<io.github.robinpcrd.kotose.form/Form, kotlin/Boolean> = ...) // io.github.robinpcrd.kotose.form/Condition.<init>|<init>(kotlinx.collections.immutable.ImmutableSet<kotlin.String>;kotlin.Function1<io.github.robinpcrd.kotose.form.Form,kotlin.Boolean>){}[0]
+
+    final val condition // io.github.robinpcrd.kotose.form/Condition.condition|{}condition[0]
+        final fun <get-condition>(): kotlin/Function1<io.github.robinpcrd.kotose.form/Form, kotlin/Boolean> // io.github.robinpcrd.kotose.form/Condition.condition.<get-condition>|<get-condition>(){}[0]
+    final val tags // io.github.robinpcrd.kotose.form/Condition.tags|{}tags[0]
+        final fun <get-tags>(): kotlinx.collections.immutable/ImmutableSet<kotlin/String> // io.github.robinpcrd.kotose.form/Condition.tags.<get-tags>|<get-tags>(){}[0]
+
+    final fun component1(): kotlinx.collections.immutable/ImmutableSet<kotlin/String> // io.github.robinpcrd.kotose.form/Condition.component1|component1(){}[0]
+    final fun component2(): kotlin/Function1<io.github.robinpcrd.kotose.form/Form, kotlin/Boolean> // io.github.robinpcrd.kotose.form/Condition.component2|component2(){}[0]
+    final fun copy(kotlinx.collections.immutable/ImmutableSet<kotlin/String> = ..., kotlin/Function1<io.github.robinpcrd.kotose.form/Form, kotlin/Boolean> = ...): io.github.robinpcrd.kotose.form/Condition // io.github.robinpcrd.kotose.form/Condition.copy|copy(kotlinx.collections.immutable.ImmutableSet<kotlin.String>;kotlin.Function1<io.github.robinpcrd.kotose.form.Form,kotlin.Boolean>){}[0]
+    final fun equals(kotlin/Any?): kotlin/Boolean // io.github.robinpcrd.kotose.form/Condition.equals|equals(kotlin.Any?){}[0]
+    final fun hashCode(): kotlin/Int // io.github.robinpcrd.kotose.form/Condition.hashCode|hashCode(){}[0]
+    final fun toString(): kotlin/String // io.github.robinpcrd.kotose.form/Condition.toString|toString(){}[0]
+
+    final object Companion { // io.github.robinpcrd.kotose.form/Condition.Companion|null[0]
+        final val False // io.github.robinpcrd.kotose.form/Condition.Companion.False|{}False[0]
+            final fun <get-False>(): io.github.robinpcrd.kotose.form/Condition // io.github.robinpcrd.kotose.form/Condition.Companion.False.<get-False>|<get-False>(){}[0]
+        final val True // io.github.robinpcrd.kotose.form/Condition.Companion.True|{}True[0]
+            final fun <get-True>(): io.github.robinpcrd.kotose.form/Condition // io.github.robinpcrd.kotose.form/Condition.Companion.True.<get-True>|<get-True>(){}[0]
+    }
+}
+
+final class io.github.robinpcrd.kotose.form/CustomCondition { // io.github.robinpcrd.kotose.form/CustomCondition|null[0]
+    constructor <init>(kotlin/Array<out kotlin/String>..., kotlin/Function2<io.github.robinpcrd.kotose.form/Element<*>, io.github.robinpcrd.kotose.form/Form, kotlin/Unit>) // io.github.robinpcrd.kotose.form/CustomCondition.<init>|<init>(kotlin.Array<out|kotlin.String>...;kotlin.Function2<io.github.robinpcrd.kotose.form.Element<*>,io.github.robinpcrd.kotose.form.Form,kotlin.Unit>){}[0]
+    constructor <init>(kotlinx.collections.immutable/ImmutableSet<kotlin/String> = ..., kotlin/Function2<io.github.robinpcrd.kotose.form/Element<*>, io.github.robinpcrd.kotose.form/Form, kotlin/Unit>) // io.github.robinpcrd.kotose.form/CustomCondition.<init>|<init>(kotlinx.collections.immutable.ImmutableSet<kotlin.String>;kotlin.Function2<io.github.robinpcrd.kotose.form.Element<*>,io.github.robinpcrd.kotose.form.Form,kotlin.Unit>){}[0]
+
+    final val onEval // io.github.robinpcrd.kotose.form/CustomCondition.onEval|{}onEval[0]
+        final fun <get-onEval>(): kotlin/Function2<io.github.robinpcrd.kotose.form/Element<*>, io.github.robinpcrd.kotose.form/Form, kotlin/Unit> // io.github.robinpcrd.kotose.form/CustomCondition.onEval.<get-onEval>|<get-onEval>(){}[0]
+    final val tags // io.github.robinpcrd.kotose.form/CustomCondition.tags|{}tags[0]
+        final fun <get-tags>(): kotlinx.collections.immutable/ImmutableSet<kotlin/String> // io.github.robinpcrd.kotose.form/CustomCondition.tags.<get-tags>|<get-tags>(){}[0]
+}
+
+final class io.github.robinpcrd.kotose.form/Form { // io.github.robinpcrd.kotose.form/Form|null[0]
+    constructor <init>() // io.github.robinpcrd.kotose.form/Form.<init>|<init>(){}[0]
+
+    final val customConditionMap // io.github.robinpcrd.kotose.form/Form.customConditionMap|{}customConditionMap[0]
+        final fun <get-customConditionMap>(): kotlinx.collections.immutable/ImmutableMap<kotlin/String, kotlin.collections/List<io.github.robinpcrd.kotose.form/Element<*>>> // io.github.robinpcrd.kotose.form/Form.customConditionMap.<get-customConditionMap>|<get-customConditionMap>(){}[0]
+    final val dismissKeyboardEvent // io.github.robinpcrd.kotose.form/Form.dismissKeyboardEvent|{}dismissKeyboardEvent[0]
+        final fun <get-dismissKeyboardEvent>(): androidx.compose.runtime/State<io.github.robinpcrd.kotose.form/Form.DismissKeyboardEvent?> // io.github.robinpcrd.kotose.form/Form.dismissKeyboardEvent.<get-dismissKeyboardEvent>|<get-dismissKeyboardEvent>(){}[0]
+    final val enabledMap // io.github.robinpcrd.kotose.form/Form.enabledMap|{}enabledMap[0]
+        final fun <get-enabledMap>(): kotlinx.collections.immutable/ImmutableMap<kotlin/String, kotlin.collections/List<io.github.robinpcrd.kotose.form/Element<*>>> // io.github.robinpcrd.kotose.form/Form.enabledMap.<get-enabledMap>|<get-enabledMap>(){}[0]
+    final val errorScrollIndex // io.github.robinpcrd.kotose.form/Form.errorScrollIndex|{}errorScrollIndex[0]
+        final fun <get-errorScrollIndex>(): androidx.compose.runtime/State<kotlin/Int> // io.github.robinpcrd.kotose.form/Form.errorScrollIndex.<get-errorScrollIndex>|<get-errorScrollIndex>(){}[0]
+    final val events // io.github.robinpcrd.kotose.form/Form.events|{}events[0]
+        final fun <get-events>(): kotlinx.coroutines.flow/SharedFlow<io.github.robinpcrd.kotose.form/SealedFormEvents> // io.github.robinpcrd.kotose.form/Form.events.<get-events>|<get-events>(){}[0]
+    final val fields // io.github.robinpcrd.kotose.form/Form.fields|{}fields[0]
+        final fun <get-fields>(): androidx.compose.runtime/State<kotlinx.collections.immutable/ImmutableList<io.github.robinpcrd.kotose.form/Field<*>>> // io.github.robinpcrd.kotose.form/Form.fields.<get-fields>|<get-fields>(){}[0]
+    final val groups // io.github.robinpcrd.kotose.form/Form.groups|{}groups[0]
+        final fun <get-groups>(): kotlin.collections/List<io.github.robinpcrd.kotose.form/Group> // io.github.robinpcrd.kotose.form/Form.groups.<get-groups>|<get-groups>(){}[0]
+    final val key // io.github.robinpcrd.kotose.form/Form.key|{}key[0]
+        final fun <get-key>(): kotlin/String // io.github.robinpcrd.kotose.form/Form.key.<get-key>|<get-key>(){}[0]
+    final val navigationRequest // io.github.robinpcrd.kotose.form/Form.navigationRequest|{}navigationRequest[0]
+        final fun <get-navigationRequest>(): androidx.compose.runtime/State<io.github.robinpcrd.kotose.form/FormNavigationRequest?> // io.github.robinpcrd.kotose.form/Form.navigationRequest.<get-navigationRequest>|<get-navigationRequest>(){}[0]
+    final val visibilityMap // io.github.robinpcrd.kotose.form/Form.visibilityMap|{}visibilityMap[0]
+        final fun <get-visibilityMap>(): kotlinx.collections.immutable/ImmutableMap<kotlin/String, kotlin.collections/List<io.github.robinpcrd.kotose.form/Element<*>>> // io.github.robinpcrd.kotose.form/Form.visibilityMap.<get-visibilityMap>|<get-visibilityMap>(){}[0]
+
+    final var currentFocus // io.github.robinpcrd.kotose.form/Form.currentFocus|{}currentFocus[0]
+        final fun <get-currentFocus>(): io.github.robinpcrd.kotose.form/FocusableField<*>? // io.github.robinpcrd.kotose.form/Form.currentFocus.<get-currentFocus>|<get-currentFocus>(){}[0]
+    final var onValueChange // io.github.robinpcrd.kotose.form/Form.onValueChange|{}onValueChange[0]
+        final fun <get-onValueChange>(): kotlin/Function1<kotlin.collections/Map<kotlin/String, kotlin/Any?>, kotlin/Unit>? // io.github.robinpcrd.kotose.form/Form.onValueChange.<get-onValueChange>|<get-onValueChange>(){}[0]
+        final fun <set-onValueChange>(kotlin/Function1<kotlin.collections/Map<kotlin/String, kotlin/Any?>, kotlin/Unit>?) // io.github.robinpcrd.kotose.form/Form.onValueChange.<set-onValueChange>|<set-onValueChange>(kotlin.Function1<kotlin.collections.Map<kotlin.String,kotlin.Any?>,kotlin.Unit>?){}[0]
+
+    final fun <#A1: kotlin/Any?> fieldValue(kotlin/String): #A1? // io.github.robinpcrd.kotose.form/Form.fieldValue|fieldValue(kotlin.String){0§<kotlin.Any?>}[0]
+    final fun add(io.github.robinpcrd.kotose.form/Group, kotlin/Boolean = ...) // io.github.robinpcrd.kotose.form/Form.add|add(io.github.robinpcrd.kotose.form.Group;kotlin.Boolean){}[0]
+    final fun add(kotlin/Int = ..., io.github.robinpcrd.kotose.form/Group, kotlin/Boolean = ...) // io.github.robinpcrd.kotose.form/Form.add|add(kotlin.Int;io.github.robinpcrd.kotose.form.Group;kotlin.Boolean){}[0]
+    final fun addAll(kotlin.collections/Collection<io.github.robinpcrd.kotose.form/Group>, kotlin/Boolean = ...) // io.github.robinpcrd.kotose.form/Form.addAll|addAll(kotlin.collections.Collection<io.github.robinpcrd.kotose.form.Group>;kotlin.Boolean){}[0]
+    final fun addAll(kotlin/Int = ..., kotlin.collections/Collection<io.github.robinpcrd.kotose.form/Group>, kotlin/Boolean = ...) // io.github.robinpcrd.kotose.form/Form.addAll|addAll(kotlin.Int;kotlin.collections.Collection<io.github.robinpcrd.kotose.form.Group>;kotlin.Boolean){}[0]
+    final fun addListener(io.github.robinpcrd.kotose.form/FormEvent) // io.github.robinpcrd.kotose.form/Form.addListener|addListener(io.github.robinpcrd.kotose.form.FormEvent){}[0]
+    final fun allNonNullValues(kotlin/Boolean = ...): kotlin.collections/Map<kotlin/String, kotlin/Any> // io.github.robinpcrd.kotose.form/Form.allNonNullValues|allNonNullValues(kotlin.Boolean){}[0]
+    final fun allValues(kotlin/Boolean = ...): kotlin.collections/Map<kotlin/String, kotlin/Any?> // io.github.robinpcrd.kotose.form/Form.allValues|allValues(kotlin.Boolean){}[0]
+    final fun canFocus(io.github.robinpcrd.kotose.form/FocusableField<*>): kotlin/Boolean // io.github.robinpcrd.kotose.form/Form.canFocus|canFocus(io.github.robinpcrd.kotose.form.FocusableField<*>){}[0]
+    final fun completeNavigation(kotlin/Long): kotlin/Boolean // io.github.robinpcrd.kotose.form/Form.completeNavigation|completeNavigation(kotlin.Long){}[0]
+    final fun focusNext(io.github.robinpcrd.kotose.form/Field<*>) // io.github.robinpcrd.kotose.form/Form.focusNext|focusNext(io.github.robinpcrd.kotose.form.Field<*>){}[0]
+    final fun getFieldByTag(kotlin/String): io.github.robinpcrd.kotose.form/Field<*>? // io.github.robinpcrd.kotose.form/Form.getFieldByTag|getFieldByTag(kotlin.String){}[0]
+    final fun getFirstErrorIndex(): kotlin/Int // io.github.robinpcrd.kotose.form/Form.getFirstErrorIndex|getFirstErrorIndex(){}[0]
+    final fun getGroupByTag(kotlin/String): io.github.robinpcrd.kotose.form/Group? // io.github.robinpcrd.kotose.form/Form.getGroupByTag|getGroupByTag(kotlin.String){}[0]
+    final fun hasScrollToError() // io.github.robinpcrd.kotose.form/Form.hasScrollToError|hasScrollToError(){}[0]
+    final fun navigationIndex(kotlin/Long): kotlin/Int // io.github.robinpcrd.kotose.form/Form.navigationIndex|navigationIndex(kotlin.Long){}[0]
+    final fun nextFocusableField(io.github.robinpcrd.kotose.form/Field<*>): io.github.robinpcrd.kotose.form/FocusableField<*>? // io.github.robinpcrd.kotose.form/Form.nextFocusableField|nextFocusableField(io.github.robinpcrd.kotose.form.Field<*>){}[0]
+    final fun nextFocusableFieldState(io.github.robinpcrd.kotose.form/Field<*>): androidx.compose.runtime/State<io.github.robinpcrd.kotose.form/FocusableField<*>?> // io.github.robinpcrd.kotose.form/Form.nextFocusableFieldState|nextFocusableFieldState(io.github.robinpcrd.kotose.form.Field<*>){}[0]
+    final fun onFocusChanged(io.github.robinpcrd.kotose.form/FocusableField<*>, kotlin/Boolean) // io.github.robinpcrd.kotose.form/Form.onFocusChanged|onFocusChanged(io.github.robinpcrd.kotose.form.FocusableField<*>;kotlin.Boolean){}[0]
+    final fun onKeyboardDismiss() // io.github.robinpcrd.kotose.form/Form.onKeyboardDismiss|onKeyboardDismiss(){}[0]
+    final fun previousFocusableField(io.github.robinpcrd.kotose.form/Field<*>): io.github.robinpcrd.kotose.form/FocusableField<*>? // io.github.robinpcrd.kotose.form/Form.previousFocusableField|previousFocusableField(io.github.robinpcrd.kotose.form.Field<*>){}[0]
+    final fun reload() // io.github.robinpcrd.kotose.form/Form.reload|reload(){}[0]
+    final fun remove(io.github.robinpcrd.kotose.form/Group, kotlin/Boolean = ...) // io.github.robinpcrd.kotose.form/Form.remove|remove(io.github.robinpcrd.kotose.form.Group;kotlin.Boolean){}[0]
+    final fun removeAll(kotlin.collections/Collection<io.github.robinpcrd.kotose.form/Group>, kotlin/Boolean = ...) // io.github.robinpcrd.kotose.form/Form.removeAll|removeAll(kotlin.collections.Collection<io.github.robinpcrd.kotose.form.Group>;kotlin.Boolean){}[0]
+    final fun removeAllListeners() // io.github.robinpcrd.kotose.form/Form.removeAllListeners|removeAllListeners(){}[0]
+    final fun removeAt(kotlin/Int, kotlin/Boolean = ...) // io.github.robinpcrd.kotose.form/Form.removeAt|removeAt(kotlin.Int;kotlin.Boolean){}[0]
+    final fun removeListener(io.github.robinpcrd.kotose.form/FormEvent) // io.github.robinpcrd.kotose.form/Form.removeListener|removeListener(io.github.robinpcrd.kotose.form.FormEvent){}[0]
+    final fun setFocus(io.github.robinpcrd.kotose.form/FocusableField<*>) // io.github.robinpcrd.kotose.form/Form.setFocus|setFocus(io.github.robinpcrd.kotose.form.FocusableField<*>){}[0]
+    final fun setValues(kotlin.collections/Map<kotlin/String, kotlin/Any?>) // io.github.robinpcrd.kotose.form/Form.setValues|setValues(kotlin.collections.Map<kotlin.String,kotlin.Any?>){}[0]
+    final fun stopEditing(kotlin/Boolean = ...) // io.github.robinpcrd.kotose.form/Form.stopEditing|stopEditing(kotlin.Boolean){}[0]
+    final fun validate(kotlin/Boolean = ..., kotlin/Boolean = ..., kotlin/Boolean = ...): kotlin.collections/List<io.github.robinpcrd.kotose.form/ValidationError> // io.github.robinpcrd.kotose.form/Form.validate|validate(kotlin.Boolean;kotlin.Boolean;kotlin.Boolean){}[0]
+    final inline fun <#A1: reified io.github.robinpcrd.kotose.form/Field<*>> getTypedFieldByTag(kotlin/String): #A1? // io.github.robinpcrd.kotose.form/Form.getTypedFieldByTag|getTypedFieldByTag(kotlin.String){0§<io.github.robinpcrd.kotose.form.Field<*>>}[0]
+
+    final object DismissKeyboardEvent // io.github.robinpcrd.kotose.form/Form.DismissKeyboardEvent|null[0]
+}
+
+final class io.github.robinpcrd.kotose.form/FormNavigationRequest { // io.github.robinpcrd.kotose.form/FormNavigationRequest|null[0]
+    constructor <init>(kotlin/Long, kotlin/String) // io.github.robinpcrd.kotose.form/FormNavigationRequest.<init>|<init>(kotlin.Long;kotlin.String){}[0]
+
+    final val id // io.github.robinpcrd.kotose.form/FormNavigationRequest.id|{}id[0]
+        final fun <get-id>(): kotlin/Long // io.github.robinpcrd.kotose.form/FormNavigationRequest.id.<get-id>|<get-id>(){}[0]
+    final val targetKey // io.github.robinpcrd.kotose.form/FormNavigationRequest.targetKey|{}targetKey[0]
+        final fun <get-targetKey>(): kotlin/String // io.github.robinpcrd.kotose.form/FormNavigationRequest.targetKey.<get-targetKey>|<get-targetKey>(){}[0]
+
+    final fun component1(): kotlin/Long // io.github.robinpcrd.kotose.form/FormNavigationRequest.component1|component1(){}[0]
+    final fun component2(): kotlin/String // io.github.robinpcrd.kotose.form/FormNavigationRequest.component2|component2(){}[0]
+    final fun copy(kotlin/Long = ..., kotlin/String = ...): io.github.robinpcrd.kotose.form/FormNavigationRequest // io.github.robinpcrd.kotose.form/FormNavigationRequest.copy|copy(kotlin.Long;kotlin.String){}[0]
+    final fun equals(kotlin/Any?): kotlin/Boolean // io.github.robinpcrd.kotose.form/FormNavigationRequest.equals|equals(kotlin.Any?){}[0]
+    final fun hashCode(): kotlin/Int // io.github.robinpcrd.kotose.form/FormNavigationRequest.hashCode|hashCode(){}[0]
+    final fun toString(): kotlin/String // io.github.robinpcrd.kotose.form/FormNavigationRequest.toString|toString(){}[0]
+}
+
+final class io.github.robinpcrd.kotose.form/RequiredSingleSelectionGroupRule : io.github.robinpcrd.kotose.form/ValidationRule.Group { // io.github.robinpcrd.kotose.form/RequiredSingleSelectionGroupRule|null[0]
+    constructor <init>(io.github.robinpcrd.kotose.form.groups/SelectionGroup<*>) // io.github.robinpcrd.kotose.form/RequiredSingleSelectionGroupRule.<init>|<init>(io.github.robinpcrd.kotose.form.groups.SelectionGroup<*>){}[0]
+
+    final fun isValid(): io.github.robinpcrd.kotose.form/ValidationError? // io.github.robinpcrd.kotose.form/RequiredSingleSelectionGroupRule.isValid|isValid(){}[0]
+}
+
+final class io.github.robinpcrd.kotose.form/Transaction { // io.github.robinpcrd.kotose.form/Transaction|null[0]
+    final fun add(io.github.robinpcrd.kotose.form/Field<*>, io.github.robinpcrd.kotose.form/Group, kotlin/Int? = ..., kotlin/Boolean = ...): kotlin/Boolean // io.github.robinpcrd.kotose.form/Transaction.add|add(io.github.robinpcrd.kotose.form.Field<*>;io.github.robinpcrd.kotose.form.Group;kotlin.Int?;kotlin.Boolean){}[0]
+    final fun add(io.github.robinpcrd.kotose.form/Group, kotlin/Int? = ...): kotlin/Boolean // io.github.robinpcrd.kotose.form/Transaction.add|add(io.github.robinpcrd.kotose.form.Group;kotlin.Int?){}[0]
+    final fun add(kotlin.collections/Collection<io.github.robinpcrd.kotose.form/Field<*>>, io.github.robinpcrd.kotose.form/Group, kotlin/Int? = ..., kotlin/Boolean = ...): kotlin/Boolean // io.github.robinpcrd.kotose.form/Transaction.add|add(kotlin.collections.Collection<io.github.robinpcrd.kotose.form.Field<*>>;io.github.robinpcrd.kotose.form.Group;kotlin.Int?;kotlin.Boolean){}[0]
+    final fun add(kotlin.collections/Collection<io.github.robinpcrd.kotose.form/Group>, kotlin/Int? = ...): kotlin/Boolean // io.github.robinpcrd.kotose.form/Transaction.add|add(kotlin.collections.Collection<io.github.robinpcrd.kotose.form.Group>;kotlin.Int?){}[0]
+    final fun commit() // io.github.robinpcrd.kotose.form/Transaction.commit|commit(){}[0]
+    final fun remove(io.github.robinpcrd.kotose.form/Field<*>?, io.github.robinpcrd.kotose.form/Group? = ..., kotlin/Int? = ...) // io.github.robinpcrd.kotose.form/Transaction.remove|remove(io.github.robinpcrd.kotose.form.Field<*>?;io.github.robinpcrd.kotose.form.Group?;kotlin.Int?){}[0]
+    final fun remove(io.github.robinpcrd.kotose.form/Group?, kotlin/Int? = ...) // io.github.robinpcrd.kotose.form/Transaction.remove|remove(io.github.robinpcrd.kotose.form.Group?;kotlin.Int?){}[0]
+    final fun remove(kotlin.collections/Collection<io.github.robinpcrd.kotose.form/Field<*>>, io.github.robinpcrd.kotose.form/Group?, kotlin/Int? = ...) // io.github.robinpcrd.kotose.form/Transaction.remove|remove(kotlin.collections.Collection<io.github.robinpcrd.kotose.form.Field<*>>;io.github.robinpcrd.kotose.form.Group?;kotlin.Int?){}[0]
+    final fun remove(kotlin.collections/Collection<io.github.robinpcrd.kotose.form/Group>, kotlin/Int? = ...) // io.github.robinpcrd.kotose.form/Transaction.remove|remove(kotlin.collections.Collection<io.github.robinpcrd.kotose.form.Group>;kotlin.Int?){}[0]
+}
+
+open class <#A: kotlin/Any?> io.github.robinpcrd.kotose.form.fields/SelectionOptionField : io.github.robinpcrd.kotose.form.fields/ISelectableField<#A>, io.github.robinpcrd.kotose.form/Field<#A> { // io.github.robinpcrd.kotose.form.fields/SelectionOptionField|null[0]
+    constructor <init>(kotlin/String? = ..., #A, io.github.robinpcrd.kotose.resources/StrRes? = ...) // io.github.robinpcrd.kotose.form.fields/SelectionOptionField.<init>|<init>(kotlin.String?;1:0;io.github.robinpcrd.kotose.resources.StrRes?){}[0]
+
+    final val isSelected // io.github.robinpcrd.kotose.form.fields/SelectionOptionField.isSelected|{}isSelected[0]
+        final fun <get-isSelected>(): kotlin/Boolean // io.github.robinpcrd.kotose.form.fields/SelectionOptionField.isSelected.<get-isSelected>|<get-isSelected>(){}[0]
+    final val labelForValueState // io.github.robinpcrd.kotose.form.fields/SelectionOptionField.labelForValueState|{}labelForValueState[0]
+        final fun <get-labelForValueState>(): androidx.compose.runtime/State<io.github.robinpcrd.kotose.resources/StrRes?> // io.github.robinpcrd.kotose.form.fields/SelectionOptionField.labelForValueState.<get-labelForValueState>|<get-labelForValueState>(){}[0]
+    final val selectionGroup // io.github.robinpcrd.kotose.form.fields/SelectionOptionField.selectionGroup|{}selectionGroup[0]
+        final fun <get-selectionGroup>(): io.github.robinpcrd.kotose.form.groups/SelectionGroup<#A>? // io.github.robinpcrd.kotose.form.fields/SelectionOptionField.selectionGroup.<get-selectionGroup>|<get-selectionGroup>(){}[0]
+    open val selectableValue // io.github.robinpcrd.kotose.form.fields/SelectionOptionField.selectableValue|{}selectableValue[0]
+        open fun <get-selectableValue>(): #A // io.github.robinpcrd.kotose.form.fields/SelectionOptionField.selectableValue.<get-selectableValue>|<get-selectableValue>(){}[0]
+
+    final var labelForValue // io.github.robinpcrd.kotose.form.fields/SelectionOptionField.labelForValue|{}labelForValue[0]
+        final fun <get-labelForValue>(): io.github.robinpcrd.kotose.resources/StrRes? // io.github.robinpcrd.kotose.form.fields/SelectionOptionField.labelForValue.<get-labelForValue>|<get-labelForValue>(){}[0]
+        final fun <set-labelForValue>(io.github.robinpcrd.kotose.resources/StrRes?) // io.github.robinpcrd.kotose.form.fields/SelectionOptionField.labelForValue.<set-labelForValue>|<set-labelForValue>(io.github.robinpcrd.kotose.resources.StrRes?){}[0]
+    final var subtitle // io.github.robinpcrd.kotose.form.fields/SelectionOptionField.subtitle|{}subtitle[0]
+        final fun <get-subtitle>(): io.github.robinpcrd.kotose.resources/StrRes? // io.github.robinpcrd.kotose.form.fields/SelectionOptionField.subtitle.<get-subtitle>|<get-subtitle>(){}[0]
+        final fun <set-subtitle>(io.github.robinpcrd.kotose.resources/StrRes?) // io.github.robinpcrd.kotose.form.fields/SelectionOptionField.subtitle.<set-subtitle>|<set-subtitle>(io.github.robinpcrd.kotose.resources.StrRes?){}[0]
+
+    final fun select() // io.github.robinpcrd.kotose.form.fields/SelectionOptionField.select|select(){}[0]
+    final fun setSelected(kotlin/Boolean): kotlin/Boolean // io.github.robinpcrd.kotose.form.fields/SelectionOptionField.setSelected|setSelected(kotlin.Boolean){}[0]
+    open fun setBaseValue(kotlin/Any?) // io.github.robinpcrd.kotose.form.fields/SelectionOptionField.setBaseValue|setBaseValue(kotlin.Any?){}[0]
+}
+
+open class <#A: kotlin/Any?> io.github.robinpcrd.kotose.form.fields/SingleChoiceField : io.github.robinpcrd.kotose.form/Field<#A> { // io.github.robinpcrd.kotose.form.fields/SingleChoiceField|null[0]
+    constructor <init>(kotlin/String? = ..., kotlin.collections/List<io.github.robinpcrd.kotose.form.fields/DropdownOption<#A>>, io.github.robinpcrd.kotose.resources/StrRes? = ..., kotlin/Boolean = ..., io.github.robinpcrd.kotose.form.fields/SelectionPresentation = ..., io.github.robinpcrd.kotose.form.fields/SelectionPresentation? = ...) // io.github.robinpcrd.kotose.form.fields/SingleChoiceField.<init>|<init>(kotlin.String?;kotlin.collections.List<io.github.robinpcrd.kotose.form.fields.DropdownOption<1:0>>;io.github.robinpcrd.kotose.resources.StrRes?;kotlin.Boolean;io.github.robinpcrd.kotose.form.fields.SelectionPresentation;io.github.robinpcrd.kotose.form.fields.SelectionPresentation?){}[0]
+
+    final val iosPresentation // io.github.robinpcrd.kotose.form.fields/SingleChoiceField.iosPresentation|{}iosPresentation[0]
+        final fun <get-iosPresentation>(): io.github.robinpcrd.kotose.form.fields/SelectionPresentation? // io.github.robinpcrd.kotose.form.fields/SingleChoiceField.iosPresentation.<get-iosPresentation>|<get-iosPresentation>(){}[0]
+    final val isClearable // io.github.robinpcrd.kotose.form.fields/SingleChoiceField.isClearable|{}isClearable[0]
+        final fun <get-isClearable>(): kotlin/Boolean // io.github.robinpcrd.kotose.form.fields/SingleChoiceField.isClearable.<get-isClearable>|<get-isClearable>(){}[0]
+    final val placeholder // io.github.robinpcrd.kotose.form.fields/SingleChoiceField.placeholder|{}placeholder[0]
+        final fun <get-placeholder>(): io.github.robinpcrd.kotose.resources/StrRes? // io.github.robinpcrd.kotose.form.fields/SingleChoiceField.placeholder.<get-placeholder>|<get-placeholder>(){}[0]
+    final val possibleValuesState // io.github.robinpcrd.kotose.form.fields/SingleChoiceField.possibleValuesState|{}possibleValuesState[0]
+        final fun <get-possibleValuesState>(): androidx.compose.runtime/State<kotlin.collections/List<io.github.robinpcrd.kotose.form.fields/DropdownOption<#A>>> // io.github.robinpcrd.kotose.form.fields/SingleChoiceField.possibleValuesState.<get-possibleValuesState>|<get-possibleValuesState>(){}[0]
+    final val presentation // io.github.robinpcrd.kotose.form.fields/SingleChoiceField.presentation|{}presentation[0]
+        final fun <get-presentation>(): io.github.robinpcrd.kotose.form.fields/SelectionPresentation // io.github.robinpcrd.kotose.form.fields/SingleChoiceField.presentation.<get-presentation>|<get-presentation>(){}[0]
+    final val selectedOption // io.github.robinpcrd.kotose.form.fields/SingleChoiceField.selectedOption|{}selectedOption[0]
+        final fun <get-selectedOption>(): androidx.compose.runtime/State<io.github.robinpcrd.kotose.form.fields/DropdownOption<#A>?> // io.github.robinpcrd.kotose.form.fields/SingleChoiceField.selectedOption.<get-selectedOption>|<get-selectedOption>(){}[0]
+
+    final var possibleValues // io.github.robinpcrd.kotose.form.fields/SingleChoiceField.possibleValues|{}possibleValues[0]
+        final fun <get-possibleValues>(): kotlin.collections/List<io.github.robinpcrd.kotose.form.fields/DropdownOption<#A>> // io.github.robinpcrd.kotose.form.fields/SingleChoiceField.possibleValues.<get-possibleValues>|<get-possibleValues>(){}[0]
+        final fun <set-possibleValues>(kotlin.collections/List<io.github.robinpcrd.kotose.form.fields/DropdownOption<#A>>) // io.github.robinpcrd.kotose.form.fields/SingleChoiceField.possibleValues.<set-possibleValues>|<set-possibleValues>(kotlin.collections.List<io.github.robinpcrd.kotose.form.fields.DropdownOption<1:0>>){}[0]
+
+    final fun presentationFor(kotlin/Boolean): io.github.robinpcrd.kotose.form.fields/SelectionPresentation // io.github.robinpcrd.kotose.form.fields/SingleChoiceField.presentationFor|presentationFor(kotlin.Boolean){}[0]
+    final fun selectOption(kotlin/String?): kotlin/Boolean // io.github.robinpcrd.kotose.form.fields/SingleChoiceField.selectOption|selectOption(kotlin.String?){}[0]
+    open fun setBaseValue(kotlin/Any?) // io.github.robinpcrd.kotose.form.fields/SingleChoiceField.setBaseValue|setBaseValue(kotlin.Any?){}[0]
+}
+
+open class io.github.robinpcrd.kotose.form.dsl/GroupBuilder { // io.github.robinpcrd.kotose.form.dsl/GroupBuilder|null[0]
+    constructor <init>() // io.github.robinpcrd.kotose.form.dsl/GroupBuilder.<init>|<init>(){}[0]
+
+    final val fields // io.github.robinpcrd.kotose.form.dsl/GroupBuilder.fields|{}fields[0]
+        final fun <get-fields>(): kotlin.collections/MutableList<io.github.robinpcrd.kotose.form/Field<*>> // io.github.robinpcrd.kotose.form.dsl/GroupBuilder.fields.<get-fields>|<get-fields>(){}[0]
+
+    final var isEnabledCondition // io.github.robinpcrd.kotose.form.dsl/GroupBuilder.isEnabledCondition|{}isEnabledCondition[0]
+        final fun <get-isEnabledCondition>(): io.github.robinpcrd.kotose.form/Condition // io.github.robinpcrd.kotose.form.dsl/GroupBuilder.isEnabledCondition.<get-isEnabledCondition>|<get-isEnabledCondition>(){}[0]
+        final fun <set-isEnabledCondition>(io.github.robinpcrd.kotose.form/Condition) // io.github.robinpcrd.kotose.form.dsl/GroupBuilder.isEnabledCondition.<set-isEnabledCondition>|<set-isEnabledCondition>(io.github.robinpcrd.kotose.form.Condition){}[0]
+    final var isVisibleCondition // io.github.robinpcrd.kotose.form.dsl/GroupBuilder.isVisibleCondition|{}isVisibleCondition[0]
+        final fun <get-isVisibleCondition>(): io.github.robinpcrd.kotose.form/Condition // io.github.robinpcrd.kotose.form.dsl/GroupBuilder.isVisibleCondition.<get-isVisibleCondition>|<get-isVisibleCondition>(){}[0]
+        final fun <set-isVisibleCondition>(io.github.robinpcrd.kotose.form/Condition) // io.github.robinpcrd.kotose.form.dsl/GroupBuilder.isVisibleCondition.<set-isVisibleCondition>|<set-isVisibleCondition>(io.github.robinpcrd.kotose.form.Condition){}[0]
+    final var tag // io.github.robinpcrd.kotose.form.dsl/GroupBuilder.tag|{}tag[0]
+        final fun <get-tag>(): kotlin/String? // io.github.robinpcrd.kotose.form.dsl/GroupBuilder.tag.<get-tag>|<get-tag>(){}[0]
+        final fun <set-tag>(kotlin/String?) // io.github.robinpcrd.kotose.form.dsl/GroupBuilder.tag.<set-tag>|<set-tag>(kotlin.String?){}[0]
+    final var validateOnBuild // io.github.robinpcrd.kotose.form.dsl/GroupBuilder.validateOnBuild|{}validateOnBuild[0]
+        final fun <get-validateOnBuild>(): kotlin/Boolean // io.github.robinpcrd.kotose.form.dsl/GroupBuilder.validateOnBuild.<get-validateOnBuild>|<get-validateOnBuild>(){}[0]
+        final fun <set-validateOnBuild>(kotlin/Boolean) // io.github.robinpcrd.kotose.form.dsl/GroupBuilder.validateOnBuild.<set-validateOnBuild>|<set-validateOnBuild>(kotlin.Boolean){}[0]
+
+    final fun (io.github.robinpcrd.kotose.form/Field<*>).unaryPlus() // io.github.robinpcrd.kotose.form.dsl/GroupBuilder.unaryPlus|unaryPlus@io.github.robinpcrd.kotose.form.Field<*>(){}[0]
+    final fun (kotlin.collections/Collection<io.github.robinpcrd.kotose.form/Field<*>>).unaryPlus() // io.github.robinpcrd.kotose.form.dsl/GroupBuilder.unaryPlus|unaryPlus@kotlin.collections.Collection<io.github.robinpcrd.kotose.form.Field<*>>(){}[0]
+    final fun (kotlin.collections/Iterable<io.github.robinpcrd.kotose.form/Field<*>>).unaryPlus() // io.github.robinpcrd.kotose.form.dsl/GroupBuilder.unaryPlus|unaryPlus@kotlin.collections.Iterable<io.github.robinpcrd.kotose.form.Field<*>>(){}[0]
+    final fun (kotlin.sequences/Sequence<io.github.robinpcrd.kotose.form/Field<*>>).unaryPlus() // io.github.robinpcrd.kotose.form.dsl/GroupBuilder.unaryPlus|unaryPlus@kotlin.sequences.Sequence<io.github.robinpcrd.kotose.form.Field<*>>(){}[0]
+    open fun build(): io.github.robinpcrd.kotose.form/Group // io.github.robinpcrd.kotose.form.dsl/GroupBuilder.build|build(){}[0]
+}
+
+open class io.github.robinpcrd.kotose.form.fields.validation/ValidationErrorField : io.github.robinpcrd.kotose.form.fields.validation/BaseValidationErrorField<kotlin/Unit> { // io.github.robinpcrd.kotose.form.fields.validation/ValidationErrorField|null[0]
+    constructor <init>(kotlin/String? = ..., kotlin/String? = ..., io.github.robinpcrd.kotose.resources/StrRes, kotlin/Boolean = ...) // io.github.robinpcrd.kotose.form.fields.validation/ValidationErrorField.<init>|<init>(kotlin.String?;kotlin.String?;io.github.robinpcrd.kotose.resources.StrRes;kotlin.Boolean){}[0]
+
+    final val asWarning // io.github.robinpcrd.kotose.form.fields.validation/ValidationErrorField.asWarning|{}asWarning[0]
+        final fun <get-asWarning>(): kotlin/Boolean // io.github.robinpcrd.kotose.form.fields.validation/ValidationErrorField.asWarning.<get-asWarning>|<get-asWarning>(){}[0]
+    final val error // io.github.robinpcrd.kotose.form.fields.validation/ValidationErrorField.error|{}error[0]
+        final fun <get-error>(): io.github.robinpcrd.kotose.resources/StrRes // io.github.robinpcrd.kotose.form.fields.validation/ValidationErrorField.error.<get-error>|<get-error>(){}[0]
+
+    open fun setBaseValue(kotlin/Any?) // io.github.robinpcrd.kotose.form.fields.validation/ValidationErrorField.setBaseValue|setBaseValue(kotlin.Any?){}[0]
+}
+
+open class io.github.robinpcrd.kotose.form.fields.validation/ValidationErrorGroupField : io.github.robinpcrd.kotose.form.fields.validation/BaseValidationErrorField<kotlin/Unit> { // io.github.robinpcrd.kotose.form.fields.validation/ValidationErrorGroupField|null[0]
+    constructor <init>(kotlin/String? = ..., kotlin/String? = ..., io.github.robinpcrd.kotose.resources/StrRes, kotlin/Boolean = ...) // io.github.robinpcrd.kotose.form.fields.validation/ValidationErrorGroupField.<init>|<init>(kotlin.String?;kotlin.String?;io.github.robinpcrd.kotose.resources.StrRes;kotlin.Boolean){}[0]
+
+    final val asWarning // io.github.robinpcrd.kotose.form.fields.validation/ValidationErrorGroupField.asWarning|{}asWarning[0]
+        final fun <get-asWarning>(): kotlin/Boolean // io.github.robinpcrd.kotose.form.fields.validation/ValidationErrorGroupField.asWarning.<get-asWarning>|<get-asWarning>(){}[0]
+    final val error // io.github.robinpcrd.kotose.form.fields.validation/ValidationErrorGroupField.error|{}error[0]
+        final fun <get-error>(): io.github.robinpcrd.kotose.resources/StrRes // io.github.robinpcrd.kotose.form.fields.validation/ValidationErrorGroupField.error.<get-error>|<get-error>(){}[0]
+
+    open fun setBaseValue(kotlin/Any?) // io.github.robinpcrd.kotose.form.fields.validation/ValidationErrorGroupField.setBaseValue|setBaseValue(kotlin.Any?){}[0]
+}
+
+open class io.github.robinpcrd.kotose.form.fields/ActionField : io.github.robinpcrd.kotose.form/Field<kotlin/Unit> { // io.github.robinpcrd.kotose.form.fields/ActionField|null[0]
+    constructor <init>(kotlin/String? = ..., io.github.robinpcrd.kotose.resources/StrRes, kotlin/Function0<kotlin/Unit>) // io.github.robinpcrd.kotose.form.fields/ActionField.<init>|<init>(kotlin.String?;io.github.robinpcrd.kotose.resources.StrRes;kotlin.Function0<kotlin.Unit>){}[0]
+
+    final val onClick // io.github.robinpcrd.kotose.form.fields/ActionField.onClick|{}onClick[0]
+        final fun <get-onClick>(): kotlin/Function0<kotlin/Unit> // io.github.robinpcrd.kotose.form.fields/ActionField.onClick.<get-onClick>|<get-onClick>(){}[0]
+    open val title // io.github.robinpcrd.kotose.form.fields/ActionField.title|{}title[0]
+        open fun <get-title>(): io.github.robinpcrd.kotose.resources/StrRes // io.github.robinpcrd.kotose.form.fields/ActionField.title.<get-title>|<get-title>(){}[0]
+
+    final fun perform(): kotlin/Boolean // io.github.robinpcrd.kotose.form.fields/ActionField.perform|perform(){}[0]
+    open fun setBaseValue(kotlin/Any?) // io.github.robinpcrd.kotose.form.fields/ActionField.setBaseValue|setBaseValue(kotlin.Any?){}[0]
+}
+
+open class io.github.robinpcrd.kotose.form.fields/DateTimeField : io.github.robinpcrd.kotose.form/Field<kotlinx.datetime/LocalDateTime> { // io.github.robinpcrd.kotose.form.fields/DateTimeField|null[0]
+    constructor <init>(kotlin/String? = ..., io.github.robinpcrd.kotose.resources/StrRes? = ..., kotlin/Function1<kotlinx.datetime/LocalDateTime, kotlin/String> = ..., kotlin/Function0<kotlin/Unit>? = ..., io.github.robinpcrd.kotose.form.fields/IosDatePickerMode = ...) // io.github.robinpcrd.kotose.form.fields/DateTimeField.<init>|<init>(kotlin.String?;io.github.robinpcrd.kotose.resources.StrRes?;kotlin.Function1<kotlinx.datetime.LocalDateTime,kotlin.String>;kotlin.Function0<kotlin.Unit>?;io.github.robinpcrd.kotose.form.fields.IosDatePickerMode){}[0]
+
+    final val formatter // io.github.robinpcrd.kotose.form.fields/DateTimeField.formatter|{}formatter[0]
+        final fun <get-formatter>(): kotlin/Function1<kotlinx.datetime/LocalDateTime, kotlin/String> // io.github.robinpcrd.kotose.form.fields/DateTimeField.formatter.<get-formatter>|<get-formatter>(){}[0]
+    final val iosPickerMode // io.github.robinpcrd.kotose.form.fields/DateTimeField.iosPickerMode|{}iosPickerMode[0]
+        final fun <get-iosPickerMode>(): io.github.robinpcrd.kotose.form.fields/IosDatePickerMode // io.github.robinpcrd.kotose.form.fields/DateTimeField.iosPickerMode.<get-iosPickerMode>|<get-iosPickerMode>(){}[0]
+    final val placeholder // io.github.robinpcrd.kotose.form.fields/DateTimeField.placeholder|{}placeholder[0]
+        final fun <get-placeholder>(): io.github.robinpcrd.kotose.resources/StrRes? // io.github.robinpcrd.kotose.form.fields/DateTimeField.placeholder.<get-placeholder>|<get-placeholder>(){}[0]
+    final val showPicker // io.github.robinpcrd.kotose.form.fields/DateTimeField.showPicker|{}showPicker[0]
+        final fun <get-showPicker>(): kotlin/Function0<kotlin/Unit>? // io.github.robinpcrd.kotose.form.fields/DateTimeField.showPicker.<get-showPicker>|<get-showPicker>(){}[0]
+
+    open fun setBaseValue(kotlin/Any?) // io.github.robinpcrd.kotose.form.fields/DateTimeField.setBaseValue|setBaseValue(kotlin.Any?){}[0]
+}
+
+open class io.github.robinpcrd.kotose.form.fields/DisplayParagraphField : io.github.robinpcrd.kotose.form/Field<kotlinx.collections.immutable/ImmutableList<io.github.robinpcrd.kotose.resources/StrRes>> { // io.github.robinpcrd.kotose.form.fields/DisplayParagraphField|null[0]
+    constructor <init>(kotlin/String? = ..., kotlin.collections/List<io.github.robinpcrd.kotose.resources/StrRes> = ...) // io.github.robinpcrd.kotose.form.fields/DisplayParagraphField.<init>|<init>(kotlin.String?;kotlin.collections.List<io.github.robinpcrd.kotose.resources.StrRes>){}[0]
+
+    open fun setBaseValue(kotlin/Any?) // io.github.robinpcrd.kotose.form.fields/DisplayParagraphField.setBaseValue|setBaseValue(kotlin.Any?){}[0]
+}
+
+open class io.github.robinpcrd.kotose.form.fields/DisplayTextField : io.github.robinpcrd.kotose.form/Field<io.github.robinpcrd.kotose.resources/StrRes> { // io.github.robinpcrd.kotose.form.fields/DisplayTextField|null[0]
+    constructor <init>(kotlin/String? = ..., io.github.robinpcrd.kotose.resources/StrRes? = ..., kotlin/Boolean = ...) // io.github.robinpcrd.kotose.form.fields/DisplayTextField.<init>|<init>(kotlin.String?;io.github.robinpcrd.kotose.resources.StrRes?;kotlin.Boolean){}[0]
+
+    final val isTitle // io.github.robinpcrd.kotose.form.fields/DisplayTextField.isTitle|{}isTitle[0]
+        final fun <get-isTitle>(): kotlin/Boolean // io.github.robinpcrd.kotose.form.fields/DisplayTextField.isTitle.<get-isTitle>|<get-isTitle>(){}[0]
+    final val text // io.github.robinpcrd.kotose.form.fields/DisplayTextField.text|{}text[0]
+        final fun <get-text>(): io.github.robinpcrd.kotose.resources/StrRes? // io.github.robinpcrd.kotose.form.fields/DisplayTextField.text.<get-text>|<get-text>(){}[0]
+
+    open fun setBaseValue(kotlin/Any?) // io.github.robinpcrd.kotose.form.fields/DisplayTextField.setBaseValue|setBaseValue(kotlin.Any?){}[0]
+}
+
+open class io.github.robinpcrd.kotose.form.fields/LocalDateField : io.github.robinpcrd.kotose.form/Field<kotlinx.datetime/LocalDate> { // io.github.robinpcrd.kotose.form.fields/LocalDateField|null[0]
+    constructor <init>(kotlin/String? = ..., io.github.robinpcrd.kotose.resources/StrRes? = ..., kotlin/Function1<kotlinx.datetime/LocalDate, kotlin/String> = ..., kotlin/Function0<kotlin/Unit>? = ..., io.github.robinpcrd.kotose.form.fields/IosDatePickerMode = ...) // io.github.robinpcrd.kotose.form.fields/LocalDateField.<init>|<init>(kotlin.String?;io.github.robinpcrd.kotose.resources.StrRes?;kotlin.Function1<kotlinx.datetime.LocalDate,kotlin.String>;kotlin.Function0<kotlin.Unit>?;io.github.robinpcrd.kotose.form.fields.IosDatePickerMode){}[0]
+
+    final val formatter // io.github.robinpcrd.kotose.form.fields/LocalDateField.formatter|{}formatter[0]
+        final fun <get-formatter>(): kotlin/Function1<kotlinx.datetime/LocalDate, kotlin/String> // io.github.robinpcrd.kotose.form.fields/LocalDateField.formatter.<get-formatter>|<get-formatter>(){}[0]
+    final val iosPickerMode // io.github.robinpcrd.kotose.form.fields/LocalDateField.iosPickerMode|{}iosPickerMode[0]
+        final fun <get-iosPickerMode>(): io.github.robinpcrd.kotose.form.fields/IosDatePickerMode // io.github.robinpcrd.kotose.form.fields/LocalDateField.iosPickerMode.<get-iosPickerMode>|<get-iosPickerMode>(){}[0]
+    final val placeholder // io.github.robinpcrd.kotose.form.fields/LocalDateField.placeholder|{}placeholder[0]
+        final fun <get-placeholder>(): io.github.robinpcrd.kotose.resources/StrRes? // io.github.robinpcrd.kotose.form.fields/LocalDateField.placeholder.<get-placeholder>|<get-placeholder>(){}[0]
+    final val showPicker // io.github.robinpcrd.kotose.form.fields/LocalDateField.showPicker|{}showPicker[0]
+        final fun <get-showPicker>(): kotlin/Function0<kotlin/Unit>? // io.github.robinpcrd.kotose.form.fields/LocalDateField.showPicker.<get-showPicker>|<get-showPicker>(){}[0]
+
+    open fun setBaseValue(kotlin/Any?) // io.github.robinpcrd.kotose.form.fields/LocalDateField.setBaseValue|setBaseValue(kotlin.Any?){}[0]
+}
+
+open class io.github.robinpcrd.kotose.form.fields/SecureTextField : io.github.robinpcrd.kotose.form/FocusableField<kotlin/String> { // io.github.robinpcrd.kotose.form.fields/SecureTextField|null[0]
+    constructor <init>(kotlin/String? = ..., io.github.robinpcrd.kotose.resources/StrRes? = ..., io.github.robinpcrd.kotose.resources/StrRes? = ...) // io.github.robinpcrd.kotose.form.fields/SecureTextField.<init>|<init>(kotlin.String?;io.github.robinpcrd.kotose.resources.StrRes?;io.github.robinpcrd.kotose.resources.StrRes?){}[0]
+
+    open val label // io.github.robinpcrd.kotose.form.fields/SecureTextField.label|{}label[0]
+        open fun <get-label>(): io.github.robinpcrd.kotose.resources/StrRes? // io.github.robinpcrd.kotose.form.fields/SecureTextField.label.<get-label>|<get-label>(){}[0]
+    open val placeholder // io.github.robinpcrd.kotose.form.fields/SecureTextField.placeholder|{}placeholder[0]
+        open fun <get-placeholder>(): io.github.robinpcrd.kotose.resources/StrRes? // io.github.robinpcrd.kotose.form.fields/SecureTextField.placeholder.<get-placeholder>|<get-placeholder>(){}[0]
+
+    open fun setBaseValue(kotlin/Any?) // io.github.robinpcrd.kotose.form.fields/SecureTextField.setBaseValue|setBaseValue(kotlin.Any?){}[0]
+    open fun setValue(kotlin/String?) // io.github.robinpcrd.kotose.form.fields/SecureTextField.setValue|setValue(kotlin.String?){}[0]
+}
+
+open class io.github.robinpcrd.kotose.form.fields/TextField : io.github.robinpcrd.kotose.form/FocusableField<kotlin/String> { // io.github.robinpcrd.kotose.form.fields/TextField|null[0]
+    constructor <init>(kotlin/String? = ..., io.github.robinpcrd.kotose.resources/StrRes? = ..., io.github.robinpcrd.kotose.resources/StrRes? = ..., io.github.robinpcrd.kotose.form.fields/TextLineLimits = ...) // io.github.robinpcrd.kotose.form.fields/TextField.<init>|<init>(kotlin.String?;io.github.robinpcrd.kotose.resources.StrRes?;io.github.robinpcrd.kotose.resources.StrRes?;io.github.robinpcrd.kotose.form.fields.TextLineLimits){}[0]
+
+    final val label // io.github.robinpcrd.kotose.form.fields/TextField.label|{}label[0]
+        final fun <get-label>(): io.github.robinpcrd.kotose.resources/StrRes? // io.github.robinpcrd.kotose.form.fields/TextField.label.<get-label>|<get-label>(){}[0]
+    final val lineLimits // io.github.robinpcrd.kotose.form.fields/TextField.lineLimits|{}lineLimits[0]
+        final fun <get-lineLimits>(): io.github.robinpcrd.kotose.form.fields/TextLineLimits // io.github.robinpcrd.kotose.form.fields/TextField.lineLimits.<get-lineLimits>|<get-lineLimits>(){}[0]
+    final val placeholder // io.github.robinpcrd.kotose.form.fields/TextField.placeholder|{}placeholder[0]
+        final fun <get-placeholder>(): io.github.robinpcrd.kotose.resources/StrRes? // io.github.robinpcrd.kotose.form.fields/TextField.placeholder.<get-placeholder>|<get-placeholder>(){}[0]
+
+    final fun setValue(kotlin/String?) // io.github.robinpcrd.kotose.form.fields/TextField.setValue|setValue(kotlin.String?){}[0]
+    open fun setBaseValue(kotlin/Any?) // io.github.robinpcrd.kotose.form.fields/TextField.setBaseValue|setBaseValue(kotlin.Any?){}[0]
+}
+
+open class io.github.robinpcrd.kotose.form.fields/ToggleField : io.github.robinpcrd.kotose.form/Field<kotlin/Boolean> { // io.github.robinpcrd.kotose.form.fields/ToggleField|null[0]
+    constructor <init>(kotlin/String? = ..., io.github.robinpcrd.kotose.resources/StrRes) // io.github.robinpcrd.kotose.form.fields/ToggleField.<init>|<init>(kotlin.String?;io.github.robinpcrd.kotose.resources.StrRes){}[0]
+
+    final val labelState // io.github.robinpcrd.kotose.form.fields/ToggleField.labelState|{}labelState[0]
+        final fun <get-labelState>(): androidx.compose.runtime/State<io.github.robinpcrd.kotose.resources/StrRes> // io.github.robinpcrd.kotose.form.fields/ToggleField.labelState.<get-labelState>|<get-labelState>(){}[0]
+
+    final var label // io.github.robinpcrd.kotose.form.fields/ToggleField.label|{}label[0]
+        final fun <get-label>(): io.github.robinpcrd.kotose.resources/StrRes // io.github.robinpcrd.kotose.form.fields/ToggleField.label.<get-label>|<get-label>(){}[0]
+        final fun <set-label>(io.github.robinpcrd.kotose.resources/StrRes) // io.github.robinpcrd.kotose.form.fields/ToggleField.label.<set-label>|<set-label>(io.github.robinpcrd.kotose.resources.StrRes){}[0]
+
+    open fun setBaseValue(kotlin/Any?) // io.github.robinpcrd.kotose.form.fields/ToggleField.setBaseValue|setBaseValue(kotlin.Any?){}[0]
+}
+
+open class io.github.robinpcrd.kotose.form/Group : io.github.robinpcrd.kotose.form/Element<io.github.robinpcrd.kotose.form/ValidationRule.Group> { // io.github.robinpcrd.kotose.form/Group|null[0]
+    constructor <init>(kotlin/String? = ...) // io.github.robinpcrd.kotose.form/Group.<init>|<init>(kotlin.String?){}[0]
+
+    final val _fields // io.github.robinpcrd.kotose.form/Group._fields|{}_fields[0]
+        final fun <get-_fields>(): kotlin.collections/MutableList<io.github.robinpcrd.kotose.form/Field<*>> // io.github.robinpcrd.kotose.form/Group._fields.<get-_fields>|<get-_fields>(){}[0]
+    final val fields // io.github.robinpcrd.kotose.form/Group.fields|{}fields[0]
+        final fun <get-fields>(): kotlinx.collections.immutable/ImmutableList<io.github.robinpcrd.kotose.form/Field<*>> // io.github.robinpcrd.kotose.form/Group.fields.<get-fields>|<get-fields>(){}[0]
+    final val indexInForm // io.github.robinpcrd.kotose.form/Group.indexInForm|{}indexInForm[0]
+        final fun <get-indexInForm>(): kotlin/Int // io.github.robinpcrd.kotose.form/Group.indexInForm.<get-indexInForm>|<get-indexInForm>(){}[0]
+
+    final fun addField(io.github.robinpcrd.kotose.form/Field<*>, kotlin/Boolean = ..., kotlin/Boolean = ...) // io.github.robinpcrd.kotose.form/Group.addField|addField(io.github.robinpcrd.kotose.form.Field<*>;kotlin.Boolean;kotlin.Boolean){}[0]
+    final fun addField(kotlin/Int, io.github.robinpcrd.kotose.form/Field<*>, kotlin/Boolean = ..., kotlin/Boolean = ...) // io.github.robinpcrd.kotose.form/Group.addField|addField(kotlin.Int;io.github.robinpcrd.kotose.form.Field<*>;kotlin.Boolean;kotlin.Boolean){}[0]
+    final fun addFields(kotlin.collections/Collection<io.github.robinpcrd.kotose.form/Field<*>>, kotlin/Boolean = ..., kotlin/Boolean = ...) // io.github.robinpcrd.kotose.form/Group.addFields|addFields(kotlin.collections.Collection<io.github.robinpcrd.kotose.form.Field<*>>;kotlin.Boolean;kotlin.Boolean){}[0]
+    final fun addFields(kotlin/Int, kotlin.collections/Collection<io.github.robinpcrd.kotose.form/Field<*>>, kotlin/Boolean = ..., kotlin/Boolean = ...) // io.github.robinpcrd.kotose.form/Group.addFields|addFields(kotlin.Int;kotlin.collections.Collection<io.github.robinpcrd.kotose.form.Field<*>>;kotlin.Boolean;kotlin.Boolean){}[0]
+    final fun notifyValueChange(kotlin/Any?) // io.github.robinpcrd.kotose.form/Group.notifyValueChange|notifyValueChange(kotlin.Any?){}[0]
+    final fun onFieldVisibilityChanged(io.github.robinpcrd.kotose.form/Field<*>) // io.github.robinpcrd.kotose.form/Group.onFieldVisibilityChanged|onFieldVisibilityChanged(io.github.robinpcrd.kotose.form.Field<*>){}[0]
+    final fun removeField(io.github.robinpcrd.kotose.form/Field<*>, kotlin/Boolean = ...) // io.github.robinpcrd.kotose.form/Group.removeField|removeField(io.github.robinpcrd.kotose.form.Field<*>;kotlin.Boolean){}[0]
+    final fun removeFields(kotlin.collections/Collection<io.github.robinpcrd.kotose.form/Field<*>>, kotlin/Boolean = ...) // io.github.robinpcrd.kotose.form/Group.removeFields|removeFields(kotlin.collections.Collection<io.github.robinpcrd.kotose.form.Field<*>>;kotlin.Boolean){}[0]
+    final fun updateFieldErrors(io.github.robinpcrd.kotose.form/Field<*>, kotlin/Boolean = ...) // io.github.robinpcrd.kotose.form/Group.updateFieldErrors|updateFieldErrors(io.github.robinpcrd.kotose.form.Field<*>;kotlin.Boolean){}[0]
+    final fun validate(io.github.robinpcrd.kotose.form/ValidationTriggerSource, kotlin/Boolean = ..., kotlin/Boolean): kotlinx.collections.immutable/ImmutableList<io.github.robinpcrd.kotose.form/ValidationError> // io.github.robinpcrd.kotose.form/Group.validate|validate(io.github.robinpcrd.kotose.form.ValidationTriggerSource;kotlin.Boolean;kotlin.Boolean){}[0]
+    open fun allValues(kotlin/Boolean = ...): kotlin.collections/Map<kotlin/String, kotlin/Any?> // io.github.robinpcrd.kotose.form/Group.allValues|allValues(kotlin.Boolean){}[0]
+    open fun clear(kotlin/Boolean = ...) // io.github.robinpcrd.kotose.form/Group.clear|clear(kotlin.Boolean){}[0]
+    open fun evaluateEnabled() // io.github.robinpcrd.kotose.form/Group.evaluateEnabled|evaluateEnabled(){}[0]
+    open fun evaluateVisibility() // io.github.robinpcrd.kotose.form/Group.evaluateVisibility|evaluateVisibility(){}[0]
+    open fun onFieldsAdded(kotlin/Int = ..., kotlin.collections/Collection<io.github.robinpcrd.kotose.form/Field<*>>, kotlin/Boolean = ..., kotlin/Boolean = ...) // io.github.robinpcrd.kotose.form/Group.onFieldsAdded|onFieldsAdded(kotlin.Int;kotlin.collections.Collection<io.github.robinpcrd.kotose.form.Field<*>>;kotlin.Boolean;kotlin.Boolean){}[0]
+    open fun onFieldsRemoved(kotlin.collections/Collection<io.github.robinpcrd.kotose.form/Field<*>>) // io.github.robinpcrd.kotose.form/Group.onFieldsRemoved|onFieldsRemoved(kotlin.collections.Collection<io.github.robinpcrd.kotose.form.Field<*>>){}[0]
+    open fun setBaseValue(kotlin/Any?) // io.github.robinpcrd.kotose.form/Group.setBaseValue|setBaseValue(kotlin.Any?){}[0]
+    open fun validate(io.github.robinpcrd.kotose.form/ValidationTriggerSource, kotlin/Boolean): kotlinx.collections.immutable/ImmutableList<io.github.robinpcrd.kotose.form/ValidationError> // io.github.robinpcrd.kotose.form/Group.validate|validate(io.github.robinpcrd.kotose.form.ValidationTriggerSource;kotlin.Boolean){}[0]
+}
+
+sealed class <#A: io.github.robinpcrd.kotose.form/ValidationRule> io.github.robinpcrd.kotose.form/Element { // io.github.robinpcrd.kotose.form/Element|null[0]
+    final val errors // io.github.robinpcrd.kotose.form/Element.errors|{}errors[0]
+        final fun <get-errors>(): kotlinx.collections.immutable/ImmutableList<io.github.robinpcrd.kotose.form/ValidationError> // io.github.robinpcrd.kotose.form/Element.errors.<get-errors>|<get-errors>(){}[0]
+    final val errorsState // io.github.robinpcrd.kotose.form/Element.errorsState|{}errorsState[0]
+        final fun <get-errorsState>(): androidx.compose.runtime/State<kotlinx.collections.immutable/ImmutableList<io.github.robinpcrd.kotose.form/ValidationError>> // io.github.robinpcrd.kotose.form/Element.errorsState.<get-errorsState>|<get-errorsState>(){}[0]
+    final val hasErrorAndVisible // io.github.robinpcrd.kotose.form/Element.hasErrorAndVisible|{}hasErrorAndVisible[0]
+        final fun <get-hasErrorAndVisible>(): kotlin/Boolean // io.github.robinpcrd.kotose.form/Element.hasErrorAndVisible.<get-hasErrorAndVisible>|<get-hasErrorAndVisible>(){}[0]
+    final val hasErrorOrWarningAndVisible // io.github.robinpcrd.kotose.form/Element.hasErrorOrWarningAndVisible|{}hasErrorOrWarningAndVisible[0]
+        final fun <get-hasErrorOrWarningAndVisible>(): kotlin/Boolean // io.github.robinpcrd.kotose.form/Element.hasErrorOrWarningAndVisible.<get-hasErrorOrWarningAndVisible>|<get-hasErrorOrWarningAndVisible>(){}[0]
+    final val hasErrors // io.github.robinpcrd.kotose.form/Element.hasErrors|{}hasErrors[0]
+        final fun <get-hasErrors>(): kotlin/Boolean // io.github.robinpcrd.kotose.form/Element.hasErrors.<get-hasErrors>|<get-hasErrors>(){}[0]
+    final val hasErrorsNotSilent // io.github.robinpcrd.kotose.form/Element.hasErrorsNotSilent|{}hasErrorsNotSilent[0]
+        final fun <get-hasErrorsNotSilent>(): kotlin/Boolean // io.github.robinpcrd.kotose.form/Element.hasErrorsNotSilent.<get-hasErrorsNotSilent>|<get-hasErrorsNotSilent>(){}[0]
+    final val hasErrorsNotSilentState // io.github.robinpcrd.kotose.form/Element.hasErrorsNotSilentState|{}hasErrorsNotSilentState[0]
+        final fun <get-hasErrorsNotSilentState>(): androidx.compose.runtime/State<kotlin/Boolean> // io.github.robinpcrd.kotose.form/Element.hasErrorsNotSilentState.<get-hasErrorsNotSilentState>|<get-hasErrorsNotSilentState>(){}[0]
+    final val hasErrorsOrWarnings // io.github.robinpcrd.kotose.form/Element.hasErrorsOrWarnings|{}hasErrorsOrWarnings[0]
+        final fun <get-hasErrorsOrWarnings>(): kotlin/Boolean // io.github.robinpcrd.kotose.form/Element.hasErrorsOrWarnings.<get-hasErrorsOrWarnings>|<get-hasErrorsOrWarnings>(){}[0]
+    final val hasErrorsState // io.github.robinpcrd.kotose.form/Element.hasErrorsState|{}hasErrorsState[0]
+        final fun <get-hasErrorsState>(): androidx.compose.runtime/State<kotlin/Boolean> // io.github.robinpcrd.kotose.form/Element.hasErrorsState.<get-hasErrorsState>|<get-hasErrorsState>(){}[0]
+    final val hasWarningsState // io.github.robinpcrd.kotose.form/Element.hasWarningsState|{}hasWarningsState[0]
+        final fun <get-hasWarningsState>(): androidx.compose.runtime/State<kotlin/Boolean> // io.github.robinpcrd.kotose.form/Element.hasWarningsState.<get-hasWarningsState>|<get-hasWarningsState>(){}[0]
+    final val isEnabled // io.github.robinpcrd.kotose.form/Element.isEnabled|{}isEnabled[0]
+        final fun <get-isEnabled>(): kotlin/Boolean // io.github.robinpcrd.kotose.form/Element.isEnabled.<get-isEnabled>|<get-isEnabled>(){}[0]
+    final val isEnabledState // io.github.robinpcrd.kotose.form/Element.isEnabledState|{}isEnabledState[0]
+        final fun <get-isEnabledState>(): androidx.compose.runtime/State<kotlin/Boolean> // io.github.robinpcrd.kotose.form/Element.isEnabledState.<get-isEnabledState>|<get-isEnabledState>(){}[0]
+    final val isVisible // io.github.robinpcrd.kotose.form/Element.isVisible|{}isVisible[0]
+        final fun <get-isVisible>(): kotlin/Boolean // io.github.robinpcrd.kotose.form/Element.isVisible.<get-isVisible>|<get-isVisible>(){}[0]
+    final val isVisibleState // io.github.robinpcrd.kotose.form/Element.isVisibleState|{}isVisibleState[0]
+        final fun <get-isVisibleState>(): androidx.compose.runtime/State<kotlin/Boolean> // io.github.robinpcrd.kotose.form/Element.isVisibleState.<get-isVisibleState>|<get-isVisibleState>(){}[0]
+    final val key // io.github.robinpcrd.kotose.form/Element.key|{}key[0]
+        final fun <get-key>(): kotlin/String // io.github.robinpcrd.kotose.form/Element.key.<get-key>|<get-key>(){}[0]
+    final val rules // io.github.robinpcrd.kotose.form/Element.rules|{}rules[0]
+        final fun <get-rules>(): kotlin.collections/List<#A> // io.github.robinpcrd.kotose.form/Element.rules.<get-rules>|<get-rules>(){}[0]
+    final val tag // io.github.robinpcrd.kotose.form/Element.tag|{}tag[0]
+        final fun <get-tag>(): kotlin/String? // io.github.robinpcrd.kotose.form/Element.tag.<get-tag>|<get-tag>(){}[0]
+
+    final var customCondition // io.github.robinpcrd.kotose.form/Element.customCondition|{}customCondition[0]
+        final fun <get-customCondition>(): io.github.robinpcrd.kotose.form/CustomCondition? // io.github.robinpcrd.kotose.form/Element.customCondition.<get-customCondition>|<get-customCondition>(){}[0]
+        final fun <set-customCondition>(io.github.robinpcrd.kotose.form/CustomCondition?) // io.github.robinpcrd.kotose.form/Element.customCondition.<set-customCondition>|<set-customCondition>(io.github.robinpcrd.kotose.form.CustomCondition?){}[0]
+    final var form // io.github.robinpcrd.kotose.form/Element.form|{}form[0]
+        final fun <get-form>(): io.github.robinpcrd.kotose.form/Form? // io.github.robinpcrd.kotose.form/Element.form.<get-form>|<get-form>(){}[0]
+    final var isEnabledCondition // io.github.robinpcrd.kotose.form/Element.isEnabledCondition|{}isEnabledCondition[0]
+        final fun <get-isEnabledCondition>(): io.github.robinpcrd.kotose.form/Condition // io.github.robinpcrd.kotose.form/Element.isEnabledCondition.<get-isEnabledCondition>|<get-isEnabledCondition>(){}[0]
+        final fun <set-isEnabledCondition>(io.github.robinpcrd.kotose.form/Condition) // io.github.robinpcrd.kotose.form/Element.isEnabledCondition.<set-isEnabledCondition>|<set-isEnabledCondition>(io.github.robinpcrd.kotose.form.Condition){}[0]
+    final var isVisibleCondition // io.github.robinpcrd.kotose.form/Element.isVisibleCondition|{}isVisibleCondition[0]
+        final fun <get-isVisibleCondition>(): io.github.robinpcrd.kotose.form/Condition // io.github.robinpcrd.kotose.form/Element.isVisibleCondition.<get-isVisibleCondition>|<get-isVisibleCondition>(){}[0]
+        final fun <set-isVisibleCondition>(io.github.robinpcrd.kotose.form/Condition) // io.github.robinpcrd.kotose.form/Element.isVisibleCondition.<set-isVisibleCondition>|<set-isVisibleCondition>(io.github.robinpcrd.kotose.form.Condition){}[0]
+    final var onValidationChange // io.github.robinpcrd.kotose.form/Element.onValidationChange|{}onValidationChange[0]
+        final fun <get-onValidationChange>(): kotlin/Function0<kotlin/Unit> // io.github.robinpcrd.kotose.form/Element.onValidationChange.<get-onValidationChange>|<get-onValidationChange>(){}[0]
+        final fun <set-onValidationChange>(kotlin/Function0<kotlin/Unit>) // io.github.robinpcrd.kotose.form/Element.onValidationChange.<set-onValidationChange>|<set-onValidationChange>(kotlin.Function0<kotlin.Unit>){}[0]
+    final var validationOption // io.github.robinpcrd.kotose.form/Element.validationOption|{}validationOption[0]
+        final fun <get-validationOption>(): io.github.robinpcrd.kotose.form/ValidationOption // io.github.robinpcrd.kotose.form/Element.validationOption.<get-validationOption>|<get-validationOption>(){}[0]
+        final fun <set-validationOption>(io.github.robinpcrd.kotose.form/ValidationOption) // io.github.robinpcrd.kotose.form/Element.validationOption.<set-validationOption>|<set-validationOption>(io.github.robinpcrd.kotose.form.ValidationOption){}[0]
+
+    abstract fun validate(io.github.robinpcrd.kotose.form/ValidationTriggerSource, kotlin/Boolean): kotlinx.collections.immutable/ImmutableList<io.github.robinpcrd.kotose.form/ValidationError> // io.github.robinpcrd.kotose.form/Element.validate|validate(io.github.robinpcrd.kotose.form.ValidationTriggerSource;kotlin.Boolean){}[0]
+    final fun addRule(#A) // io.github.robinpcrd.kotose.form/Element.addRule|addRule(1:0){}[0]
+    final fun clearValidationErrors(io.github.robinpcrd.kotose.form/ValidationTriggerSource) // io.github.robinpcrd.kotose.form/Element.clearValidationErrors|clearValidationErrors(io.github.robinpcrd.kotose.form.ValidationTriggerSource){}[0]
+    final fun removeRule(#A) // io.github.robinpcrd.kotose.form/Element.removeRule|removeRule(1:0){}[0]
+    final fun setValidationErrors(kotlin.collections/List<io.github.robinpcrd.kotose.form/ValidationError>, io.github.robinpcrd.kotose.form/ValidationTriggerSource) // io.github.robinpcrd.kotose.form/Element.setValidationErrors|setValidationErrors(kotlin.collections.List<io.github.robinpcrd.kotose.form.ValidationError>;io.github.robinpcrd.kotose.form.ValidationTriggerSource){}[0]
+    open fun evaluateCustomCondition() // io.github.robinpcrd.kotose.form/Element.evaluateCustomCondition|evaluateCustomCondition(){}[0]
+    open fun evaluateEnabled() // io.github.robinpcrd.kotose.form/Element.evaluateEnabled|evaluateEnabled(){}[0]
+    open fun evaluateVisibility() // io.github.robinpcrd.kotose.form/Element.evaluateVisibility|evaluateVisibility(){}[0]
+}
+
+sealed class <#A: kotlin/Any?> io.github.robinpcrd.kotose.form.groups/SelectionGroup : io.github.robinpcrd.kotose.form/Group { // io.github.robinpcrd.kotose.form.groups/SelectionGroup|null[0]
+    final val iosPresentation // io.github.robinpcrd.kotose.form.groups/SelectionGroup.iosPresentation|{}iosPresentation[0]
+        final fun <get-iosPresentation>(): io.github.robinpcrd.kotose.form.fields/SelectionPresentation? // io.github.robinpcrd.kotose.form.groups/SelectionGroup.iosPresentation.<get-iosPresentation>|<get-iosPresentation>(){}[0]
+    final val presentation // io.github.robinpcrd.kotose.form.groups/SelectionGroup.presentation|{}presentation[0]
+        final fun <get-presentation>(): io.github.robinpcrd.kotose.form.fields/SelectionPresentation // io.github.robinpcrd.kotose.form.groups/SelectionGroup.presentation.<get-presentation>|<get-presentation>(){}[0]
+    final val selectableFields // io.github.robinpcrd.kotose.form.groups/SelectionGroup.selectableFields|{}selectableFields[0]
+        final fun <get-selectableFields>(): kotlinx.collections.immutable/ImmutableList<io.github.robinpcrd.kotose.form.fields/SelectionOptionField<#A>> // io.github.robinpcrd.kotose.form.groups/SelectionGroup.selectableFields.<get-selectableFields>|<get-selectableFields>(){}[0]
+    final val title // io.github.robinpcrd.kotose.form.groups/SelectionGroup.title|{}title[0]
+        final fun <get-title>(): io.github.robinpcrd.kotose.resources/StrRes? // io.github.robinpcrd.kotose.form.groups/SelectionGroup.title.<get-title>|<get-title>(){}[0]
+
+    abstract fun clearSelection() // io.github.robinpcrd.kotose.form.groups/SelectionGroup.clearSelection|clearSelection(){}[0]
+    abstract fun select(io.github.robinpcrd.kotose.form.fields/SelectionOptionField<#A>) // io.github.robinpcrd.kotose.form.groups/SelectionGroup.select|select(io.github.robinpcrd.kotose.form.fields.SelectionOptionField<1:0>){}[0]
+    final fun canSelect(io.github.robinpcrd.kotose.form.fields/SelectionOptionField<#A>): kotlin/Boolean // io.github.robinpcrd.kotose.form.groups/SelectionGroup.canSelect|canSelect(io.github.robinpcrd.kotose.form.fields.SelectionOptionField<1:0>){}[0]
+    final fun changeSelection(kotlin/Function0<kotlin/Unit>) // io.github.robinpcrd.kotose.form.groups/SelectionGroup.changeSelection|changeSelection(kotlin.Function0<kotlin.Unit>){}[0]
+    final fun notifyForm() // io.github.robinpcrd.kotose.form.groups/SelectionGroup.notifyForm|notifyForm(){}[0]
+    final fun presentationFor(kotlin/Boolean): io.github.robinpcrd.kotose.form.fields/SelectionPresentation // io.github.robinpcrd.kotose.form.groups/SelectionGroup.presentationFor|presentationFor(kotlin.Boolean){}[0]
+    open fun allValues(kotlin/Boolean): kotlin.collections/Map<kotlin/String, kotlin/Any?> // io.github.robinpcrd.kotose.form.groups/SelectionGroup.allValues|allValues(kotlin.Boolean){}[0]
+    open fun onFieldsAdded(kotlin/Int, kotlin.collections/Collection<io.github.robinpcrd.kotose.form/Field<*>>, kotlin/Boolean, kotlin/Boolean) // io.github.robinpcrd.kotose.form.groups/SelectionGroup.onFieldsAdded|onFieldsAdded(kotlin.Int;kotlin.collections.Collection<io.github.robinpcrd.kotose.form.Field<*>>;kotlin.Boolean;kotlin.Boolean){}[0]
+    open fun onFieldsRemoved(kotlin.collections/Collection<io.github.robinpcrd.kotose.form/Field<*>>) // io.github.robinpcrd.kotose.form.groups/SelectionGroup.onFieldsRemoved|onFieldsRemoved(kotlin.collections.Collection<io.github.robinpcrd.kotose.form.Field<*>>){}[0]
+    open fun setBaseValue(kotlin/Any?) // io.github.robinpcrd.kotose.form.groups/SelectionGroup.setBaseValue|setBaseValue(kotlin.Any?){}[0]
+
+    final class <#A1: kotlin/Any?> Multiple : io.github.robinpcrd.kotose.form.groups/SelectionGroup<#A1> { // io.github.robinpcrd.kotose.form.groups/SelectionGroup.Multiple|null[0]
+        constructor <init>(kotlin/String? = ..., io.github.robinpcrd.kotose.resources/StrRes? = ..., io.github.robinpcrd.kotose.form.fields/SelectionPresentation = ..., io.github.robinpcrd.kotose.form.fields/SelectionPresentation? = ...) // io.github.robinpcrd.kotose.form.groups/SelectionGroup.Multiple.<init>|<init>(kotlin.String?;io.github.robinpcrd.kotose.resources.StrRes?;io.github.robinpcrd.kotose.form.fields.SelectionPresentation;io.github.robinpcrd.kotose.form.fields.SelectionPresentation?){}[0]
+
+        final var selectedValues // io.github.robinpcrd.kotose.form.groups/SelectionGroup.Multiple.selectedValues|{}selectedValues[0]
+            final fun <get-selectedValues>(): kotlinx.collections.immutable/ImmutableList<#A1> // io.github.robinpcrd.kotose.form.groups/SelectionGroup.Multiple.selectedValues.<get-selectedValues>|<get-selectedValues>(){}[0]
+            final fun <set-selectedValues>(kotlinx.collections.immutable/ImmutableList<#A1>) // io.github.robinpcrd.kotose.form.groups/SelectionGroup.Multiple.selectedValues.<set-selectedValues>|<set-selectedValues>(kotlinx.collections.immutable.ImmutableList<1:0>){}[0]
+
+        final fun clearSelection() // io.github.robinpcrd.kotose.form.groups/SelectionGroup.Multiple.clearSelection|clearSelection(){}[0]
+        final fun select(io.github.robinpcrd.kotose.form.fields/SelectionOptionField<#A1>) // io.github.robinpcrd.kotose.form.groups/SelectionGroup.Multiple.select|select(io.github.robinpcrd.kotose.form.fields.SelectionOptionField<1:0>){}[0]
+        final fun setValues(kotlin/Any?) // io.github.robinpcrd.kotose.form.groups/SelectionGroup.Multiple.setValues|setValues(kotlin.Any?){}[0]
+    }
+
+    final class <#A1: kotlin/Any?> Single : io.github.robinpcrd.kotose.form.groups/SelectionGroup<#A1> { // io.github.robinpcrd.kotose.form.groups/SelectionGroup.Single|null[0]
+        constructor <init>(kotlin/String? = ..., io.github.robinpcrd.kotose.resources/StrRes? = ..., kotlin/Boolean = ..., io.github.robinpcrd.kotose.form.fields/SelectionPresentation = ..., io.github.robinpcrd.kotose.form.fields/SelectionPresentation? = ...) // io.github.robinpcrd.kotose.form.groups/SelectionGroup.Single.<init>|<init>(kotlin.String?;io.github.robinpcrd.kotose.resources.StrRes?;kotlin.Boolean;io.github.robinpcrd.kotose.form.fields.SelectionPresentation;io.github.robinpcrd.kotose.form.fields.SelectionPresentation?){}[0]
+
+        final var selectedValue // io.github.robinpcrd.kotose.form.groups/SelectionGroup.Single.selectedValue|{}selectedValue[0]
+            final fun <get-selectedValue>(): #A1? // io.github.robinpcrd.kotose.form.groups/SelectionGroup.Single.selectedValue.<get-selectedValue>|<get-selectedValue>(){}[0]
+            final fun <set-selectedValue>(#A1?) // io.github.robinpcrd.kotose.form.groups/SelectionGroup.Single.selectedValue.<set-selectedValue>|<set-selectedValue>(1:0?){}[0]
+
+        final fun clearSelection() // io.github.robinpcrd.kotose.form.groups/SelectionGroup.Single.clearSelection|clearSelection(){}[0]
+        final fun select(io.github.robinpcrd.kotose.form.fields/SelectionOptionField<#A1>) // io.github.robinpcrd.kotose.form.groups/SelectionGroup.Single.select|select(io.github.robinpcrd.kotose.form.fields.SelectionOptionField<1:0>){}[0]
+        final fun setValue(kotlin/Any?) // io.github.robinpcrd.kotose.form.groups/SelectionGroup.Single.setValue|setValue(kotlin.Any?){}[0]
+    }
+}
+
+sealed class io.github.robinpcrd.kotose.form/SealedFormEvents { // io.github.robinpcrd.kotose.form/SealedFormEvents|null[0]
+    final class ValueChange : io.github.robinpcrd.kotose.form/SealedFormEvents { // io.github.robinpcrd.kotose.form/SealedFormEvents.ValueChange|null[0]
+        constructor <init>(io.github.robinpcrd.kotose.form/Form, kotlin.collections/Map<kotlin/String, kotlin/Any?>) // io.github.robinpcrd.kotose.form/SealedFormEvents.ValueChange.<init>|<init>(io.github.robinpcrd.kotose.form.Form;kotlin.collections.Map<kotlin.String,kotlin.Any?>){}[0]
+
+        final val form // io.github.robinpcrd.kotose.form/SealedFormEvents.ValueChange.form|{}form[0]
+            final fun <get-form>(): io.github.robinpcrd.kotose.form/Form // io.github.robinpcrd.kotose.form/SealedFormEvents.ValueChange.form.<get-form>|<get-form>(){}[0]
+        final val values // io.github.robinpcrd.kotose.form/SealedFormEvents.ValueChange.values|{}values[0]
+            final fun <get-values>(): kotlin.collections/Map<kotlin/String, kotlin/Any?> // io.github.robinpcrd.kotose.form/SealedFormEvents.ValueChange.values.<get-values>|<get-values>(){}[0]
+
+        final fun component1(): io.github.robinpcrd.kotose.form/Form // io.github.robinpcrd.kotose.form/SealedFormEvents.ValueChange.component1|component1(){}[0]
+        final fun component2(): kotlin.collections/Map<kotlin/String, kotlin/Any?> // io.github.robinpcrd.kotose.form/SealedFormEvents.ValueChange.component2|component2(){}[0]
+        final fun copy(io.github.robinpcrd.kotose.form/Form = ..., kotlin.collections/Map<kotlin/String, kotlin/Any?> = ...): io.github.robinpcrd.kotose.form/SealedFormEvents.ValueChange // io.github.robinpcrd.kotose.form/SealedFormEvents.ValueChange.copy|copy(io.github.robinpcrd.kotose.form.Form;kotlin.collections.Map<kotlin.String,kotlin.Any?>){}[0]
+        final fun equals(kotlin/Any?): kotlin/Boolean // io.github.robinpcrd.kotose.form/SealedFormEvents.ValueChange.equals|equals(kotlin.Any?){}[0]
+        final fun hashCode(): kotlin/Int // io.github.robinpcrd.kotose.form/SealedFormEvents.ValueChange.hashCode|hashCode(){}[0]
+        final fun toString(): kotlin/String // io.github.robinpcrd.kotose.form/SealedFormEvents.ValueChange.toString|toString(){}[0]
+    }
+}
+
+sealed class io.github.robinpcrd.kotose.form/ValidationRule { // io.github.robinpcrd.kotose.form/ValidationRule|null[0]
+    abstract class <#A1: kotlin/Any?> Field : io.github.robinpcrd.kotose.form/ValidationRule { // io.github.robinpcrd.kotose.form/ValidationRule.Field|null[0]
+        constructor <init>() // io.github.robinpcrd.kotose.form/ValidationRule.Field.<init>|<init>(){}[0]
+
+        abstract fun isValid(#A1?): io.github.robinpcrd.kotose.form/ValidationError? // io.github.robinpcrd.kotose.form/ValidationRule.Field.isValid|isValid(1:0?){}[0]
+    }
+
+    abstract class Group : io.github.robinpcrd.kotose.form/ValidationRule { // io.github.robinpcrd.kotose.form/ValidationRule.Group|null[0]
+        constructor <init>(io.github.robinpcrd.kotose.form/ValidationError) // io.github.robinpcrd.kotose.form/ValidationRule.Group.<init>|<init>(io.github.robinpcrd.kotose.form.ValidationError){}[0]
+
+        final val error // io.github.robinpcrd.kotose.form/ValidationRule.Group.error|{}error[0]
+            final fun <get-error>(): io.github.robinpcrd.kotose.form/ValidationError // io.github.robinpcrd.kotose.form/ValidationRule.Group.error.<get-error>|<get-error>(){}[0]
+
+        abstract fun isValid(): io.github.robinpcrd.kotose.form/ValidationError? // io.github.robinpcrd.kotose.form/ValidationRule.Group.isValid|isValid(){}[0]
+    }
+}
+
+final fun (io.github.robinpcrd.kotose.form.dsl/FormBuilder).io.github.robinpcrd.kotose.form.dsl/group(kotlin/Function1<io.github.robinpcrd.kotose.form.dsl/GroupBuilder, kotlin/Unit>): io.github.robinpcrd.kotose.form/Group // io.github.robinpcrd.kotose.form.dsl/group|group@io.github.robinpcrd.kotose.form.dsl.FormBuilder(kotlin.Function1<io.github.robinpcrd.kotose.form.dsl.GroupBuilder,kotlin.Unit>){}[0]
+final fun (io.github.robinpcrd.kotose.form.dsl/GroupBuilder).io.github.robinpcrd.kotose.form.dsl/actionField(kotlin/String? = ..., io.github.robinpcrd.kotose.resources/StrRes, kotlin/Function1<io.github.robinpcrd.kotose.form.fields/ActionField, kotlin/Unit> = ..., kotlin/Function0<kotlin/Unit>): io.github.robinpcrd.kotose.form.fields/ActionField // io.github.robinpcrd.kotose.form.dsl/actionField|actionField@io.github.robinpcrd.kotose.form.dsl.GroupBuilder(kotlin.String?;io.github.robinpcrd.kotose.resources.StrRes;kotlin.Function1<io.github.robinpcrd.kotose.form.fields.ActionField,kotlin.Unit>;kotlin.Function0<kotlin.Unit>){}[0]
+final fun (io.github.robinpcrd.kotose.form.dsl/GroupBuilder).io.github.robinpcrd.kotose.form.dsl/dateTimePicker(kotlin/String? = ..., io.github.robinpcrd.kotose.resources/StrRes? = ..., kotlin/Function0<kotlin/Unit>? = ..., kotlin/Function1<kotlinx.datetime/LocalDateTime, kotlin/String> = ..., io.github.robinpcrd.kotose.form.fields/IosDatePickerMode = ..., kotlin/Function1<io.github.robinpcrd.kotose.form.fields/DateTimeField, kotlin/Unit> = ...): io.github.robinpcrd.kotose.form.fields/DateTimeField // io.github.robinpcrd.kotose.form.dsl/dateTimePicker|dateTimePicker@io.github.robinpcrd.kotose.form.dsl.GroupBuilder(kotlin.String?;io.github.robinpcrd.kotose.resources.StrRes?;kotlin.Function0<kotlin.Unit>?;kotlin.Function1<kotlinx.datetime.LocalDateTime,kotlin.String>;io.github.robinpcrd.kotose.form.fields.IosDatePickerMode;kotlin.Function1<io.github.robinpcrd.kotose.form.fields.DateTimeField,kotlin.Unit>){}[0]
+final fun (io.github.robinpcrd.kotose.form.dsl/GroupBuilder).io.github.robinpcrd.kotose.form.dsl/displayParagraph(kotlin/String? = ..., kotlin.collections/List<io.github.robinpcrd.kotose.resources/StrRes> = ..., kotlin/Function1<io.github.robinpcrd.kotose.form.fields/DisplayParagraphField, kotlin/Unit> = ...): io.github.robinpcrd.kotose.form.fields/DisplayParagraphField // io.github.robinpcrd.kotose.form.dsl/displayParagraph|displayParagraph@io.github.robinpcrd.kotose.form.dsl.GroupBuilder(kotlin.String?;kotlin.collections.List<io.github.robinpcrd.kotose.resources.StrRes>;kotlin.Function1<io.github.robinpcrd.kotose.form.fields.DisplayParagraphField,kotlin.Unit>){}[0]
+final fun (io.github.robinpcrd.kotose.form.dsl/GroupBuilder).io.github.robinpcrd.kotose.form.dsl/displayText(kotlin/String? = ..., io.github.robinpcrd.kotose.resources/StrRes? = ..., kotlin/Boolean = ..., kotlin/Function1<io.github.robinpcrd.kotose.form.fields/DisplayTextField, kotlin/Unit> = ...): io.github.robinpcrd.kotose.form.fields/DisplayTextField // io.github.robinpcrd.kotose.form.dsl/displayText|displayText@io.github.robinpcrd.kotose.form.dsl.GroupBuilder(kotlin.String?;io.github.robinpcrd.kotose.resources.StrRes?;kotlin.Boolean;kotlin.Function1<io.github.robinpcrd.kotose.form.fields.DisplayTextField,kotlin.Unit>){}[0]
+final fun (io.github.robinpcrd.kotose.form.dsl/GroupBuilder).io.github.robinpcrd.kotose.form.dsl/localDatePicker(kotlin/String? = ..., io.github.robinpcrd.kotose.resources/StrRes? = ..., kotlin/Function1<kotlinx.datetime/LocalDate, kotlin/String> = ..., kotlin/Function0<kotlin/Unit>? = ..., io.github.robinpcrd.kotose.form.fields/IosDatePickerMode = ..., kotlin/Function1<io.github.robinpcrd.kotose.form.fields/LocalDateField, kotlin/Unit> = ...): io.github.robinpcrd.kotose.form.fields/LocalDateField // io.github.robinpcrd.kotose.form.dsl/localDatePicker|localDatePicker@io.github.robinpcrd.kotose.form.dsl.GroupBuilder(kotlin.String?;io.github.robinpcrd.kotose.resources.StrRes?;kotlin.Function1<kotlinx.datetime.LocalDate,kotlin.String>;kotlin.Function0<kotlin.Unit>?;io.github.robinpcrd.kotose.form.fields.IosDatePickerMode;kotlin.Function1<io.github.robinpcrd.kotose.form.fields.LocalDateField,kotlin.Unit>){}[0]
+final fun (io.github.robinpcrd.kotose.form.dsl/GroupBuilder).io.github.robinpcrd.kotose.form.dsl/secureTextField(kotlin/String? = ..., io.github.robinpcrd.kotose.resources/StrRes? = ..., io.github.robinpcrd.kotose.resources/StrRes? = ..., kotlin/Function1<io.github.robinpcrd.kotose.form.fields/SecureTextField, kotlin/Unit> = ...): io.github.robinpcrd.kotose.form.fields/SecureTextField // io.github.robinpcrd.kotose.form.dsl/secureTextField|secureTextField@io.github.robinpcrd.kotose.form.dsl.GroupBuilder(kotlin.String?;io.github.robinpcrd.kotose.resources.StrRes?;io.github.robinpcrd.kotose.resources.StrRes?;kotlin.Function1<io.github.robinpcrd.kotose.form.fields.SecureTextField,kotlin.Unit>){}[0]
+final fun (io.github.robinpcrd.kotose.form.dsl/GroupBuilder).io.github.robinpcrd.kotose.form.dsl/textField(kotlin/String? = ..., io.github.robinpcrd.kotose.resources/StrRes? = ..., io.github.robinpcrd.kotose.resources/StrRes? = ..., io.github.robinpcrd.kotose.form.fields/TextLineLimits = ..., kotlin/Function1<io.github.robinpcrd.kotose.form.fields/TextField, kotlin/Unit> = ...): io.github.robinpcrd.kotose.form.fields/TextField // io.github.robinpcrd.kotose.form.dsl/textField|textField@io.github.robinpcrd.kotose.form.dsl.GroupBuilder(kotlin.String?;io.github.robinpcrd.kotose.resources.StrRes?;io.github.robinpcrd.kotose.resources.StrRes?;io.github.robinpcrd.kotose.form.fields.TextLineLimits;kotlin.Function1<io.github.robinpcrd.kotose.form.fields.TextField,kotlin.Unit>){}[0]
+final fun (io.github.robinpcrd.kotose.form.dsl/GroupBuilder).io.github.robinpcrd.kotose.form.dsl/toggleField(kotlin/String? = ..., io.github.robinpcrd.kotose.resources/StrRes, kotlin/Function1<io.github.robinpcrd.kotose.form.fields/ToggleField, kotlin/Unit> = ...): io.github.robinpcrd.kotose.form.fields/ToggleField // io.github.robinpcrd.kotose.form.dsl/toggleField|toggleField@io.github.robinpcrd.kotose.form.dsl.GroupBuilder(kotlin.String?;io.github.robinpcrd.kotose.resources.StrRes;kotlin.Function1<io.github.robinpcrd.kotose.form.fields.ToggleField,kotlin.Unit>){}[0]
+final fun (io.github.robinpcrd.kotose.form.fields/DateTimeField).io.github.robinpcrd.kotose.form.fields/applyPickedDateTime(kotlinx.datetime/LocalDate, kotlin/Int, kotlin/Int) // io.github.robinpcrd.kotose.form.fields/applyPickedDateTime|applyPickedDateTime@io.github.robinpcrd.kotose.form.fields.DateTimeField(kotlinx.datetime.LocalDate;kotlin.Int;kotlin.Int){}[0]
+final fun (io.github.robinpcrd.kotose.form.fields/LocalDateField).io.github.robinpcrd.kotose.form.fields/applyPickedDate(kotlinx.datetime/LocalDate) // io.github.robinpcrd.kotose.form.fields/applyPickedDate|applyPickedDate@io.github.robinpcrd.kotose.form.fields.LocalDateField(kotlinx.datetime.LocalDate){}[0]
+final fun (io.github.robinpcrd.kotose.form/Form).io.github.robinpcrd.kotose.form/transaction(kotlin/Boolean = ..., kotlin/Function1<io.github.robinpcrd.kotose.form/Transaction, kotlin/Unit>) // io.github.robinpcrd.kotose.form/transaction|transaction@io.github.robinpcrd.kotose.form.Form(kotlin.Boolean;kotlin.Function1<io.github.robinpcrd.kotose.form.Transaction,kotlin.Unit>){}[0]
+final fun (kotlin.collections/Collection<io.github.robinpcrd.kotose.form/Field<*>>).io.github.robinpcrd.kotose.form/ensureSingleTags() // io.github.robinpcrd.kotose.form/ensureSingleTags|ensureSingleTags@kotlin.collections.Collection<io.github.robinpcrd.kotose.form.Field<*>>(){}[0]
+final fun <#A: kotlin/Any?> (io.github.robinpcrd.kotose.form.dsl/FormBuilder).io.github.robinpcrd.kotose.form.dsl/multipleSelectionGroup(kotlin/Function1<io.github.robinpcrd.kotose.form.dsl/MultipleSelectionGroupBuilder<#A>, kotlin/Unit>): io.github.robinpcrd.kotose.form.groups/SelectionGroup.Multiple<#A> // io.github.robinpcrd.kotose.form.dsl/multipleSelectionGroup|multipleSelectionGroup@io.github.robinpcrd.kotose.form.dsl.FormBuilder(kotlin.Function1<io.github.robinpcrd.kotose.form.dsl.MultipleSelectionGroupBuilder<0:0>,kotlin.Unit>){0§<kotlin.Any?>}[0]
+final fun <#A: kotlin/Any?> (io.github.robinpcrd.kotose.form.dsl/FormBuilder).io.github.robinpcrd.kotose.form.dsl/singleSelectionGroup(kotlin/Function1<io.github.robinpcrd.kotose.form.dsl/SingleSelectionGroupBuilder<#A>, kotlin/Unit>): io.github.robinpcrd.kotose.form.groups/SelectionGroup.Single<#A> // io.github.robinpcrd.kotose.form.dsl/singleSelectionGroup|singleSelectionGroup@io.github.robinpcrd.kotose.form.dsl.FormBuilder(kotlin.Function1<io.github.robinpcrd.kotose.form.dsl.SingleSelectionGroupBuilder<0:0>,kotlin.Unit>){0§<kotlin.Any?>}[0]
+final fun <#A: kotlin/Any?> (io.github.robinpcrd.kotose.form.dsl/GroupBuilder).io.github.robinpcrd.kotose.form.dsl/singleChoiceField(kotlin/String? = ..., kotlin.collections/List<io.github.robinpcrd.kotose.form.fields/DropdownOption<#A>>, io.github.robinpcrd.kotose.resources/StrRes? = ..., kotlin/Boolean = ..., io.github.robinpcrd.kotose.form.fields/SelectionPresentation = ..., io.github.robinpcrd.kotose.form.fields/SelectionPresentation? = ..., kotlin/Function1<io.github.robinpcrd.kotose.form.fields/SingleChoiceField<#A>, kotlin/Unit> = ...): io.github.robinpcrd.kotose.form.fields/SingleChoiceField<#A> // io.github.robinpcrd.kotose.form.dsl/singleChoiceField|singleChoiceField@io.github.robinpcrd.kotose.form.dsl.GroupBuilder(kotlin.String?;kotlin.collections.List<io.github.robinpcrd.kotose.form.fields.DropdownOption<0:0>>;io.github.robinpcrd.kotose.resources.StrRes?;kotlin.Boolean;io.github.robinpcrd.kotose.form.fields.SelectionPresentation;io.github.robinpcrd.kotose.form.fields.SelectionPresentation?;kotlin.Function1<io.github.robinpcrd.kotose.form.fields.SingleChoiceField<0:0>,kotlin.Unit>){0§<kotlin.Any?>}[0]
+final fun <#A: kotlin/Any?> (io.github.robinpcrd.kotose.form.dsl/SelectableGroupBuilder<#A>).io.github.robinpcrd.kotose.form.dsl/selectionOption(kotlin/String? = ..., #A, io.github.robinpcrd.kotose.resources/StrRes? = ..., kotlin/Function1<io.github.robinpcrd.kotose.form.fields/SelectionOptionField<#A>, kotlin/Unit> = ...): io.github.robinpcrd.kotose.form.fields/SelectionOptionField<#A> // io.github.robinpcrd.kotose.form.dsl/selectionOption|selectionOption@io.github.robinpcrd.kotose.form.dsl.SelectableGroupBuilder<0:0>(kotlin.String?;0:0;io.github.robinpcrd.kotose.resources.StrRes?;kotlin.Function1<io.github.robinpcrd.kotose.form.fields.SelectionOptionField<0:0>,kotlin.Unit>){0§<kotlin.Any?>}[0]
+final fun io.github.robinpcrd.kotose.form.dsl/form(kotlin/Function1<io.github.robinpcrd.kotose.form.dsl/FormBuilder, kotlin/Unit>): io.github.robinpcrd.kotose.form/Form // io.github.robinpcrd.kotose.form.dsl/form|form(kotlin.Function1<io.github.robinpcrd.kotose.form.dsl.FormBuilder,kotlin.Unit>){}[0]
+final fun io.github.robinpcrd.kotose.form.fields/defaultDateTimeFormatter(kotlinx.datetime/LocalDateTime): kotlin/String // io.github.robinpcrd.kotose.form.fields/defaultDateTimeFormatter|defaultDateTimeFormatter(kotlinx.datetime.LocalDateTime){}[0]
+final fun io.github.robinpcrd.kotose.form.fields/defaultLocalDateFormatter(kotlinx.datetime/LocalDate): kotlin/String // io.github.robinpcrd.kotose.form.fields/defaultLocalDateFormatter|defaultLocalDateFormatter(kotlinx.datetime.LocalDate){}[0]
+final fun io.github.robinpcrd.kotose.form/shouldValidate(io.github.robinpcrd.kotose.form/ValidationTriggerSource, io.github.robinpcrd.kotose.form/ValidationOption): kotlin/Boolean // io.github.robinpcrd.kotose.form/shouldValidate|shouldValidate(io.github.robinpcrd.kotose.form.ValidationTriggerSource;io.github.robinpcrd.kotose.form.ValidationOption){}[0]
+final fun io.github.robinpcrd.kotose.form/transaction(io.github.robinpcrd.kotose.form/Form, kotlin/Boolean = ..., kotlin/Function1<io.github.robinpcrd.kotose.form/Transaction, kotlin/Unit>) // io.github.robinpcrd.kotose.form/transaction|transaction(io.github.robinpcrd.kotose.form.Form;kotlin.Boolean;kotlin.Function1<io.github.robinpcrd.kotose.form.Transaction,kotlin.Unit>){}[0]
+final inline fun <#A: reified kotlin/Any?> (io.github.robinpcrd.kotose.form/Form).io.github.robinpcrd.kotose.form/getMultipleSelectionGroupByTag(kotlin/String): io.github.robinpcrd.kotose.form.groups/SelectionGroup.Multiple<#A>? // io.github.robinpcrd.kotose.form/getMultipleSelectionGroupByTag|getMultipleSelectionGroupByTag@io.github.robinpcrd.kotose.form.Form(kotlin.String){0§<kotlin.Any?>}[0]
+final inline fun <#A: reified kotlin/Any?> (io.github.robinpcrd.kotose.form/Form).io.github.robinpcrd.kotose.form/getSelectionGroupByTag(kotlin/String): io.github.robinpcrd.kotose.form.groups/SelectionGroup<#A>? // io.github.robinpcrd.kotose.form/getSelectionGroupByTag|getSelectionGroupByTag@io.github.robinpcrd.kotose.form.Form(kotlin.String){0§<kotlin.Any?>}[0]
+final inline fun <#A: reified kotlin/Any?> (io.github.robinpcrd.kotose.form/Form).io.github.robinpcrd.kotose.form/getSingleSelectionGroupByTag(kotlin/String): io.github.robinpcrd.kotose.form.groups/SelectionGroup.Single<#A>? // io.github.robinpcrd.kotose.form/getSingleSelectionGroupByTag|getSingleSelectionGroupByTag@io.github.robinpcrd.kotose.form.Form(kotlin.String){0§<kotlin.Any?>}[0]

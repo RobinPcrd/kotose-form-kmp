@@ -1,0 +1,12 @@
+appId: io.github.robinpcrd.kotose.form.example
+# On iOS the action bar, with its result line, sits under the keyboard: when Validate focused a
+# field, close the keyboard with the Done of the keyboard bar.
+---
+- runFlow:
+    when:
+      true: ${RENDERER != 'android'}
+      visible:
+        id: '.*-done'
+    commands:
+      - tapOn:
+          id: '.*-done'

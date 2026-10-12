@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="validation_error_field_required">Ce champ est requis</string>
+    <string name="validation_error_required_selectable_section">Une option doit etre selectionnee</string>
+    <string name="validation_error_phone_incorrect_length">La longueur du numero est invalide pour le pays selectionne</string>
+    <string name="validation_warning_phone_invalid">Le numero semble etre invalide</string>
+    <string name="date_picker_confirm">OK</string>
+    <string name="date_picker_cancel">Annuler</string>
+    <string name="clear_selection">Effacer la sélection</string>
+    <string name="close">Fermer</string>
+    <string name="phone_dial_code">Indicatif</string>
+    <string name="keyboard_previous">Précédent</string>
+    <string name="keyboard_next">Suivant</string>
+    <string name="keyboard_done">OK</string>
+</resources>

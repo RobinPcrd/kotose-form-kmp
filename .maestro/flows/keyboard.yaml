@@ -1,0 +1,49 @@
+appId: io.github.robinpcrd.kotose.form.example
+name: Keyboard navigation walks the fields and Validate focuses the last one
+---
+- runFlow:
+    file: ../helpers/open-page.yaml
+    env:
+      PAGE: keyboard
+      RENDERER: ${RENDERER}
+- tapOn:
+    id: keyboard-note-1
+- inputText: First
+- runFlow:
+    when:
+      platform: Android
+    commands:
+      - pressKey: Enter
+- runFlow:
+    when:
+      platform: iOS
+    commands:
+      - tapOn:
+          id: Next.*
+- inputText: Second
+- assertVisible:
+    id: keyboard-note-2
+    text: Second
+# On iOS the action bar sits under the keyboard: close it first.
+- runFlow:
+    when:
+      true: ${RENDERER != 'android'}
+    commands:
+      - tapOn:
+          id: keyboard-note-2-done
+- tapOn:
+    id: action-validate
+- assertVisible: This field is required
+- assertVisible:
+    id: keyboard-last
+- inputText: Last
+- runFlow:
+    when:
+      true: ${RENDERER != 'android'}
+    commands:
+      - tapOn:
+          id: keyboard-last-done
+- tapOn:
+    id: action-validate
+- assertVisible: Valid
+- takeScreenshot: ${RENDERER}-keyboard

@@ -1,0 +1,20 @@
+appId: io.github.robinpcrd.kotose.form.example
+name: Catalog home lists both sections
+---
+- launchApp:
+    clearState: true
+- assertVisible: Fields
+- assertVisible:
+    id: page-text
+- scrollUntilVisible:
+    element:
+      id: page-custom
+    direction: DOWN
+- scrollUntilVisible:
+    element:
+      id: page-scroll-to-error
+    direction: DOWN
+- assertVisible: Behaviors
+- assertVisible:
+    id: page-keyboard
+- takeScreenshot: ${RENDERER}-home

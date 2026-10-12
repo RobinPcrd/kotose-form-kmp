@@ -1,0 +1,713 @@
+public final class io/github/robinpcrd/kotose/form/Condition {
+	public static final field Companion Lio/github/robinpcrd/kotose/form/Condition$Companion;
+	public fun <init> ()V
+	public fun <init> (Lkotlinx/collections/immutable/ImmutableSet;Lkotlin/jvm/functions/Function1;)V
+	public synthetic fun <init> (Lkotlinx/collections/immutable/ImmutableSet;Lkotlin/jvm/functions/Function1;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public fun <init> (Z)V
+	public fun <init> ([Ljava/lang/String;Lkotlin/jvm/functions/Function1;)V
+	public final fun component1 ()Lkotlinx/collections/immutable/ImmutableSet;
+	public final fun component2 ()Lkotlin/jvm/functions/Function1;
+	public final fun copy (Lkotlinx/collections/immutable/ImmutableSet;Lkotlin/jvm/functions/Function1;)Lio/github/robinpcrd/kotose/form/Condition;
+	public static synthetic fun copy$default (Lio/github/robinpcrd/kotose/form/Condition;Lkotlinx/collections/immutable/ImmutableSet;Lkotlin/jvm/functions/Function1;ILjava/lang/Object;)Lio/github/robinpcrd/kotose/form/Condition;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getCondition ()Lkotlin/jvm/functions/Function1;
+	public final fun getTags ()Lkotlinx/collections/immutable/ImmutableSet;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class io/github/robinpcrd/kotose/form/Condition$Companion {
+	public final fun getFalse ()Lio/github/robinpcrd/kotose/form/Condition;
+	public final fun getTrue ()Lio/github/robinpcrd/kotose/form/Condition;
+}
+
+public final class io/github/robinpcrd/kotose/form/CustomCondition {
+	public fun <init> (Lkotlinx/collections/immutable/ImmutableSet;Lkotlin/jvm/functions/Function2;)V
+	public synthetic fun <init> (Lkotlinx/collections/immutable/ImmutableSet;Lkotlin/jvm/functions/Function2;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public fun <init> ([Ljava/lang/String;Lkotlin/jvm/functions/Function2;)V
+	public final fun getOnEval ()Lkotlin/jvm/functions/Function2;
+	public final fun getTags ()Lkotlinx/collections/immutable/ImmutableSet;
+}
+
+public abstract class io/github/robinpcrd/kotose/form/Element {
+	public synthetic fun <init> (Ljava/lang/String;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun addRule (Lio/github/robinpcrd/kotose/form/ValidationRule;)V
+	public final fun clearValidationErrors (Lio/github/robinpcrd/kotose/form/ValidationTriggerSource;)V
+	public fun evaluateCustomCondition ()V
+	public fun evaluateEnabled ()V
+	public fun evaluateVisibility ()V
+	public final fun getCustomCondition ()Lio/github/robinpcrd/kotose/form/CustomCondition;
+	public final fun getErrors ()Lkotlinx/collections/immutable/ImmutableList;
+	public final fun getErrorsState ()Landroidx/compose/runtime/State;
+	public final fun getForm ()Lio/github/robinpcrd/kotose/form/Form;
+	public final fun getHasErrorAndVisible ()Z
+	public final fun getHasErrorOrWarningAndVisible ()Z
+	public final fun getHasErrors ()Z
+	public final fun getHasErrorsNotSilent ()Z
+	public final fun getHasErrorsNotSilentState ()Landroidx/compose/runtime/State;
+	public final fun getHasErrorsOrWarnings ()Z
+	public final fun getHasErrorsState ()Landroidx/compose/runtime/State;
+	public final fun getHasWarningsState ()Landroidx/compose/runtime/State;
+	public final fun getKey ()Ljava/lang/String;
+	public final fun getOnValidationChange ()Lkotlin/jvm/functions/Function0;
+	public final fun getRules ()Ljava/util/List;
+	public final fun getTag ()Ljava/lang/String;
+	public final fun getValidationOption ()Lio/github/robinpcrd/kotose/form/ValidationOption;
+	public final fun isEnabled ()Z
+	public final fun isEnabledCondition ()Lio/github/robinpcrd/kotose/form/Condition;
+	public final fun isEnabledState ()Landroidx/compose/runtime/State;
+	public final fun isVisible ()Z
+	public final fun isVisibleCondition ()Lio/github/robinpcrd/kotose/form/Condition;
+	public final fun isVisibleState ()Landroidx/compose/runtime/State;
+	public final fun removeRule (Lio/github/robinpcrd/kotose/form/ValidationRule;)V
+	public final fun setCustomCondition (Lio/github/robinpcrd/kotose/form/CustomCondition;)V
+	public final fun setEnabledCondition (Lio/github/robinpcrd/kotose/form/Condition;)V
+	public final fun setOnValidationChange (Lkotlin/jvm/functions/Function0;)V
+	public final fun setValidationErrors (Ljava/util/List;Lio/github/robinpcrd/kotose/form/ValidationTriggerSource;)V
+	public final fun setValidationOption (Lio/github/robinpcrd/kotose/form/ValidationOption;)V
+	public final fun setVisibleCondition (Lio/github/robinpcrd/kotose/form/Condition;)V
+	public abstract fun validate (Lio/github/robinpcrd/kotose/form/ValidationTriggerSource;Z)Lkotlinx/collections/immutable/ImmutableList;
+}
+
+public abstract interface annotation class io/github/robinpcrd/kotose/form/ExperimentalKotoseFormApi : java/lang/annotation/Annotation {
+}
+
+public abstract class io/github/robinpcrd/kotose/form/Field : io/github/robinpcrd/kotose/form/Element, io/github/robinpcrd/kotose/form/FieldEvent {
+	public fun <init> (Ljava/lang/String;)V
+	public fun evaluateEnabled ()V
+	public fun evaluateVisibility ()V
+	public final fun getIndexInGroup ()I
+	public final fun getOnValueChange ()Lkotlin/jvm/functions/Function1;
+	public final fun getParent ()Lio/github/robinpcrd/kotose/form/Group;
+	public final fun getParentErrorState ()Landroidx/compose/runtime/State;
+	public final fun getParentErrors ()Ljava/util/List;
+	public fun getSubmittedValue ()Ljava/lang/Object;
+	public final fun getValue ()Ljava/lang/Object;
+	public final fun getValueState ()Landroidx/compose/runtime/State;
+	public final fun isErrorField ()Z
+	public fun onParentValidationChanged (Ljava/util/List;)V
+	public fun onValueChanged ()V
+	public final fun remove (Z)V
+	public static synthetic fun remove$default (Lio/github/robinpcrd/kotose/form/Field;ZILjava/lang/Object;)V
+	public abstract fun setBaseValue (Ljava/lang/Object;)V
+	public final fun setOnValueChange (Lkotlin/jvm/functions/Function1;)V
+	public final fun setValue (Ljava/lang/Object;)V
+	public fun validate (Lio/github/robinpcrd/kotose/form/ValidationTriggerSource;Z)Lkotlinx/collections/immutable/ImmutableList;
+}
+
+public final class io/github/robinpcrd/kotose/form/FieldKt {
+	public static final fun ensureSingleTags (Ljava/util/Collection;)V
+}
+
+public abstract class io/github/robinpcrd/kotose/form/FocusableField : io/github/robinpcrd/kotose/form/Field {
+	public fun <init> (Ljava/lang/String;)V
+}
+
+public final class io/github/robinpcrd/kotose/form/Form {
+	public fun <init> ()V
+	public final fun add (ILio/github/robinpcrd/kotose/form/Group;Z)V
+	public final fun add (Lio/github/robinpcrd/kotose/form/Group;Z)V
+	public static synthetic fun add$default (Lio/github/robinpcrd/kotose/form/Form;ILio/github/robinpcrd/kotose/form/Group;ZILjava/lang/Object;)V
+	public static synthetic fun add$default (Lio/github/robinpcrd/kotose/form/Form;Lio/github/robinpcrd/kotose/form/Group;ZILjava/lang/Object;)V
+	public final fun addAll (ILjava/util/Collection;Z)V
+	public final fun addAll (Ljava/util/Collection;Z)V
+	public static synthetic fun addAll$default (Lio/github/robinpcrd/kotose/form/Form;ILjava/util/Collection;ZILjava/lang/Object;)V
+	public static synthetic fun addAll$default (Lio/github/robinpcrd/kotose/form/Form;Ljava/util/Collection;ZILjava/lang/Object;)V
+	public final fun addListener (Lio/github/robinpcrd/kotose/form/FormEvent;)V
+	public final fun allNonNullValues (Z)Ljava/util/Map;
+	public static synthetic fun allNonNullValues$default (Lio/github/robinpcrd/kotose/form/Form;ZILjava/lang/Object;)Ljava/util/Map;
+	public final fun allValues (Z)Ljava/util/Map;
+	public static synthetic fun allValues$default (Lio/github/robinpcrd/kotose/form/Form;ZILjava/lang/Object;)Ljava/util/Map;
+	public final fun canFocus (Lio/github/robinpcrd/kotose/form/FocusableField;)Z
+	public final fun completeNavigation (J)Z
+	public final fun fieldValue (Ljava/lang/String;)Ljava/lang/Object;
+	public final fun focusNext (Lio/github/robinpcrd/kotose/form/Field;)V
+	public final fun getCurrentFocus ()Lio/github/robinpcrd/kotose/form/FocusableField;
+	public final fun getCustomConditionMap ()Lkotlinx/collections/immutable/ImmutableMap;
+	public final fun getDismissKeyboardEvent ()Landroidx/compose/runtime/State;
+	public final fun getEnabledMap ()Lkotlinx/collections/immutable/ImmutableMap;
+	public final fun getErrorScrollIndex ()Landroidx/compose/runtime/State;
+	public final fun getEvents ()Lkotlinx/coroutines/flow/SharedFlow;
+	public final fun getFieldByTag (Ljava/lang/String;)Lio/github/robinpcrd/kotose/form/Field;
+	public final fun getFields ()Landroidx/compose/runtime/State;
+	public final fun getFirstErrorIndex ()I
+	public final fun getGroupByTag (Ljava/lang/String;)Lio/github/robinpcrd/kotose/form/Group;
+	public final fun getGroups ()Ljava/util/List;
+	public final fun getKey ()Ljava/lang/String;
+	public final fun getNavigationRequest ()Landroidx/compose/runtime/State;
+	public final fun getOnValueChange ()Lkotlin/jvm/functions/Function1;
+	public final fun getVisibilityMap ()Lkotlinx/collections/immutable/ImmutableMap;
+	public final fun hasScrollToError ()V
+	public final fun navigationIndex (J)I
+	public final fun nextFocusableField (Lio/github/robinpcrd/kotose/form/Field;)Lio/github/robinpcrd/kotose/form/FocusableField;
+	public final fun nextFocusableFieldState (Lio/github/robinpcrd/kotose/form/Field;)Landroidx/compose/runtime/State;
+	public final fun onFocusChanged (Lio/github/robinpcrd/kotose/form/FocusableField;Z)V
+	public final fun onKeyboardDismiss ()V
+	public final fun previousFocusableField (Lio/github/robinpcrd/kotose/form/Field;)Lio/github/robinpcrd/kotose/form/FocusableField;
+	public final fun reload ()V
+	public final fun remove (Lio/github/robinpcrd/kotose/form/Group;Z)V
+	public static synthetic fun remove$default (Lio/github/robinpcrd/kotose/form/Form;Lio/github/robinpcrd/kotose/form/Group;ZILjava/lang/Object;)V
+	public final fun removeAll (Ljava/util/Collection;Z)V
+	public static synthetic fun removeAll$default (Lio/github/robinpcrd/kotose/form/Form;Ljava/util/Collection;ZILjava/lang/Object;)V
+	public final fun removeAllListeners ()V
+	public final fun removeAt (IZ)V
+	public static synthetic fun removeAt$default (Lio/github/robinpcrd/kotose/form/Form;IZILjava/lang/Object;)V
+	public final fun removeListener (Lio/github/robinpcrd/kotose/form/FormEvent;)V
+	public final fun setFocus (Lio/github/robinpcrd/kotose/form/FocusableField;)V
+	public final fun setOnValueChange (Lkotlin/jvm/functions/Function1;)V
+	public final fun setValues (Ljava/util/Map;)V
+	public final fun stopEditing (Z)V
+	public static synthetic fun stopEditing$default (Lio/github/robinpcrd/kotose/form/Form;ZILjava/lang/Object;)V
+	public final fun validate (ZZZ)Ljava/util/List;
+	public static synthetic fun validate$default (Lio/github/robinpcrd/kotose/form/Form;ZZZILjava/lang/Object;)Ljava/util/List;
+}
+
+public final class io/github/robinpcrd/kotose/form/Form$DismissKeyboardEvent {
+	public static final field INSTANCE Lio/github/robinpcrd/kotose/form/Form$DismissKeyboardEvent;
+}
+
+public abstract interface class io/github/robinpcrd/kotose/form/FormEvent {
+	public abstract fun onValueChange (Lio/github/robinpcrd/kotose/form/Form;Ljava/util/Map;)V
+}
+
+public final class io/github/robinpcrd/kotose/form/FormNavigationRequest {
+	public fun <init> (JLjava/lang/String;)V
+	public final fun component1 ()J
+	public final fun component2 ()Ljava/lang/String;
+	public final fun copy (JLjava/lang/String;)Lio/github/robinpcrd/kotose/form/FormNavigationRequest;
+	public static synthetic fun copy$default (Lio/github/robinpcrd/kotose/form/FormNavigationRequest;JLjava/lang/String;ILjava/lang/Object;)Lio/github/robinpcrd/kotose/form/FormNavigationRequest;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getId ()J
+	public final fun getTargetKey ()Ljava/lang/String;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public class io/github/robinpcrd/kotose/form/Group : io/github/robinpcrd/kotose/form/Element {
+	public fun <init> ()V
+	public fun <init> (Ljava/lang/String;)V
+	public synthetic fun <init> (Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun addField (ILio/github/robinpcrd/kotose/form/Field;ZZ)V
+	public final fun addField (Lio/github/robinpcrd/kotose/form/Field;ZZ)V
+	public static synthetic fun addField$default (Lio/github/robinpcrd/kotose/form/Group;ILio/github/robinpcrd/kotose/form/Field;ZZILjava/lang/Object;)V
+	public static synthetic fun addField$default (Lio/github/robinpcrd/kotose/form/Group;Lio/github/robinpcrd/kotose/form/Field;ZZILjava/lang/Object;)V
+	public final fun addFields (ILjava/util/Collection;ZZ)V
+	public final fun addFields (Ljava/util/Collection;ZZ)V
+	public static synthetic fun addFields$default (Lio/github/robinpcrd/kotose/form/Group;ILjava/util/Collection;ZZILjava/lang/Object;)V
+	public static synthetic fun addFields$default (Lio/github/robinpcrd/kotose/form/Group;Ljava/util/Collection;ZZILjava/lang/Object;)V
+	public fun allValues (Z)Ljava/util/Map;
+	public static synthetic fun allValues$default (Lio/github/robinpcrd/kotose/form/Group;ZILjava/lang/Object;)Ljava/util/Map;
+	public fun clear (Z)V
+	public static synthetic fun clear$default (Lio/github/robinpcrd/kotose/form/Group;ZILjava/lang/Object;)V
+	public fun evaluateEnabled ()V
+	public fun evaluateVisibility ()V
+	public final fun getFields ()Lkotlinx/collections/immutable/ImmutableList;
+	public final fun getIndexInForm ()I
+	protected final fun get_fields ()Ljava/util/List;
+	protected final fun notifyValueChange (Ljava/lang/Object;)V
+	public final fun onFieldVisibilityChanged (Lio/github/robinpcrd/kotose/form/Field;)V
+	protected fun onFieldsAdded (ILjava/util/Collection;ZZ)V
+	public static synthetic fun onFieldsAdded$default (Lio/github/robinpcrd/kotose/form/Group;ILjava/util/Collection;ZZILjava/lang/Object;)V
+	protected fun onFieldsRemoved (Ljava/util/Collection;)V
+	public final fun removeField (Lio/github/robinpcrd/kotose/form/Field;Z)V
+	public static synthetic fun removeField$default (Lio/github/robinpcrd/kotose/form/Group;Lio/github/robinpcrd/kotose/form/Field;ZILjava/lang/Object;)V
+	public final fun removeFields (Ljava/util/Collection;Z)V
+	public static synthetic fun removeFields$default (Lio/github/robinpcrd/kotose/form/Group;Ljava/util/Collection;ZILjava/lang/Object;)V
+	public fun setBaseValue (Ljava/lang/Object;)V
+	public final fun updateFieldErrors (Lio/github/robinpcrd/kotose/form/Field;Z)V
+	public static synthetic fun updateFieldErrors$default (Lio/github/robinpcrd/kotose/form/Group;Lio/github/robinpcrd/kotose/form/Field;ZILjava/lang/Object;)V
+	public fun validate (Lio/github/robinpcrd/kotose/form/ValidationTriggerSource;Z)Lkotlinx/collections/immutable/ImmutableList;
+	public final fun validate (Lio/github/robinpcrd/kotose/form/ValidationTriggerSource;ZZ)Lkotlinx/collections/immutable/ImmutableList;
+	public static synthetic fun validate$default (Lio/github/robinpcrd/kotose/form/Group;Lio/github/robinpcrd/kotose/form/ValidationTriggerSource;ZZILjava/lang/Object;)Lkotlinx/collections/immutable/ImmutableList;
+}
+
+public final class io/github/robinpcrd/kotose/form/RequiredFieldRule : io/github/robinpcrd/kotose/form/ValidationRule$Field {
+	public fun <init> ()V
+	public fun isValid (Ljava/lang/Object;)Lio/github/robinpcrd/kotose/form/ValidationError;
+}
+
+public final class io/github/robinpcrd/kotose/form/RequiredSingleSelectionGroupRule : io/github/robinpcrd/kotose/form/ValidationRule$Group {
+	public fun <init> (Lio/github/robinpcrd/kotose/form/groups/SelectionGroup;)V
+	public fun isValid ()Lio/github/robinpcrd/kotose/form/ValidationError;
+}
+
+public abstract interface class io/github/robinpcrd/kotose/form/RequiredValue {
+	public abstract fun isEmptyForRequired ()Z
+}
+
+public abstract class io/github/robinpcrd/kotose/form/SealedFormEvents {
+}
+
+public final class io/github/robinpcrd/kotose/form/SealedFormEvents$ValueChange : io/github/robinpcrd/kotose/form/SealedFormEvents {
+	public fun <init> (Lio/github/robinpcrd/kotose/form/Form;Ljava/util/Map;)V
+	public final fun component1 ()Lio/github/robinpcrd/kotose/form/Form;
+	public final fun component2 ()Ljava/util/Map;
+	public final fun copy (Lio/github/robinpcrd/kotose/form/Form;Ljava/util/Map;)Lio/github/robinpcrd/kotose/form/SealedFormEvents$ValueChange;
+	public static synthetic fun copy$default (Lio/github/robinpcrd/kotose/form/SealedFormEvents$ValueChange;Lio/github/robinpcrd/kotose/form/Form;Ljava/util/Map;ILjava/lang/Object;)Lio/github/robinpcrd/kotose/form/SealedFormEvents$ValueChange;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getForm ()Lio/github/robinpcrd/kotose/form/Form;
+	public final fun getValues ()Ljava/util/Map;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class io/github/robinpcrd/kotose/form/Transaction {
+	public final fun add (Lio/github/robinpcrd/kotose/form/Field;Lio/github/robinpcrd/kotose/form/Group;Ljava/lang/Integer;Z)Z
+	public final fun add (Lio/github/robinpcrd/kotose/form/Group;Ljava/lang/Integer;)Z
+	public final fun add (Ljava/util/Collection;Lio/github/robinpcrd/kotose/form/Group;Ljava/lang/Integer;Z)Z
+	public final fun add (Ljava/util/Collection;Ljava/lang/Integer;)Z
+	public static synthetic fun add$default (Lio/github/robinpcrd/kotose/form/Transaction;Lio/github/robinpcrd/kotose/form/Field;Lio/github/robinpcrd/kotose/form/Group;Ljava/lang/Integer;ZILjava/lang/Object;)Z
+	public static synthetic fun add$default (Lio/github/robinpcrd/kotose/form/Transaction;Lio/github/robinpcrd/kotose/form/Group;Ljava/lang/Integer;ILjava/lang/Object;)Z
+	public static synthetic fun add$default (Lio/github/robinpcrd/kotose/form/Transaction;Ljava/util/Collection;Lio/github/robinpcrd/kotose/form/Group;Ljava/lang/Integer;ZILjava/lang/Object;)Z
+	public static synthetic fun add$default (Lio/github/robinpcrd/kotose/form/Transaction;Ljava/util/Collection;Ljava/lang/Integer;ILjava/lang/Object;)Z
+	public final fun commit ()V
+	public final fun remove (Lio/github/robinpcrd/kotose/form/Field;Lio/github/robinpcrd/kotose/form/Group;Ljava/lang/Integer;)V
+	public final fun remove (Lio/github/robinpcrd/kotose/form/Group;Ljava/lang/Integer;)V
+	public final fun remove (Ljava/util/Collection;Lio/github/robinpcrd/kotose/form/Group;Ljava/lang/Integer;)V
+	public final fun remove (Ljava/util/Collection;Ljava/lang/Integer;)V
+	public static synthetic fun remove$default (Lio/github/robinpcrd/kotose/form/Transaction;Lio/github/robinpcrd/kotose/form/Field;Lio/github/robinpcrd/kotose/form/Group;Ljava/lang/Integer;ILjava/lang/Object;)V
+	public static synthetic fun remove$default (Lio/github/robinpcrd/kotose/form/Transaction;Lio/github/robinpcrd/kotose/form/Group;Ljava/lang/Integer;ILjava/lang/Object;)V
+	public static synthetic fun remove$default (Lio/github/robinpcrd/kotose/form/Transaction;Ljava/util/Collection;Lio/github/robinpcrd/kotose/form/Group;Ljava/lang/Integer;ILjava/lang/Object;)V
+	public static synthetic fun remove$default (Lio/github/robinpcrd/kotose/form/Transaction;Ljava/util/Collection;Ljava/lang/Integer;ILjava/lang/Object;)V
+}
+
+public final class io/github/robinpcrd/kotose/form/TransactionKt {
+	public static final fun formTransaction (Lio/github/robinpcrd/kotose/form/Form;ZLkotlin/jvm/functions/Function1;)V
+	public static synthetic fun formTransaction$default (Lio/github/robinpcrd/kotose/form/Form;ZLkotlin/jvm/functions/Function1;ILjava/lang/Object;)V
+	public static final fun transaction (Lio/github/robinpcrd/kotose/form/Form;ZLkotlin/jvm/functions/Function1;)V
+	public static synthetic fun transaction$default (Lio/github/robinpcrd/kotose/form/Form;ZLkotlin/jvm/functions/Function1;ILjava/lang/Object;)V
+}
+
+public abstract class io/github/robinpcrd/kotose/form/ValidationError {
+	public fun <init> ()V
+	public fun getAsWarning ()Z
+	public abstract fun getError ()Lio/github/robinpcrd/kotose/resources/StrRes;
+	public fun isSilent ()Z
+}
+
+public final class io/github/robinpcrd/kotose/form/ValidationError$PhoneIncorrectLength : io/github/robinpcrd/kotose/form/ValidationError {
+	public static final field INSTANCE Lio/github/robinpcrd/kotose/form/ValidationError$PhoneIncorrectLength;
+	public fun getError ()Lio/github/robinpcrd/kotose/resources/StrRes;
+}
+
+public final class io/github/robinpcrd/kotose/form/ValidationError$PhoneIsValid : io/github/robinpcrd/kotose/form/ValidationError {
+	public static final field INSTANCE Lio/github/robinpcrd/kotose/form/ValidationError$PhoneIsValid;
+	public fun getAsWarning ()Z
+	public fun getError ()Lio/github/robinpcrd/kotose/resources/StrRes;
+	public fun setError (Lio/github/robinpcrd/kotose/resources/StrRes;)V
+}
+
+public final class io/github/robinpcrd/kotose/form/ValidationError$Required : io/github/robinpcrd/kotose/form/ValidationError {
+	public static final field INSTANCE Lio/github/robinpcrd/kotose/form/ValidationError$Required;
+	public fun getError ()Lio/github/robinpcrd/kotose/resources/StrRes;
+	public fun setError (Lio/github/robinpcrd/kotose/resources/StrRes;)V
+}
+
+public final class io/github/robinpcrd/kotose/form/ValidationError$RequiredSelectableSection : io/github/robinpcrd/kotose/form/ValidationError {
+	public static final field INSTANCE Lio/github/robinpcrd/kotose/form/ValidationError$RequiredSelectableSection;
+	public fun getError ()Lio/github/robinpcrd/kotose/resources/StrRes;
+	public fun setError (Lio/github/robinpcrd/kotose/resources/StrRes;)V
+}
+
+public final class io/github/robinpcrd/kotose/form/ValidationKt {
+	public static final fun shouldValidate (Lio/github/robinpcrd/kotose/form/ValidationTriggerSource;Lio/github/robinpcrd/kotose/form/ValidationOption;)Z
+}
+
+public final class io/github/robinpcrd/kotose/form/ValidationOption : java/lang/Enum {
+	public static final field ALWAYS Lio/github/robinpcrd/kotose/form/ValidationOption;
+	public static final field Companion Lio/github/robinpcrd/kotose/form/ValidationOption$Companion;
+	public static final field ON_DEMAND Lio/github/robinpcrd/kotose/form/ValidationOption;
+	public static final field ON_VALUE_CHANGE Lio/github/robinpcrd/kotose/form/ValidationOption;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public final fun getPriority ()I
+	public final fun isAtLeast (Lio/github/robinpcrd/kotose/form/ValidationOption;)Z
+	public static fun valueOf (Ljava/lang/String;)Lio/github/robinpcrd/kotose/form/ValidationOption;
+	public static fun values ()[Lio/github/robinpcrd/kotose/form/ValidationOption;
+}
+
+public final class io/github/robinpcrd/kotose/form/ValidationOption$Companion {
+	public final fun isAtLeast (Lio/github/robinpcrd/kotose/form/ValidationOption;Lio/github/robinpcrd/kotose/form/ValidationOption;)Z
+}
+
+public abstract class io/github/robinpcrd/kotose/form/ValidationRule {
+}
+
+public abstract class io/github/robinpcrd/kotose/form/ValidationRule$Field : io/github/robinpcrd/kotose/form/ValidationRule {
+	public fun <init> ()V
+	public abstract fun isValid (Ljava/lang/Object;)Lio/github/robinpcrd/kotose/form/ValidationError;
+}
+
+public abstract class io/github/robinpcrd/kotose/form/ValidationRule$Group : io/github/robinpcrd/kotose/form/ValidationRule {
+	public fun <init> (Lio/github/robinpcrd/kotose/form/ValidationError;)V
+	public final fun getError ()Lio/github/robinpcrd/kotose/form/ValidationError;
+	public abstract fun isValid ()Lio/github/robinpcrd/kotose/form/ValidationError;
+}
+
+public final class io/github/robinpcrd/kotose/form/ValidationTriggerSource : java/lang/Enum {
+	public static final field FORM Lio/github/robinpcrd/kotose/form/ValidationTriggerSource;
+	public static final field VALUE_CHANGE Lio/github/robinpcrd/kotose/form/ValidationTriggerSource;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public static fun valueOf (Ljava/lang/String;)Lio/github/robinpcrd/kotose/form/ValidationTriggerSource;
+	public static fun values ()[Lio/github/robinpcrd/kotose/form/ValidationTriggerSource;
+}
+
+public final class io/github/robinpcrd/kotose/form/dsl/CoreFieldsDslKt {
+	public static final fun secureTextField (Lio/github/robinpcrd/kotose/form/dsl/GroupBuilder;Ljava/lang/String;Lio/github/robinpcrd/kotose/resources/StrRes;Lio/github/robinpcrd/kotose/resources/StrRes;Lkotlin/jvm/functions/Function1;)Lio/github/robinpcrd/kotose/form/fields/SecureTextField;
+	public static synthetic fun secureTextField$default (Lio/github/robinpcrd/kotose/form/dsl/GroupBuilder;Ljava/lang/String;Lio/github/robinpcrd/kotose/resources/StrRes;Lio/github/robinpcrd/kotose/resources/StrRes;Lkotlin/jvm/functions/Function1;ILjava/lang/Object;)Lio/github/robinpcrd/kotose/form/fields/SecureTextField;
+	public static final fun singleChoiceField (Lio/github/robinpcrd/kotose/form/dsl/GroupBuilder;Ljava/lang/String;Ljava/util/List;Lio/github/robinpcrd/kotose/resources/StrRes;ZLio/github/robinpcrd/kotose/form/fields/SelectionPresentation;Lio/github/robinpcrd/kotose/form/fields/SelectionPresentation;Lkotlin/jvm/functions/Function1;)Lio/github/robinpcrd/kotose/form/fields/SingleChoiceField;
+	public static synthetic fun singleChoiceField$default (Lio/github/robinpcrd/kotose/form/dsl/GroupBuilder;Ljava/lang/String;Ljava/util/List;Lio/github/robinpcrd/kotose/resources/StrRes;ZLio/github/robinpcrd/kotose/form/fields/SelectionPresentation;Lio/github/robinpcrd/kotose/form/fields/SelectionPresentation;Lkotlin/jvm/functions/Function1;ILjava/lang/Object;)Lio/github/robinpcrd/kotose/form/fields/SingleChoiceField;
+	public static final fun textField (Lio/github/robinpcrd/kotose/form/dsl/GroupBuilder;Ljava/lang/String;Lio/github/robinpcrd/kotose/resources/StrRes;Lio/github/robinpcrd/kotose/resources/StrRes;Lio/github/robinpcrd/kotose/form/fields/TextLineLimits;Lkotlin/jvm/functions/Function1;)Lio/github/robinpcrd/kotose/form/fields/TextField;
+	public static synthetic fun textField$default (Lio/github/robinpcrd/kotose/form/dsl/GroupBuilder;Ljava/lang/String;Lio/github/robinpcrd/kotose/resources/StrRes;Lio/github/robinpcrd/kotose/resources/StrRes;Lio/github/robinpcrd/kotose/form/fields/TextLineLimits;Lkotlin/jvm/functions/Function1;ILjava/lang/Object;)Lio/github/robinpcrd/kotose/form/fields/TextField;
+	public static final fun toggleField (Lio/github/robinpcrd/kotose/form/dsl/GroupBuilder;Ljava/lang/String;Lio/github/robinpcrd/kotose/resources/StrRes;Lkotlin/jvm/functions/Function1;)Lio/github/robinpcrd/kotose/form/fields/ToggleField;
+	public static synthetic fun toggleField$default (Lio/github/robinpcrd/kotose/form/dsl/GroupBuilder;Ljava/lang/String;Lio/github/robinpcrd/kotose/resources/StrRes;Lkotlin/jvm/functions/Function1;ILjava/lang/Object;)Lio/github/robinpcrd/kotose/form/fields/ToggleField;
+}
+
+public final class io/github/robinpcrd/kotose/form/dsl/CoreFormDslKt {
+	public static final fun form (Lkotlin/jvm/functions/Function1;)Lio/github/robinpcrd/kotose/form/Form;
+	public static final fun group (Lio/github/robinpcrd/kotose/form/dsl/FormBuilder;Lkotlin/jvm/functions/Function1;)Lio/github/robinpcrd/kotose/form/Group;
+}
+
+public final class io/github/robinpcrd/kotose/form/dsl/DateFieldsDslKt {
+	public static final fun dateTimePicker (Lio/github/robinpcrd/kotose/form/dsl/GroupBuilder;Ljava/lang/String;Lio/github/robinpcrd/kotose/resources/StrRes;Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function1;Lio/github/robinpcrd/kotose/form/fields/IosDatePickerMode;Lkotlin/jvm/functions/Function1;)Lio/github/robinpcrd/kotose/form/fields/DateTimeField;
+	public static synthetic fun dateTimePicker$default (Lio/github/robinpcrd/kotose/form/dsl/GroupBuilder;Ljava/lang/String;Lio/github/robinpcrd/kotose/resources/StrRes;Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function1;Lio/github/robinpcrd/kotose/form/fields/IosDatePickerMode;Lkotlin/jvm/functions/Function1;ILjava/lang/Object;)Lio/github/robinpcrd/kotose/form/fields/DateTimeField;
+	public static final fun localDatePicker (Lio/github/robinpcrd/kotose/form/dsl/GroupBuilder;Ljava/lang/String;Lio/github/robinpcrd/kotose/resources/StrRes;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function0;Lio/github/robinpcrd/kotose/form/fields/IosDatePickerMode;Lkotlin/jvm/functions/Function1;)Lio/github/robinpcrd/kotose/form/fields/LocalDateField;
+	public static synthetic fun localDatePicker$default (Lio/github/robinpcrd/kotose/form/dsl/GroupBuilder;Ljava/lang/String;Lio/github/robinpcrd/kotose/resources/StrRes;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function0;Lio/github/robinpcrd/kotose/form/fields/IosDatePickerMode;Lkotlin/jvm/functions/Function1;ILjava/lang/Object;)Lio/github/robinpcrd/kotose/form/fields/LocalDateField;
+}
+
+public final class io/github/robinpcrd/kotose/form/dsl/DisplayFieldsDslKt {
+	public static final fun actionField (Lio/github/robinpcrd/kotose/form/dsl/GroupBuilder;Ljava/lang/String;Lio/github/robinpcrd/kotose/resources/StrRes;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function0;)Lio/github/robinpcrd/kotose/form/fields/ActionField;
+	public static synthetic fun actionField$default (Lio/github/robinpcrd/kotose/form/dsl/GroupBuilder;Ljava/lang/String;Lio/github/robinpcrd/kotose/resources/StrRes;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function0;ILjava/lang/Object;)Lio/github/robinpcrd/kotose/form/fields/ActionField;
+	public static final fun displayParagraph (Lio/github/robinpcrd/kotose/form/dsl/GroupBuilder;Ljava/lang/String;Ljava/util/List;Lkotlin/jvm/functions/Function1;)Lio/github/robinpcrd/kotose/form/fields/DisplayParagraphField;
+	public static synthetic fun displayParagraph$default (Lio/github/robinpcrd/kotose/form/dsl/GroupBuilder;Ljava/lang/String;Ljava/util/List;Lkotlin/jvm/functions/Function1;ILjava/lang/Object;)Lio/github/robinpcrd/kotose/form/fields/DisplayParagraphField;
+	public static final fun displayText (Lio/github/robinpcrd/kotose/form/dsl/GroupBuilder;Ljava/lang/String;Lio/github/robinpcrd/kotose/resources/StrRes;ZLkotlin/jvm/functions/Function1;)Lio/github/robinpcrd/kotose/form/fields/DisplayTextField;
+	public static synthetic fun displayText$default (Lio/github/robinpcrd/kotose/form/dsl/GroupBuilder;Ljava/lang/String;Lio/github/robinpcrd/kotose/resources/StrRes;ZLkotlin/jvm/functions/Function1;ILjava/lang/Object;)Lio/github/robinpcrd/kotose/form/fields/DisplayTextField;
+}
+
+public abstract interface annotation class io/github/robinpcrd/kotose/form/dsl/FieldDslMarker : java/lang/annotation/Annotation {
+}
+
+public final class io/github/robinpcrd/kotose/form/dsl/FormBuilder {
+	public fun <init> ()V
+	public final fun build ()Lio/github/robinpcrd/kotose/form/Form;
+	public final fun unaryPlus (Lio/github/robinpcrd/kotose/form/Group;)V
+	public final fun unaryPlus (Ljava/lang/Iterable;)V
+	public final fun unaryPlus (Ljava/util/Collection;)V
+	public final fun unaryPlus (Lkotlin/sequences/Sequence;)V
+}
+
+public abstract interface annotation class io/github/robinpcrd/kotose/form/dsl/FormDslMarker : java/lang/annotation/Annotation {
+}
+
+public class io/github/robinpcrd/kotose/form/dsl/GroupBuilder {
+	public fun <init> ()V
+	public fun build ()Lio/github/robinpcrd/kotose/form/Group;
+	protected final fun getFields ()Ljava/util/List;
+	public final fun getTag ()Ljava/lang/String;
+	public final fun getValidateOnBuild ()Z
+	public final fun isEnabledCondition ()Lio/github/robinpcrd/kotose/form/Condition;
+	public final fun isVisibleCondition ()Lio/github/robinpcrd/kotose/form/Condition;
+	public final fun setEnabledCondition (Lio/github/robinpcrd/kotose/form/Condition;)V
+	public final fun setTag (Ljava/lang/String;)V
+	public final fun setValidateOnBuild (Z)V
+	public final fun setVisibleCondition (Lio/github/robinpcrd/kotose/form/Condition;)V
+	public final fun unaryPlus (Lio/github/robinpcrd/kotose/form/Field;)V
+	public final fun unaryPlus (Ljava/lang/Iterable;)V
+	public final fun unaryPlus (Ljava/util/Collection;)V
+	public final fun unaryPlus (Lkotlin/sequences/Sequence;)V
+}
+
+public abstract interface annotation class io/github/robinpcrd/kotose/form/dsl/GroupDslMarker : java/lang/annotation/Annotation {
+}
+
+public abstract interface class io/github/robinpcrd/kotose/form/dsl/IGroupBuilder {
+	public abstract fun getFields ()Ljava/util/List;
+	public abstract fun getForm ()Lio/github/robinpcrd/kotose/form/Form;
+	public abstract fun getTag ()Ljava/lang/String;
+	public abstract fun setTag (Ljava/lang/String;)V
+}
+
+public final class io/github/robinpcrd/kotose/form/dsl/MultipleSelectionGroupBuilder : io/github/robinpcrd/kotose/form/dsl/SelectableGroupBuilder {
+	public fun <init> ()V
+	public synthetic fun build ()Lio/github/robinpcrd/kotose/form/Group;
+	public fun build ()Lio/github/robinpcrd/kotose/form/groups/SelectionGroup$Multiple;
+}
+
+public abstract class io/github/robinpcrd/kotose/form/dsl/SelectableGroupBuilder : io/github/robinpcrd/kotose/form/dsl/GroupBuilder {
+	public fun <init> ()V
+	public final fun getIosPresentation ()Lio/github/robinpcrd/kotose/form/fields/SelectionPresentation;
+	public final fun getPresentation ()Lio/github/robinpcrd/kotose/form/fields/SelectionPresentation;
+	public final fun getTitle ()Lio/github/robinpcrd/kotose/resources/StrRes;
+	public final fun setIosPresentation (Lio/github/robinpcrd/kotose/form/fields/SelectionPresentation;)V
+	public final fun setPresentation (Lio/github/robinpcrd/kotose/form/fields/SelectionPresentation;)V
+	public final fun setTitle (Lio/github/robinpcrd/kotose/resources/StrRes;)V
+}
+
+public final class io/github/robinpcrd/kotose/form/dsl/SelectionDslKt {
+	public static final fun multipleSelectionGroup (Lio/github/robinpcrd/kotose/form/dsl/FormBuilder;Lkotlin/jvm/functions/Function1;)Lio/github/robinpcrd/kotose/form/groups/SelectionGroup$Multiple;
+	public static final fun selectionOption (Lio/github/robinpcrd/kotose/form/dsl/SelectableGroupBuilder;Ljava/lang/String;Ljava/lang/Object;Lio/github/robinpcrd/kotose/resources/StrRes;Lkotlin/jvm/functions/Function1;)Lio/github/robinpcrd/kotose/form/fields/SelectionOptionField;
+	public static synthetic fun selectionOption$default (Lio/github/robinpcrd/kotose/form/dsl/SelectableGroupBuilder;Ljava/lang/String;Ljava/lang/Object;Lio/github/robinpcrd/kotose/resources/StrRes;Lkotlin/jvm/functions/Function1;ILjava/lang/Object;)Lio/github/robinpcrd/kotose/form/fields/SelectionOptionField;
+	public static final fun singleSelectionGroup (Lio/github/robinpcrd/kotose/form/dsl/FormBuilder;Lkotlin/jvm/functions/Function1;)Lio/github/robinpcrd/kotose/form/groups/SelectionGroup$Single;
+}
+
+public abstract interface annotation class io/github/robinpcrd/kotose/form/dsl/SelectionGroupDslMarker : java/lang/annotation/Annotation {
+}
+
+public final class io/github/robinpcrd/kotose/form/dsl/SingleSelectionGroupBuilder : io/github/robinpcrd/kotose/form/dsl/SelectableGroupBuilder {
+	public fun <init> ()V
+	public synthetic fun build ()Lio/github/robinpcrd/kotose/form/Group;
+	public fun build ()Lio/github/robinpcrd/kotose/form/groups/SelectionGroup$Single;
+	public final fun getEnableDeselection ()Z
+	public final fun isRequired ()Z
+	public final fun setEnableDeselection (Z)V
+	public final fun setRequired (Z)V
+}
+
+public class io/github/robinpcrd/kotose/form/fields/ActionField : io/github/robinpcrd/kotose/form/Field {
+	public fun <init> (Ljava/lang/String;Lio/github/robinpcrd/kotose/resources/StrRes;Lkotlin/jvm/functions/Function0;)V
+	public synthetic fun <init> (Ljava/lang/String;Lio/github/robinpcrd/kotose/resources/StrRes;Lkotlin/jvm/functions/Function0;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun getOnClick ()Lkotlin/jvm/functions/Function0;
+	public fun getTitle ()Lio/github/robinpcrd/kotose/resources/StrRes;
+	public final fun perform ()Z
+	public fun setBaseValue (Ljava/lang/Object;)V
+}
+
+public abstract interface class io/github/robinpcrd/kotose/form/fields/CustomField {
+	public abstract fun getKind ()Ljava/lang/String;
+	public fun getLabel ()Lio/github/robinpcrd/kotose/resources/StrRes;
+}
+
+public final class io/github/robinpcrd/kotose/form/fields/CustomField$DefaultImpls {
+	public static fun getLabel (Lio/github/robinpcrd/kotose/form/fields/CustomField;)Lio/github/robinpcrd/kotose/resources/StrRes;
+}
+
+public class io/github/robinpcrd/kotose/form/fields/DateTimeField : io/github/robinpcrd/kotose/form/Field {
+	public fun <init> ()V
+	public fun <init> (Ljava/lang/String;Lio/github/robinpcrd/kotose/resources/StrRes;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function0;Lio/github/robinpcrd/kotose/form/fields/IosDatePickerMode;)V
+	public synthetic fun <init> (Ljava/lang/String;Lio/github/robinpcrd/kotose/resources/StrRes;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function0;Lio/github/robinpcrd/kotose/form/fields/IosDatePickerMode;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun getFormatter ()Lkotlin/jvm/functions/Function1;
+	public final fun getIosPickerMode ()Lio/github/robinpcrd/kotose/form/fields/IosDatePickerMode;
+	public final fun getPlaceholder ()Lio/github/robinpcrd/kotose/resources/StrRes;
+	public final fun getShowPicker ()Lkotlin/jvm/functions/Function0;
+	public fun setBaseValue (Ljava/lang/Object;)V
+}
+
+public final class io/github/robinpcrd/kotose/form/fields/DateTimeFieldKt {
+	public static final fun applyPickedDateTime (Lio/github/robinpcrd/kotose/form/fields/DateTimeField;Lkotlinx/datetime/LocalDate;II)V
+	public static final fun defaultDateTimeFormatter (Lkotlinx/datetime/LocalDateTime;)Ljava/lang/String;
+}
+
+public class io/github/robinpcrd/kotose/form/fields/DisplayParagraphField : io/github/robinpcrd/kotose/form/Field {
+	public fun <init> ()V
+	public fun <init> (Ljava/lang/String;Ljava/util/List;)V
+	public synthetic fun <init> (Ljava/lang/String;Ljava/util/List;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public fun setBaseValue (Ljava/lang/Object;)V
+}
+
+public class io/github/robinpcrd/kotose/form/fields/DisplayTextField : io/github/robinpcrd/kotose/form/Field {
+	public fun <init> ()V
+	public fun <init> (Ljava/lang/String;Lio/github/robinpcrd/kotose/resources/StrRes;Z)V
+	public synthetic fun <init> (Ljava/lang/String;Lio/github/robinpcrd/kotose/resources/StrRes;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun getText ()Lio/github/robinpcrd/kotose/resources/StrRes;
+	public final fun isTitle ()Z
+	public fun setBaseValue (Ljava/lang/Object;)V
+}
+
+public final class io/github/robinpcrd/kotose/form/fields/DropdownOption {
+	public fun <init> (Ljava/lang/Object;Lio/github/robinpcrd/kotose/resources/StrRes;Ljava/lang/String;)V
+	public synthetic fun <init> (Ljava/lang/Object;Lio/github/robinpcrd/kotose/resources/StrRes;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Ljava/lang/Object;
+	public final fun component2 ()Lio/github/robinpcrd/kotose/resources/StrRes;
+	public final fun component3 ()Ljava/lang/String;
+	public final fun copy (Ljava/lang/Object;Lio/github/robinpcrd/kotose/resources/StrRes;Ljava/lang/String;)Lio/github/robinpcrd/kotose/form/fields/DropdownOption;
+	public static synthetic fun copy$default (Lio/github/robinpcrd/kotose/form/fields/DropdownOption;Ljava/lang/Object;Lio/github/robinpcrd/kotose/resources/StrRes;Ljava/lang/String;ILjava/lang/Object;)Lio/github/robinpcrd/kotose/form/fields/DropdownOption;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getId ()Ljava/lang/String;
+	public final fun getLabel ()Lio/github/robinpcrd/kotose/resources/StrRes;
+	public final fun getValue ()Ljava/lang/Object;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public abstract interface class io/github/robinpcrd/kotose/form/fields/ISelectableField {
+	public abstract fun getSelectableValue ()Ljava/lang/Object;
+}
+
+public final class io/github/robinpcrd/kotose/form/fields/IosDatePickerMode : java/lang/Enum {
+	public static final field Compact Lio/github/robinpcrd/kotose/form/fields/IosDatePickerMode;
+	public static final field Wheels Lio/github/robinpcrd/kotose/form/fields/IosDatePickerMode;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public static fun valueOf (Ljava/lang/String;)Lio/github/robinpcrd/kotose/form/fields/IosDatePickerMode;
+	public static fun values ()[Lio/github/robinpcrd/kotose/form/fields/IosDatePickerMode;
+}
+
+public class io/github/robinpcrd/kotose/form/fields/LocalDateField : io/github/robinpcrd/kotose/form/Field {
+	public fun <init> ()V
+	public fun <init> (Ljava/lang/String;Lio/github/robinpcrd/kotose/resources/StrRes;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function0;Lio/github/robinpcrd/kotose/form/fields/IosDatePickerMode;)V
+	public synthetic fun <init> (Ljava/lang/String;Lio/github/robinpcrd/kotose/resources/StrRes;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function0;Lio/github/robinpcrd/kotose/form/fields/IosDatePickerMode;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun getFormatter ()Lkotlin/jvm/functions/Function1;
+	public final fun getIosPickerMode ()Lio/github/robinpcrd/kotose/form/fields/IosDatePickerMode;
+	public final fun getPlaceholder ()Lio/github/robinpcrd/kotose/resources/StrRes;
+	public final fun getShowPicker ()Lkotlin/jvm/functions/Function0;
+	public fun setBaseValue (Ljava/lang/Object;)V
+}
+
+public final class io/github/robinpcrd/kotose/form/fields/LocalDateFieldKt {
+	public static final fun applyPickedDate (Lio/github/robinpcrd/kotose/form/fields/LocalDateField;Lkotlinx/datetime/LocalDate;)V
+	public static final fun defaultLocalDateFormatter (Lkotlinx/datetime/LocalDate;)Ljava/lang/String;
+}
+
+public class io/github/robinpcrd/kotose/form/fields/SecureTextField : io/github/robinpcrd/kotose/form/FocusableField {
+	public fun <init> ()V
+	public fun <init> (Ljava/lang/String;Lio/github/robinpcrd/kotose/resources/StrRes;Lio/github/robinpcrd/kotose/resources/StrRes;)V
+	public synthetic fun <init> (Ljava/lang/String;Lio/github/robinpcrd/kotose/resources/StrRes;Lio/github/robinpcrd/kotose/resources/StrRes;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public fun getLabel ()Lio/github/robinpcrd/kotose/resources/StrRes;
+	public fun getPlaceholder ()Lio/github/robinpcrd/kotose/resources/StrRes;
+	public fun setBaseValue (Ljava/lang/Object;)V
+	public fun setValue (Ljava/lang/String;)V
+}
+
+public class io/github/robinpcrd/kotose/form/fields/SelectionOptionField : io/github/robinpcrd/kotose/form/Field, io/github/robinpcrd/kotose/form/fields/ISelectableField {
+	public fun <init> (Ljava/lang/String;Ljava/lang/Object;Lio/github/robinpcrd/kotose/resources/StrRes;)V
+	public synthetic fun <init> (Ljava/lang/String;Ljava/lang/Object;Lio/github/robinpcrd/kotose/resources/StrRes;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun getLabelForValue ()Lio/github/robinpcrd/kotose/resources/StrRes;
+	public final fun getLabelForValueState ()Landroidx/compose/runtime/State;
+	public fun getSelectableValue ()Ljava/lang/Object;
+	public final fun getSelectionGroup ()Lio/github/robinpcrd/kotose/form/groups/SelectionGroup;
+	public final fun getSubtitle ()Lio/github/robinpcrd/kotose/resources/StrRes;
+	public final fun isSelected ()Z
+	public final fun select ()V
+	public fun setBaseValue (Ljava/lang/Object;)V
+	public final fun setLabelForValue (Lio/github/robinpcrd/kotose/resources/StrRes;)V
+	public final fun setSelected (Z)Z
+	public final fun setSubtitle (Lio/github/robinpcrd/kotose/resources/StrRes;)V
+}
+
+public final class io/github/robinpcrd/kotose/form/fields/SelectionPresentation : java/lang/Enum {
+	public static final field Inline Lio/github/robinpcrd/kotose/form/fields/SelectionPresentation;
+	public static final field Menu Lio/github/robinpcrd/kotose/form/fields/SelectionPresentation;
+	public static final field Page Lio/github/robinpcrd/kotose/form/fields/SelectionPresentation;
+	public static final field Segmented Lio/github/robinpcrd/kotose/form/fields/SelectionPresentation;
+	public static final field Sheet Lio/github/robinpcrd/kotose/form/fields/SelectionPresentation;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public static fun valueOf (Ljava/lang/String;)Lio/github/robinpcrd/kotose/form/fields/SelectionPresentation;
+	public static fun values ()[Lio/github/robinpcrd/kotose/form/fields/SelectionPresentation;
+}
+
+public class io/github/robinpcrd/kotose/form/fields/SingleChoiceField : io/github/robinpcrd/kotose/form/Field {
+	public fun <init> (Ljava/lang/String;Ljava/util/List;Lio/github/robinpcrd/kotose/resources/StrRes;ZLio/github/robinpcrd/kotose/form/fields/SelectionPresentation;Lio/github/robinpcrd/kotose/form/fields/SelectionPresentation;)V
+	public synthetic fun <init> (Ljava/lang/String;Ljava/util/List;Lio/github/robinpcrd/kotose/resources/StrRes;ZLio/github/robinpcrd/kotose/form/fields/SelectionPresentation;Lio/github/robinpcrd/kotose/form/fields/SelectionPresentation;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun getIosPresentation ()Lio/github/robinpcrd/kotose/form/fields/SelectionPresentation;
+	public final fun getPlaceholder ()Lio/github/robinpcrd/kotose/resources/StrRes;
+	public final fun getPossibleValues ()Ljava/util/List;
+	public final fun getPossibleValuesState ()Landroidx/compose/runtime/State;
+	public final fun getPresentation ()Lio/github/robinpcrd/kotose/form/fields/SelectionPresentation;
+	public final fun getSelectedOption ()Landroidx/compose/runtime/State;
+	public final fun isClearable ()Z
+	public final fun presentationFor (Z)Lio/github/robinpcrd/kotose/form/fields/SelectionPresentation;
+	public final fun selectOption (Ljava/lang/String;)Z
+	public fun setBaseValue (Ljava/lang/Object;)V
+	public final fun setPossibleValues (Ljava/util/List;)V
+}
+
+public class io/github/robinpcrd/kotose/form/fields/TextField : io/github/robinpcrd/kotose/form/FocusableField {
+	public fun <init> ()V
+	public fun <init> (Ljava/lang/String;Lio/github/robinpcrd/kotose/resources/StrRes;Lio/github/robinpcrd/kotose/resources/StrRes;Lio/github/robinpcrd/kotose/form/fields/TextLineLimits;)V
+	public synthetic fun <init> (Ljava/lang/String;Lio/github/robinpcrd/kotose/resources/StrRes;Lio/github/robinpcrd/kotose/resources/StrRes;Lio/github/robinpcrd/kotose/form/fields/TextLineLimits;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun getLabel ()Lio/github/robinpcrd/kotose/resources/StrRes;
+	public final fun getLineLimits ()Lio/github/robinpcrd/kotose/form/fields/TextLineLimits;
+	public final fun getPlaceholder ()Lio/github/robinpcrd/kotose/resources/StrRes;
+	public fun setBaseValue (Ljava/lang/Object;)V
+	public final fun setValue (Ljava/lang/String;)V
+}
+
+public abstract interface class io/github/robinpcrd/kotose/form/fields/TextLineLimits {
+}
+
+public final class io/github/robinpcrd/kotose/form/fields/TextLineLimits$MultiLine : io/github/robinpcrd/kotose/form/fields/TextLineLimits {
+	public fun <init> ()V
+	public fun <init> (II)V
+	public synthetic fun <init> (IIILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()I
+	public final fun component2 ()I
+	public final fun copy (II)Lio/github/robinpcrd/kotose/form/fields/TextLineLimits$MultiLine;
+	public static synthetic fun copy$default (Lio/github/robinpcrd/kotose/form/fields/TextLineLimits$MultiLine;IIILjava/lang/Object;)Lio/github/robinpcrd/kotose/form/fields/TextLineLimits$MultiLine;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getMaxLines ()I
+	public final fun getMinLines ()I
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class io/github/robinpcrd/kotose/form/fields/TextLineLimits$SingleLine : io/github/robinpcrd/kotose/form/fields/TextLineLimits {
+	public static final field INSTANCE Lio/github/robinpcrd/kotose/form/fields/TextLineLimits$SingleLine;
+	public fun equals (Ljava/lang/Object;)Z
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public class io/github/robinpcrd/kotose/form/fields/ToggleField : io/github/robinpcrd/kotose/form/Field {
+	public fun <init> (Ljava/lang/String;Lio/github/robinpcrd/kotose/resources/StrRes;)V
+	public synthetic fun <init> (Ljava/lang/String;Lio/github/robinpcrd/kotose/resources/StrRes;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun getLabel ()Lio/github/robinpcrd/kotose/resources/StrRes;
+	public final fun getLabelState ()Landroidx/compose/runtime/State;
+	public fun setBaseValue (Ljava/lang/Object;)V
+	public final fun setLabel (Lio/github/robinpcrd/kotose/resources/StrRes;)V
+}
+
+public abstract class io/github/robinpcrd/kotose/form/fields/validation/BaseValidationErrorField : io/github/robinpcrd/kotose/form/Field {
+	public fun <init> (Ljava/lang/String;Ljava/lang/String;)V
+	public synthetic fun <init> (Ljava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun getElementKey ()Ljava/lang/String;
+}
+
+public class io/github/robinpcrd/kotose/form/fields/validation/ValidationErrorField : io/github/robinpcrd/kotose/form/fields/validation/BaseValidationErrorField {
+	public fun <init> (Ljava/lang/String;Ljava/lang/String;Lio/github/robinpcrd/kotose/resources/StrRes;Z)V
+	public synthetic fun <init> (Ljava/lang/String;Ljava/lang/String;Lio/github/robinpcrd/kotose/resources/StrRes;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun getAsWarning ()Z
+	public final fun getError ()Lio/github/robinpcrd/kotose/resources/StrRes;
+	public fun setBaseValue (Ljava/lang/Object;)V
+}
+
+public class io/github/robinpcrd/kotose/form/fields/validation/ValidationErrorGroupField : io/github/robinpcrd/kotose/form/fields/validation/BaseValidationErrorField {
+	public fun <init> (Ljava/lang/String;Ljava/lang/String;Lio/github/robinpcrd/kotose/resources/StrRes;Z)V
+	public synthetic fun <init> (Ljava/lang/String;Ljava/lang/String;Lio/github/robinpcrd/kotose/resources/StrRes;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun getAsWarning ()Z
+	public final fun getError ()Lio/github/robinpcrd/kotose/resources/StrRes;
+	public fun setBaseValue (Ljava/lang/Object;)V
+}
+
+public abstract class io/github/robinpcrd/kotose/form/groups/SelectionGroup : io/github/robinpcrd/kotose/form/Group {
+	public synthetic fun <init> (Ljava/lang/String;Lio/github/robinpcrd/kotose/resources/StrRes;Lio/github/robinpcrd/kotose/form/fields/SelectionPresentation;Lio/github/robinpcrd/kotose/form/fields/SelectionPresentation;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public fun allValues (Z)Ljava/util/Map;
+	public abstract fun clearSelection ()V
+	public final fun getIosPresentation ()Lio/github/robinpcrd/kotose/form/fields/SelectionPresentation;
+	public final fun getPresentation ()Lio/github/robinpcrd/kotose/form/fields/SelectionPresentation;
+	public final fun getSelectableFields ()Lkotlinx/collections/immutable/ImmutableList;
+	public final fun getTitle ()Lio/github/robinpcrd/kotose/resources/StrRes;
+	public final fun presentationFor (Z)Lio/github/robinpcrd/kotose/form/fields/SelectionPresentation;
+	public abstract fun select (Lio/github/robinpcrd/kotose/form/fields/SelectionOptionField;)V
+	public fun setBaseValue (Ljava/lang/Object;)V
+}
+
+public final class io/github/robinpcrd/kotose/form/groups/SelectionGroup$Multiple : io/github/robinpcrd/kotose/form/groups/SelectionGroup {
+	public fun <init> ()V
+	public fun <init> (Ljava/lang/String;Lio/github/robinpcrd/kotose/resources/StrRes;Lio/github/robinpcrd/kotose/form/fields/SelectionPresentation;Lio/github/robinpcrd/kotose/form/fields/SelectionPresentation;)V
+	public synthetic fun <init> (Ljava/lang/String;Lio/github/robinpcrd/kotose/resources/StrRes;Lio/github/robinpcrd/kotose/form/fields/SelectionPresentation;Lio/github/robinpcrd/kotose/form/fields/SelectionPresentation;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public fun clearSelection ()V
+	public final fun getSelectedValues ()Lkotlinx/collections/immutable/ImmutableList;
+	public fun select (Lio/github/robinpcrd/kotose/form/fields/SelectionOptionField;)V
+	public final fun setSelectedValues (Lkotlinx/collections/immutable/ImmutableList;)V
+	public final fun setValues (Ljava/lang/Object;)V
+}
+
+public final class io/github/robinpcrd/kotose/form/groups/SelectionGroup$Single : io/github/robinpcrd/kotose/form/groups/SelectionGroup {
+	public fun <init> ()V
+	public fun <init> (Ljava/lang/String;Lio/github/robinpcrd/kotose/resources/StrRes;ZLio/github/robinpcrd/kotose/form/fields/SelectionPresentation;Lio/github/robinpcrd/kotose/form/fields/SelectionPresentation;)V
+	public synthetic fun <init> (Ljava/lang/String;Lio/github/robinpcrd/kotose/resources/StrRes;ZLio/github/robinpcrd/kotose/form/fields/SelectionPresentation;Lio/github/robinpcrd/kotose/form/fields/SelectionPresentation;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public fun clearSelection ()V
+	public final fun getSelectedValue ()Ljava/lang/Object;
+	public fun select (Lio/github/robinpcrd/kotose/form/fields/SelectionOptionField;)V
+	public final fun setSelectedValue (Ljava/lang/Object;)V
+	public final fun setValue (Ljava/lang/Object;)V
+}
+

@@ -1,0 +1,23 @@
+appId: io.github.robinpcrd.kotose.form.example
+name: The brand look applies to the text page in every renderer
+---
+- launchApp:
+    clearState: true
+- tapOn:
+    id: look-brand
+- scrollUntilVisible:
+    element:
+      id: page-text
+    direction: DOWN
+- tapOn:
+    id: page-text
+- assertVisible:
+    id: action-validate
+- runFlow:
+    when:
+      true: ${RENDERER == 'compose-ios'}
+    commands:
+      - tapOn: Compose
+      - assertVisible:
+          id: action-validate
+- takeScreenshot: ${RENDERER}-brand-text

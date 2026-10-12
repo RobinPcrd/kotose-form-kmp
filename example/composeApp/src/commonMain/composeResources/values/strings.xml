@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_title">Kotose Form catalog</string>
+    <string name="look_brand">Brand look</string>
+    <string name="back">Back</string>
+    <string name="section_fields">Fields</string>
+    <string name="section_behaviors">Behaviors</string>
+
+    <string name="action_validate">Validate</string>
+    <string name="action_reset">Reset</string>
+    <string name="action_toggle_enabled">Toggle enabled</string>
+    <string name="action_toggle_phone_backend">Toggle phone libraries</string>
+    <string name="result_valid">Valid</string>
+    <string name="result_errors">%1$d errors</string>
+
+    <string name="caption_empty">Empty</string>
+    <string name="caption_filled">Filled</string>
+    <string name="caption_disabled">Disabled</string>
+    <string name="caption_error">Error</string>
+    <string name="caption_warning">Warning</string>
+
+    <string name="text_page_title">Text input</string>
+    <string name="text_name_label">Name</string>
+    <string name="text_email_label">Email</string>
+    <string name="text_error_hint">Validated on open. The required field keeps its message until it has a value.</string>
+    <string name="text_warning_hint">Warnings display without blocking submission.</string>
+    <string name="text_warning_message">Use an address you check</string>
+
+    <string name="multiline_page_title">Multi-line text</string>
+    <string name="multiline_notes_label">Notes</string>
+    <string name="multiline_fixed_caption">Fixed height</string>
+    <string name="multiline_fixed_hint">Four lines, no growth. Longer content scrolls inside the field.</string>
+    <string name="multiline_error_hint">Validated on open. Return inserts a newline; use the keyboard bar or tap another field to move on.</string>
+
+    <string name="caption_clearable">Clearable</string>
+    <string name="caption_title">Title</string>
+    <string name="caption_body">Body</string>
+    <string name="caption_live">Live value</string>
+    <string name="caption_single_line">Single line</string>
+    <string name="caption_multi_line">Several lines</string>
+    <string name="action_tap_me">Tap me</string>
+
+    <string name="password_page_title">Password</string>
+    <string name="password_label">Password</string>
+    <string name="password_hint">Masked by default. The reveal control is owned by each renderer and resets when the page is left.</string>
+
+    <string name="phone_page_title">Phone number</string>
+    <string name="phone_label">Phone number</string>
+    <string name="phone_hint">Allowed countries: FR, BE, US, GB. Parsing runs in Kotlin with the platform backend.</string>
+    <string name="phone_warning_hint">An impossible number is a warning, not a blocking error.</string>
+
+    <string name="toggle_page_title">Toggle</string>
+    <string name="toggle_label">Accept the terms</string>
+    <string name="toggle_error_hint">A rule can require the switch to be on.</string>
+    <string name="toggle_must_accept">You must accept the terms</string>
+
+    <string name="dropdown_page_title">Dropdown</string>
+    <string name="dropdown_placeholder">Choose a delivery</string>
+    <string name="dropdown_standard">Standard</string>
+    <string name="dropdown_express">Express</string>
+    <string name="dropdown_pickup">Pickup</string>
+    <string name="dropdown_clearable_hint">A clearable field offers a way back to no selection.</string>
+
+    <string name="single_page_title">Single selection</string>
+    <string name="single_hint">One option at a time; a selection cannot be removed unless the group allows it.</string>
+    <string name="single_basic">Basic plan</string>
+    <string name="single_plus">Plus plan</string>
+    <string name="single_pro">Pro plan</string>
+    <string name="single_title">Plan</string>
+    <string name="single_basic_subtitle">1 user</string>
+    <string name="single_plus_subtitle">Up to 5 users</string>
+    <string name="single_pro_subtitle">Unlimited users</string>
+
+    <string name="presentation_page_title">Selection presentation</string>
+    <string name="presentation_hint">The same selections shown inline, as a menu, a sheet or a page. iOS can override the presentation.</string>
+    <string name="caption_menu">Menu</string>
+    <string name="caption_sheet">Sheet</string>
+    <string name="caption_page">Page</string>
+    <string name="caption_ios_page">Inline here, page on iOS</string>
+    <string name="caption_choice_field">Single choice field</string>
+    <string name="caption_segmented">Segmented</string>
+    <string name="caption_wheels">Wheels on iOS</string>
+    <string name="caption_multiple_sheet">Multiple selection in a sheet</string>
+    <string name="caption_multiple_page">Multiple selection on a page</string>
+    <string name="extras_title">Extras</string>
+    <string name="billing_title">Billing</string>
+    <string name="billing_monthly">Monthly</string>
+    <string name="billing_yearly">Yearly</string>
+    <string name="billing_lifetime">Lifetime</string>
+    <string name="size_placeholder">Size</string>
+    <string name="size_small">Small</string>
+    <string name="size_medium">Medium</string>
+    <string name="size_large">Large</string>
+
+    <string name="multiple_page_title">Multiple selection</string>
+    <string name="multiple_hint">Each option is its own field with its own conditions and rules.</string>
+    <string name="multiple_breakfast">Breakfast</string>
+    <string name="multiple_parking">Parking</string>
+    <string name="multiple_lounge">Lounge</string>
+    <string name="multiple_group_error">Choose at least two extras</string>
+
+    <string name="date_page_title">Date</string>
+    <string name="date_label">Start date</string>
+    <string name="date_hint">A calendar date without a time zone. Each platform shows its own picker.</string>
+    <string name="datetime_page_title">Date and time</string>
+    <string name="datetime_label">Reminder</string>
+    <string name="datetime_hint">A calendar date and a wall-clock time, still without a time zone.</string>
+
+    <string name="label_page_title">Label</string>
+    <string name="label_title_text">A title label</string>
+    <string name="label_body_text">A body label explains something nearby.</string>
+    <string name="label_live_hint">Tap the action to change the Kotlin value; both renderers follow.</string>
+    <string name="label_live_value">Tapped %1$d times</string>
+
+    <string name="paragraph_page_title">Paragraph</string>
+    <string name="paragraph_single">A single line of read-only text.</string>
+    <string name="paragraph_line">Line %1$d of a longer explanation.</string>
+
+    <string name="action_page_title">Action button</string>
+    <string name="action_hint">The click handler runs in Kotlin and updates the label below.</string>
+    <string name="action_taps">Tapped %1$d times</string>
+
+    <string name="custom_page_title">Custom field</string>
+    <string name="custom_label">Guests</string>
+    <string name="custom_hint">A consumer-defined field. Compose and SwiftUI render it themselves and call the same Kotlin methods.</string>
+    <string name="custom_max_error">At most 5 guests</string>
+
+    <string name="action_preset_fill">Fill required</string>
+
+    <string name="timing_page_title">Validation timing</string>
+    <string name="timing_label">Required text</string>
+    <string name="timing_on_demand">On demand</string>
+    <string name="timing_on_demand_hint">Errors appear on Validate. A displayed error clears as soon as the value is fixed.</string>
+    <string name="timing_on_change">On value change</string>
+    <string name="timing_on_change_hint">Validates after the first edit.</string>
+    <string name="timing_always">Always</string>
+    <string name="timing_always_hint">Validates immediately, even before any edit.</string>
+
+    <string name="conditions_page_title">Conditions</string>
+    <string name="conditions_visible">Visibility</string>
+    <string name="conditions_visible_hint">The field below is shown only while the switch is on.</string>
+    <string name="conditions_visible_toggle">Show the field</string>
+    <string name="conditions_enabled">Enabled state</string>
+    <string name="conditions_enabled_hint">The field below is editable only while the switch is on.</string>
+    <string name="conditions_enabled_toggle">Enable the field</string>
+    <string name="conditions_field">Dependent field</string>
+    <string name="conditions_custom">Custom condition</string>
+    <string name="conditions_custom_hint">A custom condition runs Kotlin code when a tagged field changes.</string>
+    <string name="conditions_source">Type something</string>
+    <string name="conditions_mirror">Mirror: %1$s</string>
+
+    <string name="transactions_page_title">Transactions</string>
+    <string name="transactions_section">Notes</string>
+    <string name="transactions_hint">Add and remove fields at runtime. The first note is required.</string>
+    <string name="transactions_note">Note %1$d</string>
+    <string name="transactions_add">Add note</string>
+    <string name="transactions_remove">Remove last</string>
+
+    <string name="keyboard_page_title">Keyboard navigation</string>
+    <string name="keyboard_section">Walk through the fields</string>
+    <string name="keyboard_hint">Next moves to the following field, including password and phone; Done closes the keyboard. Validate focuses the required last field.</string>
+    <string name="keyboard_note">Note %1$d</string>
+    <string name="keyboard_password">Password</string>
+    <string name="keyboard_phone">Phone number</string>
+    <string name="keyboard_last">Required last field</string>
+
+    <string name="scroll_page_title">Scroll to first error</string>
+    <string name="scroll_section">Long form</string>
+    <string name="scroll_hint">Validate from the top: the list scrolls to the first error at the bottom.</string>
+    <string name="scroll_note">Optional note %1$d</string>
+    <string name="scroll_last">Required last field</string>
+    <string name="scroll_approve">Approve before submitting</string>
+    <string name="scroll_group_error">Confirm this group before submitting</string>
+</resources>

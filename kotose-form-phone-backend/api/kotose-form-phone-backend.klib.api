@@ -1,0 +1,15 @@
+// Klib ABI Dump
+// Targets: [iosArm64, iosSimulatorArm64]
+// Rendering settings:
+// - Signature version: 2
+// - Show manifest properties: true
+// - Show declarations: true
+
+// Library unique name: <io.github.robinpcrd:kotose-form-phone-backend>
+final object io.github.robinpcrd.kotose.form.utils/LibPhoneNumberBackend : io.github.robinpcrd.kotose.form.utils/PhoneNumberBackend { // io.github.robinpcrd.kotose.form.utils/LibPhoneNumberBackend|null[0]
+    final fun countryCode(kotlin/String): kotlin/Int // io.github.robinpcrd.kotose.form.utils/LibPhoneNumberBackend.countryCode|countryCode(kotlin.String){}[0]
+    final fun formatPartial(kotlin/String, kotlin/String): kotlin/String // io.github.robinpcrd.kotose.form.utils/LibPhoneNumberBackend.formatPartial|formatPartial(kotlin.String;kotlin.String){}[0]
+    final fun isPossibleNumber(kotlin/String, kotlin/String): kotlin/Boolean // io.github.robinpcrd.kotose.form.utils/LibPhoneNumberBackend.isPossibleNumber|isPossibleNumber(kotlin.String;kotlin.String){}[0]
+    final fun parse(kotlin/String, kotlin/String): io.github.robinpcrd.kotose.form.utils/PhoneParseResult? // io.github.robinpcrd.kotose.form.utils/LibPhoneNumberBackend.parse|parse(kotlin.String;kotlin.String){}[0]
+    final fun parsePartial(kotlin/String, kotlin/String): io.github.robinpcrd.kotose.form.utils/PhonePartialResult? // io.github.robinpcrd.kotose.form.utils/LibPhoneNumberBackend.parsePartial|parsePartial(kotlin.String;kotlin.String){}[0]
+}

@@ -1,0 +1,793 @@
+public final class io/github/robinpcrd/kotose/form/compose/ColorSchemeKeyTokens : java/lang/Enum {
+	public static final field OnSurface Lio/github/robinpcrd/kotose/form/compose/ColorSchemeKeyTokens;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public static fun valueOf (Ljava/lang/String;)Lio/github/robinpcrd/kotose/form/compose/ColorSchemeKeyTokens;
+	public static fun values ()[Lio/github/robinpcrd/kotose/form/compose/ColorSchemeKeyTokens;
+}
+
+public final class io/github/robinpcrd/kotose/form/compose/ColorsKt {
+	public static final fun getAmber300 ()J
+	public static final fun getAmber600 ()J
+	public static final fun getAmber700 ()J
+	public static final fun getOrange100 ()J
+	public static final fun getOrange200 ()J
+	public static final fun getOrange300 ()J
+	public static final fun harmonizedWarning (ZLandroidx/compose/runtime/Composer;II)J
+}
+
+public final class io/github/robinpcrd/kotose/form/compose/ComposableSingletons$FormScreenKt {
+	public static final field INSTANCE Lio/github/robinpcrd/kotose/form/compose/ComposableSingletons$FormScreenKt;
+	public fun <init> ()V
+	public final fun getLambda$-1041546792$io_github_robinpcrd_kotose_form ()Lkotlin/jvm/functions/Function3;
+}
+
+public abstract interface class io/github/robinpcrd/kotose/form/compose/ComposeField {
+	public abstract fun getView ()Lkotlin/jvm/functions/Function2;
+	public abstract fun setView (Lkotlin/jvm/functions/Function2;)V
+}
+
+public final class io/github/robinpcrd/kotose/form/compose/FieldColors {
+	public static final field $stable I
+	public final fun containerColor-WaAFU9c (Landroidx/compose/runtime/Composer;I)J
+	public final fun cursorColor (ZLandroidx/compose/runtime/Composer;I)Landroidx/compose/runtime/State;
+	public fun equals (Ljava/lang/Object;)Z
+	public fun hashCode ()I
+	public final fun indicatorColor (ZZLandroidx/compose/foundation/interaction/InteractionSource;Landroidx/compose/runtime/Composer;I)Landroidx/compose/runtime/State;
+	public final fun leadingIconColor (ZZLandroidx/compose/foundation/interaction/InteractionSource;Landroidx/compose/runtime/Composer;I)Landroidx/compose/runtime/State;
+	public final fun placeholderColor (ZLandroidx/compose/runtime/Composer;I)Landroidx/compose/runtime/State;
+	public final fun surfaceColorAtElevation-hD4cs00 (FLandroidx/compose/runtime/Composer;I)J
+	public final fun textColor (ZLandroidx/compose/runtime/Composer;I)Landroidx/compose/runtime/State;
+	public final fun trailingIconColor (ZZLandroidx/compose/foundation/interaction/InteractionSource;Landroidx/compose/runtime/Composer;I)Landroidx/compose/runtime/State;
+}
+
+public final class io/github/robinpcrd/kotose/form/compose/FieldColorsToken {
+	public static final field $stable I
+	public static final field INSTANCE Lio/github/robinpcrd/kotose/form/compose/FieldColorsToken;
+	public final fun getTextColor ()Lio/github/robinpcrd/kotose/form/compose/ColorSchemeKeyTokens;
+}
+
+public final class io/github/robinpcrd/kotose/form/compose/FieldDefaults {
+	public static final field $stable I
+	public static final field DisabledInputOpacity F
+	public static final field DisabledLabelOpacity F
+	public static final field DisabledLeadingIconOpacity F
+	public static final field DisabledOutlineOpacity F
+	public static final field DisabledTrailingIconOpacity F
+	public static final field INSTANCE Lio/github/robinpcrd/kotose/form/compose/FieldDefaults;
+	public final fun buttonFieldAppearance-zbh53CM (Lio/github/robinpcrd/kotose/form/fields/ButtonFieldAppearance$ButtonStyle;Landroidx/compose/material3/ButtonColors;Landroidx/compose/ui/text/TextStyle;Landroidx/compose/foundation/layout/PaddingValues;Landroidx/compose/foundation/layout/Arrangement$Horizontal;Landroidx/compose/ui/Alignment$Vertical;Lio/github/robinpcrd/kotose/form/fields/ButtonFieldAppearance$ButtonWidth;Landroidx/compose/ui/graphics/Shape;Lio/github/robinpcrd/kotose/form/utils/PainterRes;JFLandroidx/compose/runtime/Composer;III)Lio/github/robinpcrd/kotose/form/fields/ButtonFieldAppearance;
+	public final fun fieldColors-St-qZLY (JJJJJLandroidx/compose/foundation/text/selection/TextSelectionColors;JJJJJJJJJJJJJJJJJJLandroidx/compose/runtime/Composer;IIII)Lio/github/robinpcrd/kotose/form/compose/FieldColors;
+	public final fun iconButtonFieldAppearance-0wUBAAY (JLandroidx/compose/foundation/layout/PaddingValues;Landroidx/compose/foundation/layout/PaddingValues;Landroidx/compose/foundation/layout/Arrangement$Horizontal;Landroidx/compose/ui/Alignment$Vertical;JJLandroidx/compose/ui/graphics/Shape;Landroidx/compose/foundation/BorderStroke;Landroidx/compose/runtime/Composer;II)Lio/github/robinpcrd/kotose/form/fields/IconButtonFieldAppearance;
+	public final fun labelFieldAppearance (Lio/github/robinpcrd/kotose/form/compose/FieldColors;Landroidx/compose/ui/text/TextStyle;Landroidx/compose/runtime/Composer;II)Lio/github/robinpcrd/kotose/form/fields/LabelFieldAppearance;
+	public final fun paragraphFieldAppearance-NCIA-3o (Lio/github/robinpcrd/kotose/form/compose/FieldColors;Landroidx/compose/ui/text/TextStyle;Ljava/lang/String;Landroidx/compose/ui/graphics/Color;FJLandroidx/compose/foundation/layout/PaddingValues;Landroidx/compose/ui/graphics/Shape;Lio/github/robinpcrd/kotose/form/fields/ParagraphFieldAppearance$Width;Landroidx/compose/runtime/Composer;II)Lio/github/robinpcrd/kotose/form/fields/ParagraphFieldAppearance;
+	public final fun warningFieldColors (Landroidx/compose/runtime/Composer;I)Lio/github/robinpcrd/kotose/form/compose/FieldColors;
+}
+
+public final class io/github/robinpcrd/kotose/form/compose/FieldDefaultsKt {
+	public static final fun animateBorderStrokeAsState-AGcomas (ZZLandroidx/compose/foundation/interaction/InteractionSource;Lio/github/robinpcrd/kotose/form/compose/FieldColors;FFLandroidx/compose/runtime/Composer;II)Landroidx/compose/runtime/State;
+	public static final fun fromToken (Landroidx/compose/material3/ColorScheme;Lio/github/robinpcrd/kotose/form/compose/ColorSchemeKeyTokens;)J
+	public static final fun toColor (Lio/github/robinpcrd/kotose/form/compose/ColorSchemeKeyTokens;Landroidx/compose/runtime/Composer;I)J
+}
+
+public final class io/github/robinpcrd/kotose/form/compose/FormScreenKt {
+	public static final fun DefaultFieldView (Lio/github/robinpcrd/kotose/form/Field;Landroidx/compose/runtime/Composer;I)V
+	public static final fun FormScreen (Landroidx/compose/ui/Modifier;Landroidx/compose/foundation/lazy/LazyListState;Landroidx/compose/foundation/layout/PaddingValues;ZLandroidx/compose/foundation/layout/Arrangement$Vertical;Landroidx/compose/ui/Alignment$Horizontal;ZLkotlin/jvm/functions/Function1;Lio/github/robinpcrd/kotose/form/Form;Lkotlin/jvm/functions/Function3;Landroidx/compose/runtime/Composer;II)V
+	public static final fun getLocalForm ()Landroidx/compose/runtime/ProvidableCompositionLocal;
+}
+
+public final class io/github/robinpcrd/kotose/form/compose/KotoseFormStyle {
+	public static final field $stable I
+	public static final field Companion Lio/github/robinpcrd/kotose/form/compose/KotoseFormStyle$Companion;
+	public synthetic fun <init> (JJJJJJJJJJJFFLandroidx/compose/ui/text/TextStyle;Landroidx/compose/ui/text/TextStyle;Landroidx/compose/ui/text/TextStyle;ZZILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public synthetic fun <init> (JJJJJJJJJJJFFLandroidx/compose/ui/text/TextStyle;Landroidx/compose/ui/text/TextStyle;Landroidx/compose/ui/text/TextStyle;ZZLkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1-0d7_KjU ()J
+	public final fun component10-0d7_KjU ()J
+	public final fun component11-0d7_KjU ()J
+	public final fun component12-D9Ej5fM ()F
+	public final fun component13-D9Ej5fM ()F
+	public final fun component14 ()Landroidx/compose/ui/text/TextStyle;
+	public final fun component15 ()Landroidx/compose/ui/text/TextStyle;
+	public final fun component16 ()Landroidx/compose/ui/text/TextStyle;
+	public final fun component17 ()Z
+	public final fun component18 ()Z
+	public final fun component2-0d7_KjU ()J
+	public final fun component3-0d7_KjU ()J
+	public final fun component4-0d7_KjU ()J
+	public final fun component5-0d7_KjU ()J
+	public final fun component6-0d7_KjU ()J
+	public final fun component7-0d7_KjU ()J
+	public final fun component8-0d7_KjU ()J
+	public final fun component9-0d7_KjU ()J
+	public final fun copy-4v81GGM (JJJJJJJJJJJFFLandroidx/compose/ui/text/TextStyle;Landroidx/compose/ui/text/TextStyle;Landroidx/compose/ui/text/TextStyle;ZZ)Lio/github/robinpcrd/kotose/form/compose/KotoseFormStyle;
+	public static synthetic fun copy-4v81GGM$default (Lio/github/robinpcrd/kotose/form/compose/KotoseFormStyle;JJJJJJJJJJJFFLandroidx/compose/ui/text/TextStyle;Landroidx/compose/ui/text/TextStyle;Landroidx/compose/ui/text/TextStyle;ZZILjava/lang/Object;)Lio/github/robinpcrd/kotose/form/compose/KotoseFormStyle;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getAccent-0d7_KjU ()J
+	public final fun getBorderWidth-D9Ej5fM ()F
+	public final fun getCornerRadius-D9Ej5fM ()F
+	public final fun getDisabledBackground-0d7_KjU ()J
+	public final fun getDisabledText-0d7_KjU ()J
+	public final fun getError-0d7_KjU ()J
+	public final fun getFocusedBorder-0d7_KjU ()J
+	public final fun getInputBackground-0d7_KjU ()J
+	public final fun getInputBorder-0d7_KjU ()J
+	public final fun getInputTextStyle ()Landroidx/compose/ui/text/TextStyle;
+	public final fun getMessageTextStyle ()Landroidx/compose/ui/text/TextStyle;
+	public final fun getParagraphBackground-0d7_KjU ()J
+	public final fun getPlaceholder-0d7_KjU ()J
+	public final fun getShowsKeyboardBar ()Z
+	public final fun getShowsMessageIcons ()Z
+	public final fun getText-0d7_KjU ()J
+	public final fun getTitleTextStyle ()Landroidx/compose/ui/text/TextStyle;
+	public final fun getWarning-0d7_KjU ()J
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class io/github/robinpcrd/kotose/form/compose/KotoseFormStyle$Companion {
+	public final fun fromMaterial (Landroidx/compose/runtime/Composer;I)Lio/github/robinpcrd/kotose/form/compose/KotoseFormStyle;
+}
+
+public final class io/github/robinpcrd/kotose/form/compose/KotoseFormStyleKt {
+	public static final fun KotoseFormTheme (Lio/github/robinpcrd/kotose/form/compose/KotoseFormStyle;Lkotlin/jvm/functions/Function2;Landroidx/compose/runtime/Composer;I)V
+	public static final fun kotoseFormStyle (Landroidx/compose/runtime/Composer;I)Lio/github/robinpcrd/kotose/form/compose/KotoseFormStyle;
+}
+
+public final class io/github/robinpcrd/kotose/form/compose/LabelRadioButtonKt {
+	public static final fun LabelCheckBox (ZLkotlin/jvm/functions/Function0;Ljava/lang/String;Landroidx/compose/ui/Modifier;Lio/github/robinpcrd/kotose/form/compose/FieldColors;Landroidx/compose/ui/text/TextStyle;ZLjava/lang/String;Landroidx/compose/runtime/Composer;II)V
+	public static final fun LabelRadioButton (ZLkotlin/jvm/functions/Function0;Ljava/lang/String;Landroidx/compose/ui/Modifier;Lio/github/robinpcrd/kotose/form/compose/FieldColors;Landroidx/compose/ui/text/TextStyle;ZLjava/lang/String;Landroidx/compose/runtime/Composer;II)V
+}
+
+public final class io/github/robinpcrd/kotose/form/compose/ModifiersAndroidKt {
+	public static final fun autofill (Landroidx/compose/ui/Modifier;Ljava/util/List;Lkotlin/jvm/functions/Function1;)Landroidx/compose/ui/Modifier;
+	public static final fun clearFocusOnKeyboardDismiss (Landroidx/compose/ui/Modifier;)Landroidx/compose/ui/Modifier;
+	public static final fun clearFormFocusOnKeyboardDismiss (Landroidx/compose/ui/Modifier;)Landroidx/compose/ui/Modifier;
+}
+
+public final class io/github/robinpcrd/kotose/form/compose/ModifiersKt {
+	public static final fun fieldPadding (Landroidx/compose/ui/Modifier;)Landroidx/compose/ui/Modifier;
+	public static final fun fieldPadding (Landroidx/compose/ui/Modifier;Z)Landroidx/compose/ui/Modifier;
+	public static synthetic fun fieldPadding$default (Landroidx/compose/ui/Modifier;ZILjava/lang/Object;)Landroidx/compose/ui/Modifier;
+}
+
+public final class io/github/robinpcrd/kotose/form/compose/Paddings {
+	public static final field $stable I
+	public fun <init> ()V
+	public synthetic fun <init> (FFFFILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public synthetic fun <init> (FFFFLkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1-D9Ej5fM ()F
+	public final fun component2-D9Ej5fM ()F
+	public final fun component3-D9Ej5fM ()F
+	public final fun component4-D9Ej5fM ()F
+	public final fun copy-a9UjIt4 (FFFF)Lio/github/robinpcrd/kotose/form/compose/Paddings;
+	public static synthetic fun copy-a9UjIt4$default (Lio/github/robinpcrd/kotose/form/compose/Paddings;FFFFILjava/lang/Object;)Lio/github/robinpcrd/kotose/form/compose/Paddings;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getDefaultPadding-D9Ej5fM ()F
+	public final fun getLargePadding-D9Ej5fM ()F
+	public final fun getSmallPadding-D9Ej5fM ()F
+	public final fun getTinyPadding-D9Ej5fM ()F
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class io/github/robinpcrd/kotose/form/compose/PhoneOutputTransformationKt {
+	public static final fun phoneNumberOutputTransformation (Lio/github/robinpcrd/kotose/form/compose/data/Country;)Landroidx/compose/foundation/text/input/OutputTransformation;
+}
+
+public final class io/github/robinpcrd/kotose/form/compose/ThemeKt {
+	public static final fun getLocalKotosePaddings ()Landroidx/compose/runtime/ProvidableCompositionLocal;
+}
+
+public final class io/github/robinpcrd/kotose/form/compose/fields/ButtonFieldKt {
+	public static final fun ButtonField (Lio/github/robinpcrd/kotose/form/fields/ActionField;Lio/github/robinpcrd/kotose/form/fields/ButtonFieldAppearance;Landroidx/compose/ui/Modifier;Landroidx/compose/runtime/Composer;II)V
+	public static final fun ButtonField (Lio/github/robinpcrd/kotose/resources/StrRes;Lio/github/robinpcrd/kotose/form/fields/ButtonFieldAppearance;Lkotlin/jvm/functions/Function0;ZLandroidx/compose/ui/Modifier;Landroidx/compose/runtime/Composer;II)V
+}
+
+public final class io/github/robinpcrd/kotose/form/compose/fields/ComposableSingletons$DateTimeFieldKt {
+	public static final field INSTANCE Lio/github/robinpcrd/kotose/form/compose/fields/ComposableSingletons$DateTimeFieldKt;
+	public fun <init> ()V
+	public final fun getLambda$-111539917$io_github_robinpcrd_kotose_form ()Lkotlin/jvm/functions/Function3;
+	public final fun getLambda$-503220950$io_github_robinpcrd_kotose_form ()Lkotlin/jvm/functions/Function3;
+	public final fun getLambda$-778921807$io_github_robinpcrd_kotose_form ()Lkotlin/jvm/functions/Function3;
+	public final fun getLambda$-888807895$io_github_robinpcrd_kotose_form ()Lkotlin/jvm/functions/Function2;
+	public final fun getLambda$9937829$io_github_robinpcrd_kotose_form ()Lkotlin/jvm/functions/Function3;
+}
+
+public final class io/github/robinpcrd/kotose/form/compose/fields/ComposableSingletons$DropDownFieldKt {
+	public static final field INSTANCE Lio/github/robinpcrd/kotose/form/compose/fields/ComposableSingletons$DropDownFieldKt;
+	public fun <init> ()V
+	public final fun getLambda$-1623132166$io_github_robinpcrd_kotose_form ()Lkotlin/jvm/functions/Function4;
+	public final fun getLambda$1620335105$io_github_robinpcrd_kotose_form ()Lkotlin/jvm/functions/Function2;
+}
+
+public final class io/github/robinpcrd/kotose/form/compose/fields/ComposableSingletons$InputFieldKt {
+	public static final field INSTANCE Lio/github/robinpcrd/kotose/form/compose/fields/ComposableSingletons$InputFieldKt;
+	public fun <init> ()V
+	public final fun getLambda$296776805$io_github_robinpcrd_kotose_form ()Lkotlin/jvm/functions/Function2;
+}
+
+public final class io/github/robinpcrd/kotose/form/compose/fields/ComposeFieldFocus {
+	public static final field $stable I
+	public fun <init> ()V
+	public final fun getRequester ()Landroidx/compose/ui/focus/FocusRequester;
+	public final fun getState ()Landroidx/compose/runtime/State;
+	public final fun update (Landroidx/compose/ui/focus/FocusState;)Z
+}
+
+public final class io/github/robinpcrd/kotose/form/compose/fields/ComposeFieldFocusKt {
+	public static final fun rememberFieldFocus (Lio/github/robinpcrd/kotose/form/FocusableField;Landroidx/compose/runtime/Composer;I)Lio/github/robinpcrd/kotose/form/compose/fields/ComposeFieldFocus;
+}
+
+public final class io/github/robinpcrd/kotose/form/compose/fields/DateTimeFieldAndroid {
+	public static final fun rememberDefaultDateTimePicker (Lio/github/robinpcrd/kotose/form/fields/DateTimeField;Landroidx/compose/runtime/Composer;I)Lkotlin/jvm/functions/Function0;
+}
+
+public final class io/github/robinpcrd/kotose/form/compose/fields/DateTimeFieldKt {
+	public static final fun DateTimeField (Lio/github/robinpcrd/kotose/form/fields/DateTimeField;Lio/github/robinpcrd/kotose/form/compose/FieldColors;Landroidx/compose/foundation/interaction/InteractionSource;Landroidx/compose/ui/Modifier;Landroidx/compose/runtime/Composer;II)V
+}
+
+public final class io/github/robinpcrd/kotose/form/compose/fields/DropDownFieldKt {
+	public static final fun DropdownField (Lio/github/robinpcrd/kotose/form/fields/SingleChoiceField;Landroidx/compose/ui/Modifier;Lio/github/robinpcrd/kotose/form/compose/FieldColors;Landroidx/compose/foundation/interaction/InteractionSource;Landroidx/compose/runtime/Composer;II)V
+}
+
+public final class io/github/robinpcrd/kotose/form/compose/fields/FocusableInputFieldKt {
+	public static final fun FocusableInputField (Lio/github/robinpcrd/kotose/form/FocusableField;Lio/github/robinpcrd/kotose/form/fields/InputFieldAppearance;Lio/github/robinpcrd/kotose/form/compose/fields/ComposeFieldFocus;Lio/github/robinpcrd/kotose/form/fields/TextLineLimits;Lkotlin/jvm/functions/Function4;Landroidx/compose/runtime/Composer;II)V
+	public static final fun FocusableInputField2 (Lio/github/robinpcrd/kotose/form/FocusableField;Lio/github/robinpcrd/kotose/form/fields/InputFieldAppearance;Lio/github/robinpcrd/kotose/form/compose/fields/ComposeFieldFocus;Lkotlin/jvm/functions/Function4;Landroidx/compose/runtime/Composer;II)V
+}
+
+public final class io/github/robinpcrd/kotose/form/compose/fields/IconButtonFieldKt {
+	public static final fun IconButtonField (Lio/github/robinpcrd/kotose/form/fields/IconButtonField;Lio/github/robinpcrd/kotose/form/fields/IconButtonFieldAppearance;Landroidx/compose/runtime/Composer;I)V
+}
+
+public final class io/github/robinpcrd/kotose/form/compose/fields/InputFieldKt {
+	public static final fun InputField (Lio/github/robinpcrd/kotose/form/fields/TextField;Landroidx/compose/ui/Modifier;Lio/github/robinpcrd/kotose/form/fields/InputFieldAppearance;Lkotlin/jvm/functions/Function2;Landroidx/compose/runtime/Composer;II)V
+	public static final fun InputField (Ljava/lang/String;Lio/github/robinpcrd/kotose/resources/StrRes;ZLio/github/robinpcrd/kotose/form/fields/InputFieldAppearance;Landroidx/compose/ui/Modifier;Lio/github/robinpcrd/kotose/form/fields/TextLineLimits;ZZLandroidx/compose/ui/text/input/VisualTransformation;Landroidx/compose/foundation/text/KeyboardOptions;Landroidx/compose/foundation/text/KeyboardActions;Landroidx/compose/ui/focus/FocusState;Landroidx/compose/ui/focus/FocusRequester;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function2;Lkotlin/jvm/functions/Function2;Landroidx/compose/runtime/Composer;III)V
+}
+
+public final class io/github/robinpcrd/kotose/form/compose/fields/LabelFieldKt {
+	public static final fun LabelField (Lio/github/robinpcrd/kotose/form/fields/DisplayTextField;Lio/github/robinpcrd/kotose/form/fields/LabelFieldAppearance;Landroidx/compose/runtime/Composer;II)V
+	public static final fun LabelField (Lio/github/robinpcrd/kotose/resources/StrRes;Lio/github/robinpcrd/kotose/form/fields/LabelFieldAppearance;ZLandroidx/compose/ui/Modifier;Landroidx/compose/runtime/Composer;II)V
+}
+
+public final class io/github/robinpcrd/kotose/form/compose/fields/LocalDateFieldAndroid {
+	public static final fun rememberDefaultLocalDatePicker (Lio/github/robinpcrd/kotose/form/fields/LocalDateField;Landroidx/compose/runtime/Composer;I)Lkotlin/jvm/functions/Function0;
+}
+
+public final class io/github/robinpcrd/kotose/form/compose/fields/LocalDateFieldKt {
+	public static final fun LocalDateField (Lio/github/robinpcrd/kotose/form/fields/LocalDateField;Lio/github/robinpcrd/kotose/form/compose/FieldColors;Landroidx/compose/foundation/interaction/InteractionSource;Landroidx/compose/ui/Modifier;Landroidx/compose/runtime/Composer;II)V
+}
+
+public final class io/github/robinpcrd/kotose/form/compose/fields/ParagraphFieldKt {
+	public static final fun ParagraphField (Lio/github/robinpcrd/kotose/form/fields/DisplayParagraphField;Lio/github/robinpcrd/kotose/form/fields/ParagraphFieldAppearance;Landroidx/compose/runtime/Composer;II)V
+	public static final fun ParagraphField (Ljava/util/List;Lio/github/robinpcrd/kotose/form/fields/ParagraphFieldAppearance;Landroidx/compose/ui/Modifier;Landroidx/compose/runtime/Composer;II)V
+}
+
+public final class io/github/robinpcrd/kotose/form/compose/fields/PasswordFieldKt {
+	public static final fun PasswordField (Lio/github/robinpcrd/kotose/form/fields/PasswordField;Lio/github/robinpcrd/kotose/form/fields/InputFieldAppearance;Landroidx/compose/ui/Modifier;Landroidx/compose/runtime/Composer;II)V
+	public static final fun PasswordField (Lio/github/robinpcrd/kotose/form/fields/SecureTextField;Lio/github/robinpcrd/kotose/form/fields/InputFieldAppearance;Landroidx/compose/ui/Modifier;Landroidx/compose/runtime/Composer;II)V
+}
+
+public final class io/github/robinpcrd/kotose/form/compose/fields/PhoneFieldKt {
+	public static final fun PhoneField (Lio/github/robinpcrd/kotose/form/fields/PhoneField;Lio/github/robinpcrd/kotose/form/fields/InputFieldAppearance;Landroidx/compose/ui/Modifier;Lio/github/robinpcrd/kotose/form/compose/FieldColors;Landroidx/compose/foundation/interaction/MutableInteractionSource;Landroidx/compose/runtime/Composer;II)V
+	public static final fun PhoneField (Lio/github/robinpcrd/kotose/form/fields/PhoneNumberField;Lio/github/robinpcrd/kotose/form/fields/InputFieldAppearance;Landroidx/compose/ui/Modifier;Lio/github/robinpcrd/kotose/form/compose/FieldColors;Landroidx/compose/foundation/interaction/MutableInteractionSource;Landroidx/compose/runtime/Composer;II)V
+}
+
+public final class io/github/robinpcrd/kotose/form/compose/fields/SwitchFieldKt {
+	public static final fun SwitchField (Lio/github/robinpcrd/kotose/form/fields/ToggleField;Lio/github/robinpcrd/kotose/form/fields/SwitchFieldAppearance;Landroidx/compose/ui/Modifier;Landroidx/compose/runtime/Composer;II)V
+	public static final fun SwitchField (Ljava/lang/Boolean;Ljava/lang/String;Lio/github/robinpcrd/kotose/form/fields/SwitchFieldAppearance;Landroidx/compose/ui/Modifier;ZLkotlin/jvm/functions/Function1;Landroidx/compose/runtime/Composer;II)V
+}
+
+public final class io/github/robinpcrd/kotose/form/compose/fields/selectable/ComposableSingletons$SelectionPresentationsKt {
+	public static final field INSTANCE Lio/github/robinpcrd/kotose/form/compose/fields/selectable/ComposableSingletons$SelectionPresentationsKt;
+	public fun <init> ()V
+	public final fun getLambda$-982818301$io_github_robinpcrd_kotose_form ()Lkotlin/jvm/functions/Function2;
+	public final fun getLambda$17695165$io_github_robinpcrd_kotose_form ()Lkotlin/jvm/functions/Function2;
+}
+
+public final class io/github/robinpcrd/kotose/form/compose/fields/selectable/MultipleSelectionFieldKt {
+	public static final fun MultipleSelectionField (Lio/github/robinpcrd/kotose/form/fields/SelectableField;Landroidx/compose/runtime/Composer;I)V
+	public static final fun MultipleSelectionField (Lio/github/robinpcrd/kotose/form/fields/SelectionOptionField;Lio/github/robinpcrd/kotose/form/fields/SelectableFieldAppearance;Landroidx/compose/runtime/Composer;II)V
+	public static final fun MultipleSelectionField (ZLjava/lang/String;Lio/github/robinpcrd/kotose/form/fields/SelectableFieldAppearance;Landroidx/compose/ui/Modifier;ZZZLjava/lang/String;Lkotlin/jvm/functions/Function0;Landroidx/compose/runtime/Composer;II)V
+}
+
+public final class io/github/robinpcrd/kotose/form/compose/fields/selectable/SingleSelectionFieldKt {
+	public static final fun SingleSelectionField (Lio/github/robinpcrd/kotose/form/fields/SelectableField;Landroidx/compose/runtime/Composer;I)V
+	public static final fun SingleSelectionField (Lio/github/robinpcrd/kotose/form/fields/SelectionOptionField;Lio/github/robinpcrd/kotose/form/fields/SelectableFieldAppearance;Landroidx/compose/runtime/Composer;II)V
+	public static final fun SingleSelectionField (ZLjava/lang/String;Lio/github/robinpcrd/kotose/form/fields/SelectableFieldAppearance;Landroidx/compose/ui/Modifier;ZZZLjava/lang/String;Lkotlin/jvm/functions/Function0;Landroidx/compose/runtime/Composer;II)V
+}
+
+public final class io/github/robinpcrd/kotose/form/compose/fields/validation/ValidationErrorFieldKt {
+	public static final fun ValidationErrorField (Lio/github/robinpcrd/kotose/form/fields/validation/ValidationErrorField;Landroidx/compose/ui/Modifier;Landroidx/compose/runtime/Composer;II)V
+	public static final fun ValidationErrorField (Lio/github/robinpcrd/kotose/form/fields/validation/ValidationErrorGroupField;Landroidx/compose/ui/Modifier;Landroidx/compose/runtime/Composer;II)V
+	public static final fun ValidationErrorField (Ljava/lang/String;ZLandroidx/compose/ui/Modifier;Landroidx/compose/runtime/Composer;II)V
+}
+
+public final class io/github/robinpcrd/kotose/form/dsl/FormDslKt {
+	public static final fun button (Lio/github/robinpcrd/kotose/form/dsl/GroupBuilder;Ljava/lang/String;Lio/github/robinpcrd/kotose/resources/StrRes;Lkotlin/jvm/functions/Function2;Lkotlin/jvm/functions/Function0;)Lio/github/robinpcrd/kotose/form/fields/ButtonField;
+	public static synthetic fun button$default (Lio/github/robinpcrd/kotose/form/dsl/GroupBuilder;Ljava/lang/String;Lio/github/robinpcrd/kotose/resources/StrRes;Lkotlin/jvm/functions/Function2;Lkotlin/jvm/functions/Function0;ILjava/lang/Object;)Lio/github/robinpcrd/kotose/form/fields/ButtonField;
+	public static final fun buttonField (Lio/github/robinpcrd/kotose/form/dsl/GroupBuilder;Ljava/lang/String;Lio/github/robinpcrd/kotose/resources/StrRes;Lkotlin/jvm/functions/Function2;Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function1;)Lio/github/robinpcrd/kotose/form/fields/ButtonField;
+	public static synthetic fun buttonField$default (Lio/github/robinpcrd/kotose/form/dsl/GroupBuilder;Ljava/lang/String;Lio/github/robinpcrd/kotose/resources/StrRes;Lkotlin/jvm/functions/Function2;Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function1;ILjava/lang/Object;)Lio/github/robinpcrd/kotose/form/fields/ButtonField;
+	public static final fun dropDown (Lio/github/robinpcrd/kotose/form/dsl/GroupBuilder;Ljava/lang/String;Ljava/util/List;Lio/github/robinpcrd/kotose/resources/StrRes;ZLkotlin/jvm/functions/Function1;)Lio/github/robinpcrd/kotose/form/fields/DropDownField;
+	public static synthetic fun dropDown$default (Lio/github/robinpcrd/kotose/form/dsl/GroupBuilder;Ljava/lang/String;Ljava/util/List;Lio/github/robinpcrd/kotose/resources/StrRes;ZLkotlin/jvm/functions/Function1;ILjava/lang/Object;)Lio/github/robinpcrd/kotose/form/fields/DropDownField;
+	public static final fun error (Lio/github/robinpcrd/kotose/form/dsl/GroupBuilder;Ljava/lang/String;Lio/github/robinpcrd/kotose/resources/StrRes;ZLkotlin/jvm/functions/Function1;)Lio/github/robinpcrd/kotose/form/fields/ErrorField;
+	public static synthetic fun error$default (Lio/github/robinpcrd/kotose/form/dsl/GroupBuilder;Ljava/lang/String;Lio/github/robinpcrd/kotose/resources/StrRes;ZLkotlin/jvm/functions/Function1;ILjava/lang/Object;)Lio/github/robinpcrd/kotose/form/fields/ErrorField;
+	public static final fun input (Lio/github/robinpcrd/kotose/form/dsl/GroupBuilder;Ljava/lang/String;Lio/github/robinpcrd/kotose/resources/StrRes;Lio/github/robinpcrd/kotose/resources/StrRes;Lio/github/robinpcrd/kotose/form/fields/TextLineLimits;Lkotlin/jvm/functions/Function2;Lkotlin/jvm/functions/Function2;Lkotlin/jvm/functions/Function1;)Lio/github/robinpcrd/kotose/form/fields/InputField;
+	public static synthetic fun input$default (Lio/github/robinpcrd/kotose/form/dsl/GroupBuilder;Ljava/lang/String;Lio/github/robinpcrd/kotose/resources/StrRes;Lio/github/robinpcrd/kotose/resources/StrRes;Lio/github/robinpcrd/kotose/form/fields/TextLineLimits;Lkotlin/jvm/functions/Function2;Lkotlin/jvm/functions/Function2;Lkotlin/jvm/functions/Function1;ILjava/lang/Object;)Lio/github/robinpcrd/kotose/form/fields/InputField;
+	public static final fun label (Lio/github/robinpcrd/kotose/form/dsl/GroupBuilder;Ljava/lang/String;Lio/github/robinpcrd/kotose/resources/StrRes;Lkotlin/jvm/functions/Function2;Lkotlin/jvm/functions/Function1;)Lio/github/robinpcrd/kotose/form/fields/LabelField;
+	public static synthetic fun label$default (Lio/github/robinpcrd/kotose/form/dsl/GroupBuilder;Ljava/lang/String;Lio/github/robinpcrd/kotose/resources/StrRes;Lkotlin/jvm/functions/Function2;Lkotlin/jvm/functions/Function1;ILjava/lang/Object;)Lio/github/robinpcrd/kotose/form/fields/LabelField;
+	public static final fun paragraph (Lio/github/robinpcrd/kotose/form/dsl/GroupBuilder;Ljava/lang/String;Lkotlin/jvm/functions/Function2;Lkotlin/jvm/functions/Function1;)Lio/github/robinpcrd/kotose/form/fields/ParagraphField;
+	public static synthetic fun paragraph$default (Lio/github/robinpcrd/kotose/form/dsl/GroupBuilder;Ljava/lang/String;Lkotlin/jvm/functions/Function2;Lkotlin/jvm/functions/Function1;ILjava/lang/Object;)Lio/github/robinpcrd/kotose/form/fields/ParagraphField;
+	public static final fun password (Lio/github/robinpcrd/kotose/form/dsl/GroupBuilder;Ljava/lang/String;Lio/github/robinpcrd/kotose/resources/StrRes;Lio/github/robinpcrd/kotose/resources/StrRes;Lkotlin/jvm/functions/Function2;Lkotlin/jvm/functions/Function1;)Lio/github/robinpcrd/kotose/form/fields/PasswordField;
+	public static synthetic fun password$default (Lio/github/robinpcrd/kotose/form/dsl/GroupBuilder;Ljava/lang/String;Lio/github/robinpcrd/kotose/resources/StrRes;Lio/github/robinpcrd/kotose/resources/StrRes;Lkotlin/jvm/functions/Function2;Lkotlin/jvm/functions/Function1;ILjava/lang/Object;)Lio/github/robinpcrd/kotose/form/fields/PasswordField;
+	public static final fun phone (Lio/github/robinpcrd/kotose/form/dsl/GroupBuilder;Ljava/lang/String;Lio/github/robinpcrd/kotose/resources/StrRes;Lkotlin/jvm/functions/Function2;Lkotlin/jvm/functions/Function1;)Lio/github/robinpcrd/kotose/form/fields/PhoneField;
+	public static synthetic fun phone$default (Lio/github/robinpcrd/kotose/form/dsl/GroupBuilder;Ljava/lang/String;Lio/github/robinpcrd/kotose/resources/StrRes;Lkotlin/jvm/functions/Function2;Lkotlin/jvm/functions/Function1;ILjava/lang/Object;)Lio/github/robinpcrd/kotose/form/fields/PhoneField;
+	public static final fun phoneDropdown (Lio/github/robinpcrd/kotose/form/dsl/GroupBuilder;Ljava/lang/String;Lio/github/robinpcrd/kotose/resources/StrRes;Lkotlin/jvm/functions/Function2;Lkotlin/jvm/functions/Function1;)Lio/github/robinpcrd/kotose/form/fields/PhoneField;
+	public static synthetic fun phoneDropdown$default (Lio/github/robinpcrd/kotose/form/dsl/GroupBuilder;Ljava/lang/String;Lio/github/robinpcrd/kotose/resources/StrRes;Lkotlin/jvm/functions/Function2;Lkotlin/jvm/functions/Function1;ILjava/lang/Object;)Lio/github/robinpcrd/kotose/form/fields/PhoneField;
+	public static final fun selectableField (Lio/github/robinpcrd/kotose/form/dsl/SelectableGroupBuilder;Ljava/lang/String;Ljava/lang/Object;Lio/github/robinpcrd/kotose/resources/StrRes;Lkotlin/jvm/functions/Function3;Lio/github/robinpcrd/kotose/form/fields/SelectableFieldAppearance;Lkotlin/jvm/functions/Function1;)Lio/github/robinpcrd/kotose/form/fields/SelectableField;
+	public static synthetic fun selectableField$default (Lio/github/robinpcrd/kotose/form/dsl/SelectableGroupBuilder;Ljava/lang/String;Ljava/lang/Object;Lio/github/robinpcrd/kotose/resources/StrRes;Lkotlin/jvm/functions/Function3;Lio/github/robinpcrd/kotose/form/fields/SelectableFieldAppearance;Lkotlin/jvm/functions/Function1;ILjava/lang/Object;)Lio/github/robinpcrd/kotose/form/fields/SelectableField;
+	public static final fun switch (Lio/github/robinpcrd/kotose/form/dsl/GroupBuilder;Ljava/lang/String;Lio/github/robinpcrd/kotose/resources/StrRes;Lkotlin/jvm/functions/Function2;Lkotlin/jvm/functions/Function1;)Lio/github/robinpcrd/kotose/form/fields/SwitchField;
+	public static synthetic fun switch$default (Lio/github/robinpcrd/kotose/form/dsl/GroupBuilder;Ljava/lang/String;Lio/github/robinpcrd/kotose/resources/StrRes;Lkotlin/jvm/functions/Function2;Lkotlin/jvm/functions/Function1;ILjava/lang/Object;)Lio/github/robinpcrd/kotose/form/fields/SwitchField;
+	public static final fun title (Lio/github/robinpcrd/kotose/form/dsl/GroupBuilder;Ljava/lang/String;Lio/github/robinpcrd/kotose/resources/StrRes;Lkotlin/jvm/functions/Function2;Lkotlin/jvm/functions/Function1;)Lio/github/robinpcrd/kotose/form/fields/LabelField;
+	public static synthetic fun title$default (Lio/github/robinpcrd/kotose/form/dsl/GroupBuilder;Ljava/lang/String;Lio/github/robinpcrd/kotose/resources/StrRes;Lkotlin/jvm/functions/Function2;Lkotlin/jvm/functions/Function1;ILjava/lang/Object;)Lio/github/robinpcrd/kotose/form/fields/LabelField;
+}
+
+public abstract interface class io/github/robinpcrd/kotose/form/fields/Appearance {
+}
+
+public final class io/github/robinpcrd/kotose/form/fields/ButtonField : io/github/robinpcrd/kotose/form/fields/ActionField, io/github/robinpcrd/kotose/form/compose/ComposeField {
+	public static final field $stable I
+	public fun <init> (Ljava/lang/String;Lio/github/robinpcrd/kotose/resources/StrRes;Lkotlin/jvm/functions/Function2;Lkotlin/jvm/functions/Function0;)V
+	public synthetic fun <init> (Ljava/lang/String;Lio/github/robinpcrd/kotose/resources/StrRes;Lkotlin/jvm/functions/Function2;Lkotlin/jvm/functions/Function0;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun getAppearance ()Lkotlin/jvm/functions/Function2;
+	public fun getTitle ()Lio/github/robinpcrd/kotose/resources/StrRes;
+	public fun getView ()Lkotlin/jvm/functions/Function2;
+	public fun setView (Lkotlin/jvm/functions/Function2;)V
+}
+
+public final class io/github/robinpcrd/kotose/form/fields/ButtonFieldAppearance {
+	public static final field $stable I
+	public static final field Companion Lio/github/robinpcrd/kotose/form/fields/ButtonFieldAppearance$Companion;
+	public fun <init> ()V
+	public synthetic fun <init> (Lio/github/robinpcrd/kotose/form/fields/ButtonFieldAppearance$ButtonStyle;Landroidx/compose/material3/ButtonColors;Landroidx/compose/ui/text/TextStyle;Landroidx/compose/foundation/layout/PaddingValues;Landroidx/compose/foundation/layout/Arrangement$Horizontal;Landroidx/compose/ui/Alignment$Vertical;Lio/github/robinpcrd/kotose/form/fields/ButtonFieldAppearance$ButtonWidth;Landroidx/compose/ui/graphics/Shape;Lio/github/robinpcrd/kotose/form/utils/PainterRes;JFILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public synthetic fun <init> (Lio/github/robinpcrd/kotose/form/fields/ButtonFieldAppearance$ButtonStyle;Landroidx/compose/material3/ButtonColors;Landroidx/compose/ui/text/TextStyle;Landroidx/compose/foundation/layout/PaddingValues;Landroidx/compose/foundation/layout/Arrangement$Horizontal;Landroidx/compose/ui/Alignment$Vertical;Lio/github/robinpcrd/kotose/form/fields/ButtonFieldAppearance$ButtonWidth;Landroidx/compose/ui/graphics/Shape;Lio/github/robinpcrd/kotose/form/utils/PainterRes;JFLkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Lio/github/robinpcrd/kotose/form/fields/ButtonFieldAppearance$ButtonStyle;
+	public final fun component10-MYxV2XQ ()J
+	public final fun component11-D9Ej5fM ()F
+	public final fun component2 ()Landroidx/compose/material3/ButtonColors;
+	public final fun component3 ()Landroidx/compose/ui/text/TextStyle;
+	public final fun component4 ()Landroidx/compose/foundation/layout/PaddingValues;
+	public final fun component5 ()Landroidx/compose/foundation/layout/Arrangement$Horizontal;
+	public final fun component6 ()Landroidx/compose/ui/Alignment$Vertical;
+	public final fun component7 ()Lio/github/robinpcrd/kotose/form/fields/ButtonFieldAppearance$ButtonWidth;
+	public final fun component8 ()Landroidx/compose/ui/graphics/Shape;
+	public final fun component9 ()Lio/github/robinpcrd/kotose/form/utils/PainterRes;
+	public final fun copy-L9d5iZI (Lio/github/robinpcrd/kotose/form/fields/ButtonFieldAppearance$ButtonStyle;Landroidx/compose/material3/ButtonColors;Landroidx/compose/ui/text/TextStyle;Landroidx/compose/foundation/layout/PaddingValues;Landroidx/compose/foundation/layout/Arrangement$Horizontal;Landroidx/compose/ui/Alignment$Vertical;Lio/github/robinpcrd/kotose/form/fields/ButtonFieldAppearance$ButtonWidth;Landroidx/compose/ui/graphics/Shape;Lio/github/robinpcrd/kotose/form/utils/PainterRes;JF)Lio/github/robinpcrd/kotose/form/fields/ButtonFieldAppearance;
+	public static synthetic fun copy-L9d5iZI$default (Lio/github/robinpcrd/kotose/form/fields/ButtonFieldAppearance;Lio/github/robinpcrd/kotose/form/fields/ButtonFieldAppearance$ButtonStyle;Landroidx/compose/material3/ButtonColors;Landroidx/compose/ui/text/TextStyle;Landroidx/compose/foundation/layout/PaddingValues;Landroidx/compose/foundation/layout/Arrangement$Horizontal;Landroidx/compose/ui/Alignment$Vertical;Lio/github/robinpcrd/kotose/form/fields/ButtonFieldAppearance$ButtonWidth;Landroidx/compose/ui/graphics/Shape;Lio/github/robinpcrd/kotose/form/utils/PainterRes;JFILjava/lang/Object;)Lio/github/robinpcrd/kotose/form/fields/ButtonFieldAppearance;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getButtonColors ()Landroidx/compose/material3/ButtonColors;
+	public final fun getButtonStyle ()Lio/github/robinpcrd/kotose/form/fields/ButtonFieldAppearance$ButtonStyle;
+	public final fun getHorizontalArrangement ()Landroidx/compose/foundation/layout/Arrangement$Horizontal;
+	public final fun getIcon ()Lio/github/robinpcrd/kotose/form/utils/PainterRes;
+	public final fun getIconSize-MYxV2XQ ()J
+	public final fun getPadding ()Landroidx/compose/foundation/layout/PaddingValues;
+	public final fun getShape ()Landroidx/compose/ui/graphics/Shape;
+	public final fun getSpacerWidth-D9Ej5fM ()F
+	public final fun getTextStyle ()Landroidx/compose/ui/text/TextStyle;
+	public final fun getVerticalAlignment ()Landroidx/compose/ui/Alignment$Vertical;
+	public final fun getWidth ()Lio/github/robinpcrd/kotose/form/fields/ButtonFieldAppearance$ButtonWidth;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class io/github/robinpcrd/kotose/form/fields/ButtonFieldAppearance$ButtonStyle : java/lang/Enum {
+	public static final field BUTTON Lio/github/robinpcrd/kotose/form/fields/ButtonFieldAppearance$ButtonStyle;
+	public static final field OUTLINE Lio/github/robinpcrd/kotose/form/fields/ButtonFieldAppearance$ButtonStyle;
+	public static final field TEXT Lio/github/robinpcrd/kotose/form/fields/ButtonFieldAppearance$ButtonStyle;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public static fun valueOf (Ljava/lang/String;)Lio/github/robinpcrd/kotose/form/fields/ButtonFieldAppearance$ButtonStyle;
+	public static fun values ()[Lio/github/robinpcrd/kotose/form/fields/ButtonFieldAppearance$ButtonStyle;
+}
+
+public final class io/github/robinpcrd/kotose/form/fields/ButtonFieldAppearance$ButtonWidth : java/lang/Enum {
+	public static final field FULL Lio/github/robinpcrd/kotose/form/fields/ButtonFieldAppearance$ButtonWidth;
+	public static final field WIDE Lio/github/robinpcrd/kotose/form/fields/ButtonFieldAppearance$ButtonWidth;
+	public static final field WRAP_CONTENT Lio/github/robinpcrd/kotose/form/fields/ButtonFieldAppearance$ButtonWidth;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public static fun valueOf (Ljava/lang/String;)Lio/github/robinpcrd/kotose/form/fields/ButtonFieldAppearance$ButtonWidth;
+	public static fun values ()[Lio/github/robinpcrd/kotose/form/fields/ButtonFieldAppearance$ButtonWidth;
+}
+
+public final class io/github/robinpcrd/kotose/form/fields/ButtonFieldAppearance$Companion {
+	public final fun getDefault ()Lkotlin/jvm/functions/Function2;
+}
+
+public final class io/github/robinpcrd/kotose/form/fields/ComposableSingletons$SelectableFieldKt {
+	public static final field INSTANCE Lio/github/robinpcrd/kotose/form/fields/ComposableSingletons$SelectableFieldKt;
+	public fun <init> ()V
+	public final fun getLambda$1225968575$io_github_robinpcrd_kotose_form ()Lkotlin/jvm/functions/Function2;
+}
+
+public final class io/github/robinpcrd/kotose/form/fields/DropDownField : io/github/robinpcrd/kotose/form/fields/SingleChoiceField, io/github/robinpcrd/kotose/form/compose/ComposeField {
+	public static final field $stable I
+	public fun <init> (Ljava/lang/String;Ljava/util/List;Lio/github/robinpcrd/kotose/resources/StrRes;Z)V
+	public synthetic fun <init> (Ljava/lang/String;Ljava/util/List;Lio/github/robinpcrd/kotose/resources/StrRes;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public fun getView ()Lkotlin/jvm/functions/Function2;
+	public fun setView (Lkotlin/jvm/functions/Function2;)V
+}
+
+public class io/github/robinpcrd/kotose/form/fields/ErrorField : io/github/robinpcrd/kotose/form/Field, io/github/robinpcrd/kotose/form/compose/ComposeField {
+	public static final field $stable I
+	public fun <init> ()V
+	public fun <init> (Ljava/lang/String;Lio/github/robinpcrd/kotose/resources/StrRes;Z)V
+	public synthetic fun <init> (Ljava/lang/String;Lio/github/robinpcrd/kotose/resources/StrRes;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public fun getView ()Lkotlin/jvm/functions/Function2;
+	public fun setBaseValue (Ljava/lang/Object;)V
+	public fun setView (Lkotlin/jvm/functions/Function2;)V
+}
+
+public final class io/github/robinpcrd/kotose/form/fields/IconButtonField : io/github/robinpcrd/kotose/form/fields/ActionField, io/github/robinpcrd/kotose/form/compose/ComposeField {
+	public static final field $stable I
+	public fun <init> (Ljava/lang/String;Lio/github/robinpcrd/kotose/form/utils/PainterRes;Lio/github/robinpcrd/kotose/resources/StrRes;Lkotlin/jvm/functions/Function2;Lkotlin/jvm/functions/Function0;)V
+	public synthetic fun <init> (Ljava/lang/String;Lio/github/robinpcrd/kotose/form/utils/PainterRes;Lio/github/robinpcrd/kotose/resources/StrRes;Lkotlin/jvm/functions/Function2;Lkotlin/jvm/functions/Function0;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun getAppearance ()Lkotlin/jvm/functions/Function2;
+	public final fun getContentDescription ()Lio/github/robinpcrd/kotose/resources/StrRes;
+	public final fun getIcon ()Lio/github/robinpcrd/kotose/form/utils/PainterRes;
+	public fun getView ()Lkotlin/jvm/functions/Function2;
+	public fun setView (Lkotlin/jvm/functions/Function2;)V
+}
+
+public final class io/github/robinpcrd/kotose/form/fields/IconButtonFieldAppearance {
+	public static final field $stable I
+	public static final field Companion Lio/github/robinpcrd/kotose/form/fields/IconButtonFieldAppearance$Companion;
+	public fun <init> ()V
+	public synthetic fun <init> (JLandroidx/compose/foundation/layout/PaddingValues;Landroidx/compose/foundation/layout/PaddingValues;Landroidx/compose/foundation/layout/Arrangement$Horizontal;Landroidx/compose/ui/Alignment$Vertical;JJLandroidx/compose/ui/graphics/Shape;Landroidx/compose/foundation/BorderStroke;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public synthetic fun <init> (JLandroidx/compose/foundation/layout/PaddingValues;Landroidx/compose/foundation/layout/PaddingValues;Landroidx/compose/foundation/layout/Arrangement$Horizontal;Landroidx/compose/ui/Alignment$Vertical;JJLandroidx/compose/ui/graphics/Shape;Landroidx/compose/foundation/BorderStroke;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1-MYxV2XQ ()J
+	public final fun component2 ()Landroidx/compose/foundation/layout/PaddingValues;
+	public final fun component3 ()Landroidx/compose/foundation/layout/PaddingValues;
+	public final fun component4 ()Landroidx/compose/foundation/layout/Arrangement$Horizontal;
+	public final fun component5 ()Landroidx/compose/ui/Alignment$Vertical;
+	public final fun component6-0d7_KjU ()J
+	public final fun component7-0d7_KjU ()J
+	public final fun component8 ()Landroidx/compose/ui/graphics/Shape;
+	public final fun component9 ()Landroidx/compose/foundation/BorderStroke;
+	public final fun copy-I7puIVY (JLandroidx/compose/foundation/layout/PaddingValues;Landroidx/compose/foundation/layout/PaddingValues;Landroidx/compose/foundation/layout/Arrangement$Horizontal;Landroidx/compose/ui/Alignment$Vertical;JJLandroidx/compose/ui/graphics/Shape;Landroidx/compose/foundation/BorderStroke;)Lio/github/robinpcrd/kotose/form/fields/IconButtonFieldAppearance;
+	public static synthetic fun copy-I7puIVY$default (Lio/github/robinpcrd/kotose/form/fields/IconButtonFieldAppearance;JLandroidx/compose/foundation/layout/PaddingValues;Landroidx/compose/foundation/layout/PaddingValues;Landroidx/compose/foundation/layout/Arrangement$Horizontal;Landroidx/compose/ui/Alignment$Vertical;JJLandroidx/compose/ui/graphics/Shape;Landroidx/compose/foundation/BorderStroke;ILjava/lang/Object;)Lio/github/robinpcrd/kotose/form/fields/IconButtonFieldAppearance;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getBackgroundColor-0d7_KjU ()J
+	public final fun getBorder ()Landroidx/compose/foundation/BorderStroke;
+	public final fun getButtonPadding ()Landroidx/compose/foundation/layout/PaddingValues;
+	public final fun getContentColor-0d7_KjU ()J
+	public final fun getHorizontalArrangement ()Landroidx/compose/foundation/layout/Arrangement$Horizontal;
+	public final fun getIconPadding ()Landroidx/compose/foundation/layout/PaddingValues;
+	public final fun getIconSize-MYxV2XQ ()J
+	public final fun getShape ()Landroidx/compose/ui/graphics/Shape;
+	public final fun getVerticalAlignment ()Landroidx/compose/ui/Alignment$Vertical;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class io/github/robinpcrd/kotose/form/fields/IconButtonFieldAppearance$Companion {
+	public final fun getDefault ()Lkotlin/jvm/functions/Function2;
+}
+
+public final class io/github/robinpcrd/kotose/form/fields/InputField : io/github/robinpcrd/kotose/form/fields/TextField, io/github/robinpcrd/kotose/form/compose/ComposeField {
+	public static final field $stable I
+	public fun <init> ()V
+	public fun <init> (Ljava/lang/String;Lio/github/robinpcrd/kotose/resources/StrRes;Lio/github/robinpcrd/kotose/resources/StrRes;Lio/github/robinpcrd/kotose/form/fields/TextLineLimits;Lkotlin/jvm/functions/Function2;Lkotlin/jvm/functions/Function2;)V
+	public synthetic fun <init> (Ljava/lang/String;Lio/github/robinpcrd/kotose/resources/StrRes;Lio/github/robinpcrd/kotose/resources/StrRes;Lio/github/robinpcrd/kotose/form/fields/TextLineLimits;Lkotlin/jvm/functions/Function2;Lkotlin/jvm/functions/Function2;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun getAppearance ()Lkotlin/jvm/functions/Function2;
+	public fun getView ()Lkotlin/jvm/functions/Function2;
+	public fun setView (Lkotlin/jvm/functions/Function2;)V
+}
+
+public final class io/github/robinpcrd/kotose/form/fields/InputFieldAppearance {
+	public static final field $stable I
+	public static final field Companion Lio/github/robinpcrd/kotose/form/fields/InputFieldAppearance$Companion;
+	public fun <init> (Lio/github/robinpcrd/kotose/form/compose/FieldColors;Landroidx/compose/ui/text/TextStyle;ZZLandroidx/compose/ui/text/input/VisualTransformation;Landroidx/compose/foundation/text/KeyboardOptions;Landroidx/compose/foundation/text/KeyboardActions;Lio/github/robinpcrd/kotose/form/utils/PainterRes;Lio/github/robinpcrd/kotose/form/utils/PainterRes;Landroidx/compose/ui/autofill/ContentType;)V
+	public synthetic fun <init> (Lio/github/robinpcrd/kotose/form/compose/FieldColors;Landroidx/compose/ui/text/TextStyle;ZZLandroidx/compose/ui/text/input/VisualTransformation;Landroidx/compose/foundation/text/KeyboardOptions;Landroidx/compose/foundation/text/KeyboardActions;Lio/github/robinpcrd/kotose/form/utils/PainterRes;Lio/github/robinpcrd/kotose/form/utils/PainterRes;Landroidx/compose/ui/autofill/ContentType;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Lio/github/robinpcrd/kotose/form/compose/FieldColors;
+	public final fun component10 ()Landroidx/compose/ui/autofill/ContentType;
+	public final fun component2 ()Landroidx/compose/ui/text/TextStyle;
+	public final fun component3 ()Z
+	public final fun component4 ()Z
+	public final fun component5 ()Landroidx/compose/ui/text/input/VisualTransformation;
+	public final fun component6 ()Landroidx/compose/foundation/text/KeyboardOptions;
+	public final fun component7 ()Landroidx/compose/foundation/text/KeyboardActions;
+	public final fun component8 ()Lio/github/robinpcrd/kotose/form/utils/PainterRes;
+	public final fun component9 ()Lio/github/robinpcrd/kotose/form/utils/PainterRes;
+	public final fun copy (Lio/github/robinpcrd/kotose/form/compose/FieldColors;Landroidx/compose/ui/text/TextStyle;ZZLandroidx/compose/ui/text/input/VisualTransformation;Landroidx/compose/foundation/text/KeyboardOptions;Landroidx/compose/foundation/text/KeyboardActions;Lio/github/robinpcrd/kotose/form/utils/PainterRes;Lio/github/robinpcrd/kotose/form/utils/PainterRes;Landroidx/compose/ui/autofill/ContentType;)Lio/github/robinpcrd/kotose/form/fields/InputFieldAppearance;
+	public static synthetic fun copy$default (Lio/github/robinpcrd/kotose/form/fields/InputFieldAppearance;Lio/github/robinpcrd/kotose/form/compose/FieldColors;Landroidx/compose/ui/text/TextStyle;ZZLandroidx/compose/ui/text/input/VisualTransformation;Landroidx/compose/foundation/text/KeyboardOptions;Landroidx/compose/foundation/text/KeyboardActions;Lio/github/robinpcrd/kotose/form/utils/PainterRes;Lio/github/robinpcrd/kotose/form/utils/PainterRes;Landroidx/compose/ui/autofill/ContentType;ILjava/lang/Object;)Lio/github/robinpcrd/kotose/form/fields/InputFieldAppearance;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getAutofillType ()Landroidx/compose/ui/autofill/ContentType;
+	public final fun getClearable ()Z
+	public final fun getColors ()Lio/github/robinpcrd/kotose/form/compose/FieldColors;
+	public final fun getKeyboardActions ()Landroidx/compose/foundation/text/KeyboardActions;
+	public final fun getKeyboardOptions ()Landroidx/compose/foundation/text/KeyboardOptions;
+	public final fun getLeadingIconRes ()Lio/github/robinpcrd/kotose/form/utils/PainterRes;
+	public final fun getReadOnly ()Z
+	public final fun getTextStyle ()Landroidx/compose/ui/text/TextStyle;
+	public final fun getTrailingIconRes ()Lio/github/robinpcrd/kotose/form/utils/PainterRes;
+	public final fun getVisualTransformation ()Landroidx/compose/ui/text/input/VisualTransformation;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class io/github/robinpcrd/kotose/form/fields/InputFieldAppearance$Companion {
+	public final fun getDefault ()Lkotlin/jvm/functions/Function2;
+	public final fun getDefaultEmail ()Lkotlin/jvm/functions/Function2;
+	public final fun getDefaultInt ()Lkotlin/jvm/functions/Function2;
+	public final fun getDefaultPassword ()Lkotlin/jvm/functions/Function2;
+	public final fun getDefaultPhone ()Lkotlin/jvm/functions/Function2;
+	public final fun getDefaultUsername ()Lkotlin/jvm/functions/Function2;
+}
+
+public final class io/github/robinpcrd/kotose/form/fields/LabelField : io/github/robinpcrd/kotose/form/fields/DisplayTextField, io/github/robinpcrd/kotose/form/compose/ComposeField {
+	public static final field $stable I
+	public fun <init> ()V
+	public fun <init> (Ljava/lang/String;Lio/github/robinpcrd/kotose/resources/StrRes;Lkotlin/jvm/functions/Function2;Z)V
+	public synthetic fun <init> (Ljava/lang/String;Lio/github/robinpcrd/kotose/resources/StrRes;Lkotlin/jvm/functions/Function2;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun getAppearance ()Lkotlin/jvm/functions/Function2;
+	public final fun getDefaultValue ()Lio/github/robinpcrd/kotose/resources/StrRes;
+	public fun getView ()Lkotlin/jvm/functions/Function2;
+	public fun setView (Lkotlin/jvm/functions/Function2;)V
+}
+
+public final class io/github/robinpcrd/kotose/form/fields/LabelFieldAppearance {
+	public static final field $stable I
+	public static final field Companion Lio/github/robinpcrd/kotose/form/fields/LabelFieldAppearance$Companion;
+	public fun <init> (Lio/github/robinpcrd/kotose/form/compose/FieldColors;Landroidx/compose/ui/text/TextStyle;)V
+	public final fun component1 ()Lio/github/robinpcrd/kotose/form/compose/FieldColors;
+	public final fun component2 ()Landroidx/compose/ui/text/TextStyle;
+	public final fun copy (Lio/github/robinpcrd/kotose/form/compose/FieldColors;Landroidx/compose/ui/text/TextStyle;)Lio/github/robinpcrd/kotose/form/fields/LabelFieldAppearance;
+	public static synthetic fun copy$default (Lio/github/robinpcrd/kotose/form/fields/LabelFieldAppearance;Lio/github/robinpcrd/kotose/form/compose/FieldColors;Landroidx/compose/ui/text/TextStyle;ILjava/lang/Object;)Lio/github/robinpcrd/kotose/form/fields/LabelFieldAppearance;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getColors ()Lio/github/robinpcrd/kotose/form/compose/FieldColors;
+	public final fun getTextStyle ()Landroidx/compose/ui/text/TextStyle;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class io/github/robinpcrd/kotose/form/fields/LabelFieldAppearance$Companion {
+	public final fun getDefault ()Lkotlin/jvm/functions/Function2;
+	public final fun getTitle ()Lkotlin/jvm/functions/Function2;
+}
+
+public final class io/github/robinpcrd/kotose/form/fields/ParagraphField : io/github/robinpcrd/kotose/form/fields/DisplayParagraphField, io/github/robinpcrd/kotose/form/compose/ComposeField {
+	public static final field $stable I
+	public fun <init> ()V
+	public fun <init> (Ljava/lang/String;Lkotlin/jvm/functions/Function2;)V
+	public synthetic fun <init> (Ljava/lang/String;Lkotlin/jvm/functions/Function2;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun getAppearance ()Lkotlin/jvm/functions/Function2;
+	public fun getView ()Lkotlin/jvm/functions/Function2;
+	public fun setView (Lkotlin/jvm/functions/Function2;)V
+}
+
+public final class io/github/robinpcrd/kotose/form/fields/ParagraphFieldAppearance {
+	public static final field $stable I
+	public static final field Companion Lio/github/robinpcrd/kotose/form/fields/ParagraphFieldAppearance$Companion;
+	public synthetic fun <init> (Lio/github/robinpcrd/kotose/form/compose/FieldColors;Landroidx/compose/ui/text/TextStyle;Ljava/lang/String;Landroidx/compose/ui/graphics/Color;FJLandroidx/compose/foundation/layout/PaddingValues;Landroidx/compose/ui/graphics/Shape;Lio/github/robinpcrd/kotose/form/fields/ParagraphFieldAppearance$Width;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public synthetic fun <init> (Lio/github/robinpcrd/kotose/form/compose/FieldColors;Landroidx/compose/ui/text/TextStyle;Ljava/lang/String;Landroidx/compose/ui/graphics/Color;FJLandroidx/compose/foundation/layout/PaddingValues;Landroidx/compose/ui/graphics/Shape;Lio/github/robinpcrd/kotose/form/fields/ParagraphFieldAppearance$Width;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Lio/github/robinpcrd/kotose/form/compose/FieldColors;
+	public final fun component2 ()Landroidx/compose/ui/text/TextStyle;
+	public final fun component3 ()Ljava/lang/String;
+	public final fun component4-QN2ZGVo ()Landroidx/compose/ui/graphics/Color;
+	public final fun component5-D9Ej5fM ()F
+	public final fun component6-0d7_KjU ()J
+	public final fun component7 ()Landroidx/compose/foundation/layout/PaddingValues;
+	public final fun component8 ()Landroidx/compose/ui/graphics/Shape;
+	public final fun component9 ()Lio/github/robinpcrd/kotose/form/fields/ParagraphFieldAppearance$Width;
+	public final fun copy-dawCF0U (Lio/github/robinpcrd/kotose/form/compose/FieldColors;Landroidx/compose/ui/text/TextStyle;Ljava/lang/String;Landroidx/compose/ui/graphics/Color;FJLandroidx/compose/foundation/layout/PaddingValues;Landroidx/compose/ui/graphics/Shape;Lio/github/robinpcrd/kotose/form/fields/ParagraphFieldAppearance$Width;)Lio/github/robinpcrd/kotose/form/fields/ParagraphFieldAppearance;
+	public static synthetic fun copy-dawCF0U$default (Lio/github/robinpcrd/kotose/form/fields/ParagraphFieldAppearance;Lio/github/robinpcrd/kotose/form/compose/FieldColors;Landroidx/compose/ui/text/TextStyle;Ljava/lang/String;Landroidx/compose/ui/graphics/Color;FJLandroidx/compose/foundation/layout/PaddingValues;Landroidx/compose/ui/graphics/Shape;Lio/github/robinpcrd/kotose/form/fields/ParagraphFieldAppearance$Width;ILjava/lang/Object;)Lio/github/robinpcrd/kotose/form/fields/ParagraphFieldAppearance;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getBackgroundColor-QN2ZGVo ()Landroidx/compose/ui/graphics/Color;
+	public final fun getBorderColor-0d7_KjU ()J
+	public final fun getBorderSize-D9Ej5fM ()F
+	public final fun getColors ()Lio/github/robinpcrd/kotose/form/compose/FieldColors;
+	public final fun getCornerShape ()Landroidx/compose/ui/graphics/Shape;
+	public final fun getLinePrefix ()Ljava/lang/String;
+	public final fun getPadding ()Landroidx/compose/foundation/layout/PaddingValues;
+	public final fun getTextStyle ()Landroidx/compose/ui/text/TextStyle;
+	public final fun getWidth ()Lio/github/robinpcrd/kotose/form/fields/ParagraphFieldAppearance$Width;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class io/github/robinpcrd/kotose/form/fields/ParagraphFieldAppearance$Companion {
+	public final fun getDefault ()Lkotlin/jvm/functions/Function2;
+}
+
+public final class io/github/robinpcrd/kotose/form/fields/ParagraphFieldAppearance$Width : java/lang/Enum {
+	public static final field FillMaxWidth Lio/github/robinpcrd/kotose/form/fields/ParagraphFieldAppearance$Width;
+	public static final field WrapContent Lio/github/robinpcrd/kotose/form/fields/ParagraphFieldAppearance$Width;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public static fun valueOf (Ljava/lang/String;)Lio/github/robinpcrd/kotose/form/fields/ParagraphFieldAppearance$Width;
+	public static fun values ()[Lio/github/robinpcrd/kotose/form/fields/ParagraphFieldAppearance$Width;
+}
+
+public final class io/github/robinpcrd/kotose/form/fields/PasswordField : io/github/robinpcrd/kotose/form/fields/SecureTextField, io/github/robinpcrd/kotose/form/compose/ComposeField {
+	public static final field $stable I
+	public fun <init> ()V
+	public fun <init> (Ljava/lang/String;Lio/github/robinpcrd/kotose/resources/StrRes;Lio/github/robinpcrd/kotose/resources/StrRes;Lkotlin/jvm/functions/Function2;)V
+	public synthetic fun <init> (Ljava/lang/String;Lio/github/robinpcrd/kotose/resources/StrRes;Lio/github/robinpcrd/kotose/resources/StrRes;Lkotlin/jvm/functions/Function2;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun getAppearance ()Lkotlin/jvm/functions/Function2;
+	public fun getLabel ()Lio/github/robinpcrd/kotose/resources/StrRes;
+	public fun getPlaceholder ()Lio/github/robinpcrd/kotose/resources/StrRes;
+	public fun getView ()Lkotlin/jvm/functions/Function2;
+	public fun setBaseValue (Ljava/lang/Object;)V
+	public fun setValue (Ljava/lang/String;)V
+	public fun setView (Lkotlin/jvm/functions/Function2;)V
+}
+
+public abstract interface class io/github/robinpcrd/kotose/form/fields/PhoneCountryPicker {
+}
+
+public final class io/github/robinpcrd/kotose/form/fields/PhoneCountryPicker$BuiltIn : io/github/robinpcrd/kotose/form/fields/PhoneCountryPicker {
+	public static final field $stable I
+	public fun <init> ()V
+	public fun <init> (Lio/github/robinpcrd/kotose/form/fields/PhoneCountryPickerPresenter;)V
+	public synthetic fun <init> (Lio/github/robinpcrd/kotose/form/fields/PhoneCountryPickerPresenter;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Lio/github/robinpcrd/kotose/form/fields/PhoneCountryPickerPresenter;
+	public final fun copy (Lio/github/robinpcrd/kotose/form/fields/PhoneCountryPickerPresenter;)Lio/github/robinpcrd/kotose/form/fields/PhoneCountryPicker$BuiltIn;
+	public static synthetic fun copy$default (Lio/github/robinpcrd/kotose/form/fields/PhoneCountryPicker$BuiltIn;Lio/github/robinpcrd/kotose/form/fields/PhoneCountryPickerPresenter;ILjava/lang/Object;)Lio/github/robinpcrd/kotose/form/fields/PhoneCountryPicker$BuiltIn;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getPresenter ()Lio/github/robinpcrd/kotose/form/fields/PhoneCountryPickerPresenter;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class io/github/robinpcrd/kotose/form/fields/PhoneCountryPicker$Custom : io/github/robinpcrd/kotose/form/fields/PhoneCountryPicker {
+	public static final field $stable I
+	public fun <init> (Lkotlin/jvm/functions/Function1;)V
+	public final fun getShow ()Lkotlin/jvm/functions/Function1;
+}
+
+public final class io/github/robinpcrd/kotose/form/fields/PhoneCountryPicker$Disabled : io/github/robinpcrd/kotose/form/fields/PhoneCountryPicker {
+	public static final field $stable I
+	public static final field INSTANCE Lio/github/robinpcrd/kotose/form/fields/PhoneCountryPicker$Disabled;
+	public fun equals (Ljava/lang/Object;)Z
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class io/github/robinpcrd/kotose/form/fields/PhoneCountryPickerPresenter {
+	public static final field $stable I
+	public fun <init> (Landroid/app/Activity;)V
+}
+
+public final class io/github/robinpcrd/kotose/form/fields/PhoneField : io/github/robinpcrd/kotose/form/fields/PhoneNumberField, io/github/robinpcrd/kotose/form/compose/ComposeField {
+	public static final field $stable I
+	public fun <init> ()V
+	public fun <init> (Ljava/lang/String;Lio/github/robinpcrd/kotose/resources/StrRes;Lkotlin/jvm/functions/Function2;)V
+	public synthetic fun <init> (Ljava/lang/String;Lio/github/robinpcrd/kotose/resources/StrRes;Lkotlin/jvm/functions/Function2;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun getAppearance ()Lkotlin/jvm/functions/Function2;
+	public final fun getCountryPicker ()Lio/github/robinpcrd/kotose/form/fields/PhoneCountryPicker;
+	public fun getPlaceholder ()Lio/github/robinpcrd/kotose/resources/StrRes;
+	public fun getSetOfAllowedRegion ()Lkotlinx/collections/immutable/ImmutableSet;
+	public fun getSubmittedValue ()Ljava/lang/Object;
+	public fun getView ()Lkotlin/jvm/functions/Function2;
+	public fun isCountrySelectionEnabled ()Z
+	public fun selectCountry (Lio/github/robinpcrd/kotose/form/compose/data/Country;)V
+	public fun selectCountry (Lio/github/robinpcrd/kotose/form/compose/data/CountryRegion;)V
+	public fun selectableCountries (Ljava/lang/String;)Lkotlinx/collections/immutable/ImmutableList;
+	public fun setBaseValue (Ljava/lang/Object;)V
+	public final fun setCountryPicker (Lio/github/robinpcrd/kotose/form/fields/PhoneCountryPicker;)V
+	public fun setCountrySelectionEnabled (Z)V
+	public fun setPhone (Ljava/lang/String;)V
+	public fun setSetOfAllowedRegion (Lkotlinx/collections/immutable/ImmutableSet;)V
+	public fun setView (Lkotlin/jvm/functions/Function2;)V
+}
+
+public class io/github/robinpcrd/kotose/form/fields/SelectableField : io/github/robinpcrd/kotose/form/fields/SelectionOptionField, io/github/robinpcrd/kotose/form/compose/ComposeField {
+	public static final field $stable I
+	public fun <init> (Ljava/lang/String;Ljava/lang/Object;Lio/github/robinpcrd/kotose/resources/StrRes;)V
+	public synthetic fun <init> (Ljava/lang/String;Ljava/lang/Object;Lio/github/robinpcrd/kotose/resources/StrRes;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun getAppearance ()Lio/github/robinpcrd/kotose/form/fields/SelectableFieldAppearance;
+	public final fun getAppearanceState ()Landroidx/compose/runtime/State;
+	public fun getView ()Lkotlin/jvm/functions/Function2;
+	public final fun setAppearance (Lio/github/robinpcrd/kotose/form/fields/SelectableFieldAppearance;)V
+	public fun setView (Lkotlin/jvm/functions/Function2;)V
+}
+
+public final class io/github/robinpcrd/kotose/form/fields/SelectableFieldAppearance {
+	public static final field $stable I
+	public fun <init> ()V
+	public synthetic fun <init> (JLandroidx/compose/ui/text/TextStyle;FFILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public synthetic fun <init> (JLandroidx/compose/ui/text/TextStyle;FFLkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1-0d7_KjU ()J
+	public final fun component2 ()Landroidx/compose/ui/text/TextStyle;
+	public final fun component3-D9Ej5fM ()F
+	public final fun component4-D9Ej5fM ()F
+	public final fun copy-8DiM2jg (JLandroidx/compose/ui/text/TextStyle;FF)Lio/github/robinpcrd/kotose/form/fields/SelectableFieldAppearance;
+	public static synthetic fun copy-8DiM2jg$default (Lio/github/robinpcrd/kotose/form/fields/SelectableFieldAppearance;JLandroidx/compose/ui/text/TextStyle;FFILjava/lang/Object;)Lio/github/robinpcrd/kotose/form/fields/SelectableFieldAppearance;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getLabelTextStyle ()Landroidx/compose/ui/text/TextStyle;
+	public final fun getStartPadding-D9Ej5fM ()F
+	public final fun getTextColor-0d7_KjU ()J
+	public final fun getTonalElevation-D9Ej5fM ()F
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class io/github/robinpcrd/kotose/form/fields/SelectableFieldKt {
+	public static final fun toColors (Lio/github/robinpcrd/kotose/form/fields/SelectableFieldAppearance;Landroidx/compose/runtime/Composer;I)Lio/github/robinpcrd/kotose/form/compose/FieldColors;
+}
+
+public final class io/github/robinpcrd/kotose/form/fields/SwitchField : io/github/robinpcrd/kotose/form/fields/ToggleField, io/github/robinpcrd/kotose/form/compose/ComposeField {
+	public static final field $stable I
+	public fun <init> (Ljava/lang/String;Lio/github/robinpcrd/kotose/resources/StrRes;Lkotlin/jvm/functions/Function2;)V
+	public synthetic fun <init> (Ljava/lang/String;Lio/github/robinpcrd/kotose/resources/StrRes;Lkotlin/jvm/functions/Function2;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun getAppearance ()Lkotlin/jvm/functions/Function2;
+	public fun getView ()Lkotlin/jvm/functions/Function2;
+	public fun setBaseValue (Ljava/lang/Object;)V
+	public fun setView (Lkotlin/jvm/functions/Function2;)V
+}
+
+public final class io/github/robinpcrd/kotose/form/fields/SwitchFieldAppearance {
+	public static final field $stable I
+	public static final field Companion Lio/github/robinpcrd/kotose/form/fields/SwitchFieldAppearance$Companion;
+	public fun <init> (Lio/github/robinpcrd/kotose/form/compose/FieldColors;Landroidx/compose/ui/text/TextStyle;)V
+	public final fun component1 ()Lio/github/robinpcrd/kotose/form/compose/FieldColors;
+	public final fun component2 ()Landroidx/compose/ui/text/TextStyle;
+	public final fun copy (Lio/github/robinpcrd/kotose/form/compose/FieldColors;Landroidx/compose/ui/text/TextStyle;)Lio/github/robinpcrd/kotose/form/fields/SwitchFieldAppearance;
+	public static synthetic fun copy$default (Lio/github/robinpcrd/kotose/form/fields/SwitchFieldAppearance;Lio/github/robinpcrd/kotose/form/compose/FieldColors;Landroidx/compose/ui/text/TextStyle;ILjava/lang/Object;)Lio/github/robinpcrd/kotose/form/fields/SwitchFieldAppearance;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getColors ()Lio/github/robinpcrd/kotose/form/compose/FieldColors;
+	public final fun getLabelTextStyle ()Landroidx/compose/ui/text/TextStyle;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class io/github/robinpcrd/kotose/form/fields/SwitchFieldAppearance$Companion {
+	public final fun getDefault ()Lkotlin/jvm/functions/Function2;
+}
+
+public final class io/github/robinpcrd/kotose/form/fields/selectable/MultipleSelectionField : io/github/robinpcrd/kotose/form/fields/SelectableField {
+	public static final field $stable I
+	public fun <init> (Ljava/lang/String;Ljava/lang/Object;Lio/github/robinpcrd/kotose/resources/StrRes;)V
+	public synthetic fun <init> (Ljava/lang/String;Ljava/lang/Object;Lio/github/robinpcrd/kotose/resources/StrRes;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public fun getView ()Lkotlin/jvm/functions/Function2;
+	public fun setView (Lkotlin/jvm/functions/Function2;)V
+}
+
+public final class io/github/robinpcrd/kotose/form/fields/selectable/SingleSelectionField : io/github/robinpcrd/kotose/form/fields/SelectableField {
+	public static final field $stable I
+	public fun <init> (Ljava/lang/String;Ljava/lang/Object;Lio/github/robinpcrd/kotose/resources/StrRes;)V
+	public synthetic fun <init> (Ljava/lang/String;Ljava/lang/Object;Lio/github/robinpcrd/kotose/resources/StrRes;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public fun getView ()Lkotlin/jvm/functions/Function2;
+	public fun setView (Lkotlin/jvm/functions/Function2;)V
+}
+
+public final class io/github/robinpcrd/kotose/form/utils/KFLogger {
+	public static final field $stable I
+	public static final field INSTANCE Lio/github/robinpcrd/kotose/form/utils/KFLogger;
+	public final fun e (Ljava/lang/String;Ljava/lang/String;)V
+	public final fun isDebug ()Z
+	public final fun wtf (Ljava/lang/String;Ljava/lang/String;)V
+}
+
+public final class io/github/robinpcrd/kotose/form/utils/PainterRes {
+	public static final field $stable I
+	public fun <init> ()V
+	public fun <init> (Landroidx/compose/ui/graphics/vector/ImageVector;Landroidx/compose/ui/graphics/ImageBitmap;Landroidx/compose/ui/graphics/painter/Painter;)V
+	public synthetic fun <init> (Landroidx/compose/ui/graphics/vector/ImageVector;Landroidx/compose/ui/graphics/ImageBitmap;Landroidx/compose/ui/graphics/painter/Painter;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Landroidx/compose/ui/graphics/vector/ImageVector;
+	public final fun component2 ()Landroidx/compose/ui/graphics/ImageBitmap;
+	public final fun component3 ()Landroidx/compose/ui/graphics/painter/Painter;
+	public final fun copy (Landroidx/compose/ui/graphics/vector/ImageVector;Landroidx/compose/ui/graphics/ImageBitmap;Landroidx/compose/ui/graphics/painter/Painter;)Lio/github/robinpcrd/kotose/form/utils/PainterRes;
+	public static synthetic fun copy$default (Lio/github/robinpcrd/kotose/form/utils/PainterRes;Landroidx/compose/ui/graphics/vector/ImageVector;Landroidx/compose/ui/graphics/ImageBitmap;Landroidx/compose/ui/graphics/painter/Painter;ILjava/lang/Object;)Lio/github/robinpcrd/kotose/form/utils/PainterRes;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getBitmap ()Landroidx/compose/ui/graphics/ImageBitmap;
+	public final fun getPainter ()Landroidx/compose/ui/graphics/painter/Painter;
+	public final fun getPainter (Landroidx/compose/runtime/Composer;I)Landroidx/compose/ui/graphics/painter/Painter;
+	public final fun getVector ()Landroidx/compose/ui/graphics/vector/ImageVector;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class io/github/robinpcrd/kotose/form/utils/TimeUtilsKt {
+	public static final fun getUtcZone ()Ljava/time/ZoneId;
+	public static final fun toEpochMilli (Ljava/time/LocalDate;)J
+	public static final fun toInstant (Ljava/time/LocalDate;)Ljava/time/Instant;
+	public static final fun toLocalDate (J)Ljava/time/LocalDate;
+	public static final fun toLocalDate (Ljava/time/Instant;)Ljava/time/LocalDate;
+}
+

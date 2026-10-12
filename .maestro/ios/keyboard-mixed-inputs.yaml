@@ -1,0 +1,56 @@
+appId: io.github.robinpcrd.kotose.form.example
+name: SwiftUI hands focus between text, password and phone inputs
+---
+- launchApp:
+    clearState: true
+- scrollUntilVisible:
+    element:
+      id: page-keyboard
+    direction: DOWN
+- tapOn:
+    id: page-keyboard
+- tapOn:
+    id: keyboard-note-1
+- repeat:
+    times: 6
+    commands:
+      - tapOn:
+          id: Next.*
+      - assertVisible:
+          id: Next.*
+- tapOn: p
+- tapOn:
+    id: keyboard-password-reveal
+- assertVisible:
+    id: keyboard-password
+    text: p
+- tapOn: x
+- assertVisible:
+    id: keyboard-password
+    text: px
+- tapOn:
+    id: keyboard-password-reveal
+- assertNotVisible: px
+- tapOn:
+    id: Next.*
+- assertVisible:
+    id: keyboard-phone-next
+- tapOn: '6'
+- assertVisible:
+    id: keyboard-phone
+    text: '6'
+- tapOn:
+    id: keyboard-phone-next
+- tapOn: L
+- assertVisible:
+    id: keyboard-last
+    text: L
+# The keyboard bar: Previous goes back to the phone number, Done closes the keyboard.
+- tapOn:
+    id: keyboard-last-previous
+- assertVisible:
+    id: keyboard-phone-previous
+- tapOn:
+    id: keyboard-phone-done
+- assertNotVisible:
+    id: keyboard-phone-done

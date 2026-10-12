@@ -1,0 +1,140 @@
+public abstract interface annotation class io/github/robinpcrd/kotose/form/swiftui/ExperimentalKotoseSwiftUIApi : java/lang/annotation/Annotation {
+}
+
+public final class io/github/robinpcrd/kotose/form/swiftui/NativeChoiceOption {
+	public static final field $stable I
+	public final fun getId ()Ljava/lang/String;
+	public final fun getLabel ()Ljava/lang/String;
+}
+
+public final class io/github/robinpcrd/kotose/form/swiftui/NativeChoiceSnapshot {
+	public static final field $stable I
+	public final fun getOptions ()Ljava/util/List;
+	public final fun getPresentation ()Lio/github/robinpcrd/kotose/form/fields/SelectionPresentation;
+	public final fun getSelectedId ()Ljava/lang/String;
+	public final fun isClearable ()Z
+}
+
+public final class io/github/robinpcrd/kotose/form/swiftui/NativeDateSnapshot {
+	public static final field $stable I
+	public final fun getDay ()I
+	public final fun getHasValue ()Z
+	public final fun getHour ()I
+	public final fun getIncludesTime ()Z
+	public final fun getMinute ()I
+	public final fun getMonth ()I
+	public final fun getPickerMode ()Lio/github/robinpcrd/kotose/form/fields/IosDatePickerMode;
+	public final fun getYear ()I
+}
+
+public final class io/github/robinpcrd/kotose/form/swiftui/NativeDisplaySnapshot {
+	public static final field $stable I
+	public final fun getLines ()Ljava/util/List;
+	public final fun isTitle ()Z
+}
+
+public final class io/github/robinpcrd/kotose/form/swiftui/NativeFieldKind : java/lang/Enum {
+	public static final field ACTION Lio/github/robinpcrd/kotose/form/swiftui/NativeFieldKind;
+	public static final field CUSTOM Lio/github/robinpcrd/kotose/form/swiftui/NativeFieldKind;
+	public static final field DATE Lio/github/robinpcrd/kotose/form/swiftui/NativeFieldKind;
+	public static final field DATE_TIME Lio/github/robinpcrd/kotose/form/swiftui/NativeFieldKind;
+	public static final field LABEL Lio/github/robinpcrd/kotose/form/swiftui/NativeFieldKind;
+	public static final field MULTIPLE_SELECTION Lio/github/robinpcrd/kotose/form/swiftui/NativeFieldKind;
+	public static final field PARAGRAPH Lio/github/robinpcrd/kotose/form/swiftui/NativeFieldKind;
+	public static final field PASSWORD Lio/github/robinpcrd/kotose/form/swiftui/NativeFieldKind;
+	public static final field PHONE Lio/github/robinpcrd/kotose/form/swiftui/NativeFieldKind;
+	public static final field SINGLE_CHOICE Lio/github/robinpcrd/kotose/form/swiftui/NativeFieldKind;
+	public static final field SINGLE_SELECTION Lio/github/robinpcrd/kotose/form/swiftui/NativeFieldKind;
+	public static final field TEXT Lio/github/robinpcrd/kotose/form/swiftui/NativeFieldKind;
+	public static final field TOGGLE Lio/github/robinpcrd/kotose/form/swiftui/NativeFieldKind;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public static fun valueOf (Ljava/lang/String;)Lio/github/robinpcrd/kotose/form/swiftui/NativeFieldKind;
+	public static fun values ()[Lio/github/robinpcrd/kotose/form/swiftui/NativeFieldKind;
+}
+
+public final class io/github/robinpcrd/kotose/form/swiftui/NativeFieldSnapshot {
+	public static final field $stable I
+	public final fun getChoice ()Lio/github/robinpcrd/kotose/form/swiftui/NativeChoiceSnapshot;
+	public final fun getCustomKind ()Ljava/lang/String;
+	public final fun getDate ()Lio/github/robinpcrd/kotose/form/swiftui/NativeDateSnapshot;
+	public final fun getDisplay ()Lio/github/robinpcrd/kotose/form/swiftui/NativeDisplaySnapshot;
+	public final fun getEnabled ()Z
+	public final fun getKey ()Ljava/lang/String;
+	public final fun getKind ()Lio/github/robinpcrd/kotose/form/swiftui/NativeFieldKind;
+	public final fun getLabel ()Ljava/lang/String;
+	public final fun getLines ()Lio/github/robinpcrd/kotose/form/swiftui/NativeLineLimits;
+	public final fun getMessages ()Ljava/util/List;
+	public final fun getNextFocusKey ()Ljava/lang/String;
+	public final fun getPhone ()Lio/github/robinpcrd/kotose/form/swiftui/NativePhoneSnapshot;
+	public final fun getPlaceholder ()Ljava/lang/String;
+	public final fun getPreviousFocusKey ()Ljava/lang/String;
+	public final fun getSelected ()Z
+	public final fun getSubtitle ()Ljava/lang/String;
+	public final fun getTextValue ()Ljava/lang/String;
+	public final fun getToggleValue ()Z
+	public final fun getValidationMessages ()Ljava/util/List;
+}
+
+public final class io/github/robinpcrd/kotose/form/swiftui/NativeFormAdapter {
+	public static final field $stable I
+	public fun <init> (Lio/github/robinpcrd/kotose/form/Form;)V
+	public final fun completeNavigation (J)Z
+	public final fun customField (Ljava/lang/String;)Lio/github/robinpcrd/kotose/form/Field;
+	public final fun focusNext (Ljava/lang/String;)V
+	public final fun focusPrevious (Ljava/lang/String;)V
+	public final fun getSnapshots ()Lkotlinx/coroutines/flow/Flow;
+	public final fun isNavigationCurrent (J)Z
+	public final fun onFocusChanged (Ljava/lang/String;Z)V
+	public final fun performAction (Ljava/lang/String;)Z
+	public final fun selectOption (Ljava/lang/String;Ljava/lang/String;)Z
+	public final fun selectPhoneCountry (Ljava/lang/String;Ljava/lang/String;)Z
+	public final fun setDate (Ljava/lang/String;IIIII)Z
+	public final fun setPhoneDialCode (Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+	public final fun setSelected (Ljava/lang/String;Z)Z
+	public final fun setText (Ljava/lang/String;Ljava/lang/String;)Z
+	public final fun setToggle (Ljava/lang/String;Z)Z
+	public final fun stopEditing ()V
+	public final fun validate ()Z
+	public final fun validate (ZZ)Z
+}
+
+public final class io/github/robinpcrd/kotose/form/swiftui/NativeFormSnapshot {
+	public static final field $stable I
+	public final fun getFields ()Ljava/util/List;
+	public final fun getFocusedFieldKey ()Ljava/lang/String;
+	public final fun getGroups ()Ljava/util/List;
+	public final fun getNavigationRequest ()Lio/github/robinpcrd/kotose/form/FormNavigationRequest;
+}
+
+public final class io/github/robinpcrd/kotose/form/swiftui/NativeGroupSnapshot {
+	public static final field $stable I
+	public final fun getFields ()Ljava/util/List;
+	public final fun getKey ()Ljava/lang/String;
+	public final fun getPresentation ()Lio/github/robinpcrd/kotose/form/fields/SelectionPresentation;
+	public final fun getTitle ()Ljava/lang/String;
+	public final fun getValidationMessages ()Ljava/util/List;
+}
+
+public final class io/github/robinpcrd/kotose/form/swiftui/NativeLineLimits {
+	public static final field $stable I
+	public final fun getMaxLines ()I
+	public final fun getMinLines ()I
+}
+
+public final class io/github/robinpcrd/kotose/form/swiftui/NativePhoneSnapshot {
+	public static final field $stable I
+	public final fun getCountries ()Ljava/util/List;
+	public final fun getCountrySelectionEnabled ()Z
+	public final fun getDialCode ()Ljava/lang/String;
+	public final fun getDialCodeDigits ()Ljava/lang/String;
+	public final fun getFlag ()Ljava/lang/String;
+	public final fun getHasCountryPicker ()Z
+	public final fun getRegion ()Ljava/lang/String;
+}
+
+public final class io/github/robinpcrd/kotose/form/swiftui/NativeValidationMessage {
+	public static final field $stable I
+	public final fun getAsWarning ()Z
+	public final fun getText ()Ljava/lang/String;
+}
+

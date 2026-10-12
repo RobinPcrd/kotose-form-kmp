@@ -1,0 +1,30 @@
+appId: io.github.robinpcrd.kotose.form.example
+name: The custom field renders through each renderer's own hook
+---
+- runFlow:
+    file: ../helpers/open-page.yaml
+    env:
+      PAGE: custom
+      RENDERER: ${RENDERER}
+- assertVisible:
+    id: stepper-value
+    text: '0'
+- tapOn:
+    id: stepper-plus
+- tapOn:
+    id: stepper-plus
+- assertVisible:
+    id: stepper-value
+    text: '2'
+- tapOn:
+    id: stepper-minus
+- assertVisible:
+    id: stepper-value
+    text: '1'
+- assertVisible:
+    id: stepper-disabled-plus
+    enabled: false
+- tapOn:
+    id: action-validate
+- assertVisible: 1 errors
+- takeScreenshot: ${RENDERER}-custom

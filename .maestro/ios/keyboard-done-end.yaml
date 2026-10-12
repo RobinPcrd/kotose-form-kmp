@@ -1,0 +1,26 @@
+appId: io.github.robinpcrd.kotose.form.example
+name: SwiftUI Done on the last field keeps it reachable above the action bar
+---
+- launchApp:
+    clearState: true
+- scrollUntilVisible:
+    element:
+      id: page-scroll-to-error
+    direction: DOWN
+- tapOn:
+    id: page-scroll-to-error
+- scrollUntilVisible:
+    element:
+      id: scroll-last
+    direction: DOWN
+- tapOn:
+    id: scroll-last
+- tapOn:
+    id: scroll-last-done
+- assertNotVisible:
+    id: scroll-last-done
+# A field left behind the action bar takes no tap: the bar does.
+- tapOn:
+    id: scroll-last
+- assertVisible:
+    id: scroll-last-done

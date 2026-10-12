@@ -1,0 +1,16 @@
+appId: io.github.robinpcrd.kotose.form.example
+# Moves to the next input. NEXT: the Next of the iOS keyboard bar; TO: the bar button that shows
+# once the next input has focus. Android uses the keyboard's action key.
+---
+- runFlow:
+    when:
+      true: ${RENDERER != 'android'}
+    file: next.yaml
+    env:
+      FROM: ${NEXT}
+      TO: ${TO}
+- runFlow:
+    when:
+      true: ${RENDERER == 'android'}
+    commands:
+      - pressKey: Enter
