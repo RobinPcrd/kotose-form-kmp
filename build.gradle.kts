@@ -16,5 +16,9 @@ plugins {
 }
 
 dependencies {
+    dokka(project(":kotose-form-core"))
+    dokka(project(":kotose-form-phone"))
+    dokka(project(":kotose-form-phone-backend"))
     dokka(project(":kotose-form"))
+    dokka(project(":kotose-form-swiftui"))
 }

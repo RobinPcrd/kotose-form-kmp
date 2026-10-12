@@ -29,9 +29,10 @@ jobs:
 
       - uses: gradle/actions/setup-gradle@v5
 
+      # A -LOCAL version builds the phone backend from its local Swift package, not a release tag.
       - run: ./gradlew :dokkaGenerate
         env:
-          VERSION: 0.0.0-DOCS
+          VERSION: 0.0.0-LOCAL
 
       - uses: actions/upload-pages-artifact@v5
         with:
