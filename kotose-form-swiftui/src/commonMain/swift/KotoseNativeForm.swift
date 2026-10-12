@@ -825,6 +825,7 @@ private protocol NativeInputView: UIView {
 }
 
 /// Owns only native responders. Kotlin still supplies the next field and navigation requests.
+@available(iOS 16.0, *)
 private final class NativeInputRegistry {
     private final class Entry {
         weak var view: NativeInputView?
@@ -1155,6 +1156,7 @@ private struct KeyboardActions {
 
 /// Previous, Next and Done above the keyboard of every text input. The system draws the bar:
 /// Liquid Glass buttons over the form from iOS 26, a toolbar background before.
+@available(iOS 16.0, *)
 private final class KeyboardBar: UIToolbar {
     private var actions = KeyboardActions(previous: nil, next: nil, done: {})
     private lazy var previousItem = UIBarButtonItem(
