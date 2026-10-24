@@ -1,6 +1,6 @@
 # Changelog
 
-## [Unreleased]
+## [0.1.1] - 2026-10-24
 
 - `rememberPhoneCountryPicker(field)` opens the field's country picker from a custom phone input, as
   the built-in country button does; with `phoneNumberOutputTransformation` it lets an app draw its
