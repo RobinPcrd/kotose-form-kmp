@@ -30,6 +30,7 @@ import androidx.compose.foundation.relocation.BringIntoViewRequester
 import androidx.compose.foundation.relocation.bringIntoViewRequester
 import androidx.compose.foundation.shape.CornerBasedShape
 import androidx.compose.foundation.shape.CornerSize
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.BasicTextField
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.foundation.text.input.InputTransformation
@@ -184,7 +185,7 @@ fun PhoneField(
     }
 
     val fieldColors by rememberUpdatedState(
-        newValue = if (!hasErrors) FieldDefaults.warningFieldColors() else colors
+        newValue = if (hasErrors) colors else colors.withWarning(kotoseFormStyle().warning)
     )
 
     InternalPhoneField(
@@ -207,6 +208,7 @@ fun PhoneField(
         mergedTextStyle = mergedTextStyle,
         data = data,
         countryPickerEnabled = field.isCountrySelectionEnabled,
+        shape = RoundedCornerShape(kotoseFormStyle().cornerRadius),
         dialCode = if (hasCountryPicker) null else dialCodeState,
         numberRequester = numberRequester,
         onFlagClicked = showCountryPicker,

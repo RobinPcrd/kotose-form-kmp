@@ -16,8 +16,7 @@ val brand = KotoseFormStyle.fromMaterial().copy(cornerRadius = 12.dp, inputBorde
 KotoseFormTheme(brand) { FormScreen(form = form) }
 ```
 
-The per-kind `Appearance` objects and `FieldDefaults` still work and take their defaults from
-the style. To draw a field yourself, use the `fieldView` slot of `FormScreen`, and fall back to
+The per-kind `Appearance` objects and `FieldDefaults` still work. To draw a field yourself, use the `fieldView` slot of `FormScreen`, and fall back to
 `DefaultFieldView(field)` for the others.
 
 ## SwiftUI
@@ -60,4 +59,6 @@ take the accent color.
 | `groupBackground`, `groupCornerRadius`, `groupRowPadding` (selection cards) | SwiftUI only | secondary system background, 12 pt, 11 by 16 pt |
 
 Known gaps: Compose has no padding or spacing tokens yet, so Material inputs stay taller than
-the iOS ones, and the Compose phone input does not read the style.
+the iOS ones. The Compose phone, dropdown, date and date-time fields take only `cornerRadius` and
+`warning` from the style; their other colors come from the `FieldColors` they receive,
+`FieldDefaults.fieldColors()` by default, which follows `MaterialTheme`.

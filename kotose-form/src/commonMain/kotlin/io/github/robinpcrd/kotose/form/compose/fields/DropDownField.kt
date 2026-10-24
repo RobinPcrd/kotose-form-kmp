@@ -17,12 +17,12 @@ import androidx.compose.foundation.layout.RowScope
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.DropdownMenu
 import androidx.compose.material3.DropdownMenuItem
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.LocalTextStyle
-import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
@@ -41,6 +41,7 @@ import androidx.compose.ui.unit.dp
 import io.github.robinpcrd.kotose.form.compose.FieldColors
 import io.github.robinpcrd.kotose.form.compose.FieldDefaults
 import io.github.robinpcrd.kotose.form.compose.animateBorderStrokeAsState
+import io.github.robinpcrd.kotose.form.compose.kotoseFormStyle
 import io.github.robinpcrd.kotose.form.fields.SingleChoiceField
 import io.github.robinpcrd.kotose_form.generated.resources.Res
 import io.github.robinpcrd.kotose_form.generated.resources.ic_clear
@@ -145,10 +146,10 @@ internal fun DropdownBox(
             TextStyle(color = colors.textColor(textColorEnabled).value)
         )
     }
-    val shape = MaterialTheme.shapes.extraSmall
+    val shape = RoundedCornerShape(kotoseFormStyle().cornerRadius)
 
     val fieldColors by rememberUpdatedState(
-        newValue = if (!hasErrors) FieldDefaults.warningFieldColors() else colors
+        newValue = if (hasErrors) colors else colors.withWarning(kotoseFormStyle().warning)
     )
     Box(
         modifier = modifier

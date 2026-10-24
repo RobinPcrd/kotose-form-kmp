@@ -158,6 +158,34 @@ class FieldColors internal constructor(
         )
     }
 
+    /** These colors with the error state drawn in [warning], for a field showing only warnings. */
+    internal fun withWarning(warning: Color): FieldColors = FieldColors(
+        textColor = textColor,
+        disabledTextColor = disabledTextColor,
+        containerColor = containerColor,
+        cursorColor = cursorColor,
+        errorCursorColor = warning,
+        textSelectionColors = textSelectionColors,
+        focusedIndicatorColor = focusedIndicatorColor,
+        unfocusedIndicatorColor = unfocusedIndicatorColor,
+        errorIndicatorColor = warning,
+        disabledIndicatorColor = disabledIndicatorColor,
+        focusedLeadingIconColor = focusedLeadingIconColor,
+        unfocusedLeadingIconColor = unfocusedLeadingIconColor,
+        disabledLeadingIconColor = disabledLeadingIconColor,
+        errorLeadingIconColor = errorLeadingIconColor,
+        focusedTrailingIconColor = focusedTrailingIconColor,
+        unfocusedTrailingIconColor = unfocusedTrailingIconColor,
+        disabledTrailingIconColor = disabledTrailingIconColor,
+        errorTrailingIconColor = warning,
+        focusedLabelColor = focusedLabelColor,
+        unfocusedLabelColor = unfocusedLabelColor,
+        disabledLabelColor = disabledLabelColor,
+        errorLabelColor = warning,
+        placeholderColor = placeholderColor,
+        disabledPlaceholderColor = disabledPlaceholderColor,
+    )
+
     /*
     @OptIn(ExperimentalMaterial3Api::class)
     @Composable

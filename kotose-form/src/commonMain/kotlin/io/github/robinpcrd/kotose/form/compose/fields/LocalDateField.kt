@@ -12,9 +12,9 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.wrapContentSize
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Icon
 import androidx.compose.material3.LocalTextStyle
-import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
@@ -28,6 +28,7 @@ import io.github.robinpcrd.kotose.form.compose.FieldColors
 import io.github.robinpcrd.kotose.form.compose.FieldDefaults
 import io.github.robinpcrd.kotose.form.compose.animateBorderStrokeAsState
 import io.github.robinpcrd.kotose.form.compose.fieldPadding
+import io.github.robinpcrd.kotose.form.compose.kotoseFormStyle
 import io.github.robinpcrd.kotose.form.fields.LocalDateField
 import io.github.robinpcrd.kotose_form.generated.resources.Res
 import io.github.robinpcrd.kotose_form.generated.resources.ic_date_range
@@ -62,12 +63,12 @@ fun LocalDateField(
             TextStyle(color = colors.textColor(textColorEnabled).value)
         )
     }
-    val shape = MaterialTheme.shapes.extraSmall
+    val shape = RoundedCornerShape(kotoseFormStyle().cornerRadius)
 
     val defaultPicker = rememberDefaultLocalDatePicker(field)
     val onClickAction = field.showPicker ?: defaultPicker
 
-    val fieldColors = if (hasErrors) colors else FieldDefaults.warningFieldColors()
+    val fieldColors = if (hasErrors) colors else colors.withWarning(kotoseFormStyle().warning)
     Row(
         modifier = modifier
             .fieldPadding()

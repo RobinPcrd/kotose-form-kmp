@@ -12,9 +12,9 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.wrapContentSize
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Icon
 import androidx.compose.material3.LocalTextStyle
-import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
@@ -29,6 +29,7 @@ import io.github.robinpcrd.kotose.form.compose.FieldColors
 import io.github.robinpcrd.kotose.form.compose.FieldDefaults
 import io.github.robinpcrd.kotose.form.compose.animateBorderStrokeAsState
 import io.github.robinpcrd.kotose.form.compose.fieldPadding
+import io.github.robinpcrd.kotose.form.compose.kotoseFormStyle
 import io.github.robinpcrd.kotose.form.fields.DateTimeField
 import io.github.robinpcrd.kotose_form.generated.resources.Res
 import io.github.robinpcrd.kotose_form.generated.resources.ic_schedule
@@ -53,7 +54,7 @@ fun DateTimeField(
     val enabled by field.isEnabledState
     val hasErrors by field.hasErrorsState
     val hasWarnings by field.hasWarningsState
-    val shape = MaterialTheme.shapes.extraSmall
+    val shape = RoundedCornerShape(kotoseFormStyle().cornerRadius)
     val textColorEnabled = if (value == null) false else enabled
     val mergedTextStyle = if (value == null) {
         LocalTextStyle.current.merge(
@@ -69,7 +70,7 @@ fun DateTimeField(
     val onClickAction = field.showPicker ?: defaultPicker
 
     val fieldColors by rememberUpdatedState(
-        newValue = if (!hasErrors) FieldDefaults.warningFieldColors() else colors
+        newValue = if (hasErrors) colors else colors.withWarning(kotoseFormStyle().warning)
     )
     Row(
         modifier = modifier
