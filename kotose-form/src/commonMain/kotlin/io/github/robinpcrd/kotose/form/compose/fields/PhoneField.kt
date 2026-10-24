@@ -153,7 +153,7 @@ fun PhoneField(
     val focusState by focus.state
     val isFieldFocused = remember(focusState) { focusState?.isFocused ?: false }
     val bringIntoViewRequester = remember { BringIntoViewRequester() }
-    val defaultCountryPickerPresenter = rememberDefaultPhoneCountryPickerPresenter()
+    val showCountryPicker = rememberPhoneCountryPicker(field)
 
     LaunchedEffect(data) {
         if (textFieldState.text != data?.phone) {
@@ -209,26 +209,46 @@ fun PhoneField(
         countryPickerEnabled = field.isCountrySelectionEnabled,
         dialCode = if (hasCountryPicker) null else dialCodeState,
         numberRequester = numberRequester,
-        onFlagClicked = {
-            when (val countryPicker = (field as? PhoneField)?.countryPicker ?: PhoneCountryPicker.BuiltIn()) {
-                is PhoneCountryPicker.BuiltIn -> {
-                    val presenter = countryPicker.presenter ?: defaultCountryPickerPresenter
-                    if (presenter != null) {
-                        showPhoneCountryPicker(field, presenter)
-                    } else {
-                        KFLogger.e(
-                            "KF-PhoneField",
-                            "No presenter found for built-in phone country picker"
-                        )
-                    }
-                }
-
-                is PhoneCountryPicker.Custom -> (field as? PhoneField)?.let { countryPicker.show(it) }
-                PhoneCountryPicker.Disabled -> Unit
-            }
-        }
+        onFlagClicked = showCountryPicker,
     )
 }
+
+/**
+ * Opens the country picker of [field] from a custom phone input: the [PhoneField.countryPicker] of a
+ * [PhoneField], the built-in one otherwise. The picked country goes through
+ * [PhoneNumberField.selectCountry]. Does nothing while the field is disabled, has no phone backend
+ * or has country selection off.
+ */
+@Composable
+fun rememberPhoneCountryPicker(field: PhoneNumberField): () -> Unit {
+    val defaultPresenter = rememberDefaultPhoneCountryPickerPresenter()
+    return remember(field, defaultPresenter) {
+        {
+            if (field.canPickCountry) {
+                when (val countryPicker = (field as? PhoneField)?.countryPicker ?: PhoneCountryPicker.BuiltIn()) {
+                    is PhoneCountryPicker.BuiltIn -> {
+                        val presenter = countryPicker.presenter ?: defaultPresenter
+                        if (presenter != null) {
+                            showPhoneCountryPicker(field, presenter)
+                        } else {
+                            KFLogger.e(
+                                "KF-PhoneField",
+                                "No presenter found for built-in phone country picker"
+                            )
+                        }
+                    }
+
+                    is PhoneCountryPicker.Custom -> (field as? PhoneField)?.let { countryPicker.show(it) }
+                    PhoneCountryPicker.Disabled -> Unit
+                }
+            }
+        }
+    }
+}
+
+/** Whether the field takes a country now: enabled, with a phone backend and country selection on. */
+internal val PhoneNumberField.canPickCountry: Boolean
+    get() = isEnabled && hasCountryPicker && isCountrySelectionEnabled
 
 @Composable
 @OptIn(ExperimentalFoundationApi::class)
@@ -298,6 +318,7 @@ internal fun InternalPhoneField(
         if (dialCode == null) {
             Box(
                 modifier = Modifier
+                    .testTag(field.key + "-country")
                     .clip(phoneButtonShape)
                     .clickable(enabled = enabled && countryPickerEnabled, onClick = onFlagClicked)
                     .padding(8.dp)

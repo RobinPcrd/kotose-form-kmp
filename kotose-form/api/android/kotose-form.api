@@ -268,6 +268,7 @@ public final class io/github/robinpcrd/kotose/form/compose/fields/PasswordFieldK
 public final class io/github/robinpcrd/kotose/form/compose/fields/PhoneFieldKt {
 	public static final fun PhoneField (Lio/github/robinpcrd/kotose/form/fields/PhoneField;Lio/github/robinpcrd/kotose/form/fields/InputFieldAppearance;Landroidx/compose/ui/Modifier;Lio/github/robinpcrd/kotose/form/compose/FieldColors;Landroidx/compose/foundation/interaction/MutableInteractionSource;Landroidx/compose/runtime/Composer;II)V
 	public static final fun PhoneField (Lio/github/robinpcrd/kotose/form/fields/PhoneNumberField;Lio/github/robinpcrd/kotose/form/fields/InputFieldAppearance;Landroidx/compose/ui/Modifier;Lio/github/robinpcrd/kotose/form/compose/FieldColors;Landroidx/compose/foundation/interaction/MutableInteractionSource;Landroidx/compose/runtime/Composer;II)V
+	public static final fun rememberPhoneCountryPicker (Lio/github/robinpcrd/kotose/form/fields/PhoneNumberField;Landroidx/compose/runtime/Composer;I)Lkotlin/jvm/functions/Function0;
 }
 
 public final class io/github/robinpcrd/kotose/form/compose/fields/SwitchFieldKt {
